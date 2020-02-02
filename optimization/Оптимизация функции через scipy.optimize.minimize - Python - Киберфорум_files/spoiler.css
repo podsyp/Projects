@@ -1,0 +1,39 @@
+/* ============		Spoiler	 ============ */
+.spoiler-wrap {
+	width: 95%;
+	margin: 5px 10px 0px 30px;
+	clear: both;
+	background: #E9E9E6;
+	border: solid #C3CBD1;
+	border-width: 1px 1px 1px 2px;
+	font: 12px Verdana,Arial,sans-serif;
+}
+.spoiler-head {
+	font-size: 11px;
+	padding: 1px 14px 3px;
+	margin-left: 6px;
+	line-height: 15px;
+	font-weight: bold;
+}
+.spoiler-body {
+	padding: 1px 6px 2px;
+	display: none;
+	border-top: 1px solid #C3CBD1;
+	background: #F5F5F5;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+.folded {
+	display: block;
+	background: transparent url(/images/misc/icon_plus.gif) no-repeat left center;
+	padding-left: 14px; 
+}
+
+.unfolded {
+	display: block;
+	background: transparent url(/images/misc/icon_minus.gif) no-repeat left center;
+	padding-left: 14px;
+}

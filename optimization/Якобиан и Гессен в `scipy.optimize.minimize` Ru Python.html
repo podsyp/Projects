@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://www.rupython.com/scipy-optimize-minimize-51331.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>  Якобиан и Гессен в `scipy.optimize.minimize` Ru Python</title>
+
+    <link href="./Якобиан и Гессен в `scipy.optimize.minimize` Ru Python_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./Якобиан и Гессен в `scipy.optimize.minimize` Ru Python_files/custom.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	  <script src="./Якобиан и Гессен в `scipy.optimize.minimize` Ru Python_files/pubads_impl_rendering_2020012701.js.Без названия"></script><script async="" src="./Якобиан и Гессен в `scipy.optimize.minimize` Ru Python_files/gpt.js.Без названия"></script>
+<script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/21669498964/wph-jy/zsy-02-rupython-wph-jy', ['fluid'], 'div-gpt-ad-1567074706077-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/21669498964/wph-jy/zsy-01-rupython-wph-jy', ['fluid'], 'div-gpt-ad-1567074790252-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/21669498964/wph-jy/336x280-01-rupython-jy-wph', [336, 280], 'div-gpt-ad-1567078695349-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/21669498964/wph-jy/300x250-01-rupython-jy-wph', [300, 250], 'div-gpt-ad-1567155448111-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/21669498964/wph-jy/300x600-01-rupython-wph-jy', [300, 600], 'div-gpt-ad-1567156079328-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/21669498964/wph-jy/970x90-01-rupython-jy-wph', [970, 90], 'div-gpt-ad-1567156972160-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/21669498964/wph-jy/728x90-01-rupython-jy-wph', [728, 90], 'div-gpt-ad-1567158138866-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+
+  <link rel="preload" href="./Якобиан и Гессен в `scipy.optimize.minimize` Ru Python_files/f.txt" as="script"><script type="text/javascript" src="./Якобиан и Гессен в `scipy.optimize.minimize` Ru Python_files/f.txt"></script><link rel="preload" href="./Якобиан и Гессен в `scipy.optimize.minimize` Ru Python_files/f(1).txt" as="script"><script type="text/javascript" src="./Якобиан и Гессен в `scipy.optimize.minimize` Ru Python_files/f(1).txt"></script><script src="./Якобиан и Гессен в `scipy.optimize.minimize` Ru Python_files/pubads_impl_2020012701.js.Без названия" async=""></script><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-37/html/container.html"></head>
+<body>
+    <nav class="navbar navbar-default ">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="http://www.rupython.com/" class="navbar-brand">Ru Python</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://www.rupython.com/" target="_blank">Contact</a></li>
+            <li><a href="http://www.rupython.com/" target="_blank">Advertising</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>	
+<div class="container">
+
+<br>
+<!-- /21669498964/wph-jy/970x90-01-rupython-jy-wph -->
+<div id="div-gpt-ad-1567156972160-0" style="width: 970px; height: 90px;">
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1567156972160-0'); });
+  </script>
+<div id="google_ads_iframe_/21669498964/wph-jy/970x90-01-rupython-jy-wph_0__container__" style="border: 0pt none; width: 970px; height: 90px;"></div></div>
+	  <ul class="breadcrumb">
+<li class="h"><a href="http://www.rupython.com/">Ru Python</a></li>
+<li><span class="btn btn-default btn-xs"><a href="http://www.rupython.com/python/114" rel="tag">оптимизация</a></span>&nbsp;<span class="btn btn-default btn-xs"><a href="http://www.rupython.com/python/lambda" rel="tag">lambda</a></span>&nbsp;<span class="btn btn-default btn-xs"><a href="http://www.rupython.com/python/numpy" rel="tag">numpy</a></span>&nbsp;<span class="btn btn-default btn-xs"><a href="http://www.rupython.com/python/python" rel="tag">python</a></span>&nbsp;<span class="btn btn-default btn-xs"><a href="http://www.rupython.com/python/scipy" rel="tag">scipy</a></span></li>
+<li>Якобиан и Гессен в `scipy.optimize.minimize`</li>
+</ul>
+
+
+
+<div class="row">
+<div class="col-md-8 article-content">
+	   <a href="http://www.rupython.com/scipy-optimize-minimize-51331.html" title="Якобиан и Гессен в `scipy.optimize.minimize`"><h1 class="text-uppercase list-group-item-heading">Якобиан и Гессен в `scipy.optimize.minimize`</h1></a>
+  
+<p> Я пытаюсь понять, как работает метод « <code><a href="http://www.rupython.com/python/scipy" title="Topics of scipy" target="_blank">scipy</a>.optimize.minimize</code> функции <code>scipy.optimize.minimize</code> Python.  Я адаптирую пример в нижней части страницы справки. </p><div class="row"><div class="float-left col-md-6"><!-- /21669498964/wph-jy/336x280-01-rupython-jy-wph -->
+<div id="div-gpt-ad-1567078695349-0" style="width: 336px; height: 280px;">
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1567078695349-0'); });
+  </script>
+<div id="google_ads_iframe_/21669498964/wph-jy/336x280-01-rupython-jy-wph_0__container__" style="border: 0pt none; width: 336px; height: 280px;"></div></div></div><div class="float-left col-md-6"><!-- /21669498964/wph-jy/zsy-02-rupython-wph-jy -->
+<div id="div-gpt-ad-1567074706077-0" style="">
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1567074706077-0'); });
+  </script>
+<div id="google_ads_iframe_/21669498964/wph-jy/zsy-02-rupython-wph-jy_0__container__" style="border: 0pt none; width: 100%; height: 0%;"></div></div></div></div>
+<p>  Метод dogleg требует аргументов якобиана и гессиана в соответствии с примечаниями.  Для этого я использую пакет <code>numdifftools</code> : </p><ul><li><a href="http://www.rupython.com/scipy-25-35933.html" rel="bookmark" title="Scipy поворачивает и масштабирует изображение без изменения его размеров">Scipy поворачивает и масштабирует изображение без изменения его размеров</a></li><li><a href="http://www.rupython.com/63792-63792.html" rel="bookmark" title="Как заставить нулевой перехват в линейной регрессии?">Как заставить нулевой перехват в линейной регрессии?</a></li><li><a href="http://www.rupython.com/33676-33676.html" rel="bookmark" title="Любая хорошая реализация жадного набора для больших наборов данных?">Любая хорошая реализация жадного набора для больших наборов данных?</a></li><li><a href="http://www.rupython.com/gaussian-fit-with-scipy-optimize-curve_fit-python-14799.html" rel="bookmark" title="gaussian fit with scipy.optimize.curve_fit в python с неправильными результатами">gaussian fit with scipy.optimize.curve_fit в python с неправильными результатами</a></li><li><a href="http://www.rupython.com/2525-2525.html" rel="bookmark" title="Вычисление корреляции и значимости Пирсона в Python">Вычисление корреляции и значимости Пирсона в Python</a></li></ul>
+<pre> <code>import <a href="http://www.rupython.com/python/numpy" title="Topics of numpy" target="_blank">numpy</a> as np from scipy.optimize import minimize from numdifftools import Jacobian, Hessian def fun(x,a): return (x[0] - 1)**2 + (x[1] - a)**2 x0 = np.array([2,0]) # initial guess a = 2.5 res = minimize(fun, x0, args=(a), method='dogleg', jac=Jacobian(fun)([2,0]), hess=Hessian(fun)([2,0])) print(res)</code> </pre>
+<p>  <strong>Редактировать:</strong> </p>
+<p>  Если я внес изменения, как было предложено в сообщении ниже, </p><!-- /21669498964/wph-jy/zsy-01-rupython-wph-jy -->
+<div id="div-gpt-ad-1567074790252-0" style="">
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1567074790252-0'); });
+  </script>
+<div id="google_ads_iframe_/21669498964/wph-jy/zsy-01-rupython-wph-jy_0__container__" style="border: 0pt none; width: 100%; height: 0%;"></div></div>
+<pre> <code>res = minimize(fun, x0, args=a, method='dogleg', jac=Jacobian(<a href="http://www.rupython.com/python/lambda" title="Topics of lambda" target="_blank">lambda</a> x: fun(x,a)), hess=Hessian(lambda x: fun(x,a)))</code> </pre>
+<p>  Я получаю ошибку <code>TypeError: &lt;lambda&gt;() takes 1 positional argument but 2 were given</code> .  Что я делаю не так? </p>
+<p>  Также правильно ли вычислять якобиан и гессиан при начальном предположении <code>x0</code> ? </p>
+<div class="row">
+			<div class="col-md-5">
+		<!-- /21669498964/wph-jy/300x250-01-rupython-jy-wph -->
+<div id="div-gpt-ad-1567155448111-0" style="width: 300px; height: 250px;">
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1567155448111-0'); });
+  </script>
+<div id="google_ads_iframe_/21669498964/wph-jy/300x250-01-rupython-jy-wph_0__container__" style="border: 0pt none; width: 300px; height: 250px;"></div></div>
+			</div>
+			<div class="col-md-7">
+				<ul><li><a href="http://www.rupython.com/11048-11048.html" rel="bookmark" title="Переносные векторы смещения среди множества точек">Переносные векторы смещения среди множества точек</a></li><li><a href="http://www.rupython.com/matlab-ksdensity-python-91530.html" rel="bookmark" title="MATLAB эквивалент ksdensity в Python">MATLAB эквивалент ksdensity в Python</a></li><li><a href="http://www.rupython.com/pylab-10-90863.html" rel="bookmark" title="Pylab: наложение меток на цвета">Pylab: наложение меток на цвета</a></li><li><a href="http://www.rupython.com/87230-87230.html" rel="bookmark" title="Вычислить попарное расстояние в scipy с отсутствующими значениями">Вычислить попарное расстояние в scipy с отсутствующими значениями</a></li><li><a href="http://www.rupython.com/weibull-41320.html" rel="bookmark" title="Как установить распределение weibull на данные с помощью python?">Как установить распределение weibull на данные с помощью python?</a></li></ul>			</div>
+		</div>
+<div class="list-group">
+	
+
+
+
+<!-- You can start editing here. -->
+
+
+  <h3 id="comments">
+		2 Solutions collect form web for “Якобиан и Гессен в `scipy.optimize.minimize`”	</h3>
+
+	<div class="list-group-item list-group-item-action flex-column align-items-start">
+		      	<p>  Эта ошибка исходит от призывов к <code>Jacobian</code> и <code>Hessian</code> , а не к <code>minimize</code> .  Замена <code>Jacobian(fun)</code> с <code>Jacobian(lambda x: fun(x, a))</code> и аналогичным образом для <code>Hessian</code> должна сделать трюк (так как теперь дифференцируемая функция имеет только один векторный аргумент). </p>
+<p>  Еще одна вещь: <code>(a)</code> – это просто, если вы хотите, чтобы это был кортеж <code>(a,)</code> . </p>
+<pre> <code>import numpy as np from scipy.optimize import minimize from numdifftools import Jacobian, Hessian def fun(x, a): return (x[0] - 1) **2 + (x[1] - a) **2 def fun_der(x, a): return Jacobian(lambda x: fun(x, a))(x).ravel() def fun_hess(x, a): return Hessian(lambda x: fun(x, a))(x) x0 = np.array([2, 0]) # initial guess a = 2.5 res = minimize(fun, x0, args=(a,), method='dogleg', jac=fun_der, hess=fun_hess) print(res)</code> </pre>
+</div>
+<!-- #comment-## -->
+<div class="list-group-item list-group-item-action flex-column align-items-start">
+		      	<p>  Я понимаю, что это игрушечный пример, но я хотел бы указать, что использование инструмента, такого как <code>Jacobian</code> или <code>Hessian</code> для вычисления производных вместо выведения самой функции достаточно дорого.  Например, с помощью вашего метода: </p>
+<pre> <code>x0 = np.array([2, 0]) a = 2.5 %timeit minimize(fun, x0, args=(a,), method='dogleg', jac=fun_der, hess=fun_hess) 100 loops, best of 3: 13.6 ms per loop</code> </pre>
+<p>  Но вы могли бы вычислить производные функции как таковые: </p>
+<pre> <code>def fun_der(x, a): dx = 2 * (x[0] - 1) dy = 2 * (x[1] - a) return np.array([dx, dy] def fun_hess(x, a): dx = 2 dy = 2 return np.diag([dx, dy]) %timeit minimize(fun, x0, args=(a,), method='dogleg', jac=fun_der, hess=fun_hess) 1000 loops, best of 3: 279 µs per loop</code> </pre>
+<p>  Как вы можете видеть, это почти в 50 раз быстрее.  Он действительно начинает складываться со сложными функциями.  Поэтому я всегда стараюсь самостоятельно вывести функции, независимо от того, насколько это сложно.  Один интересный пример – реализация на основе ядра Inductive Matrix Completion . </p>
+<pre> <code>argmin --&gt; sum((A - gamma_u(X) Z gamma_v(Y))**2 - lambda * ||Z||**2) where gamma_u = (1/sqrt(m_x)) * [cos(UX), sin(UX)] and gamma_v = (1/sqrt(m_y)) * [cos(VY), sin(VY)] X.shape = n_x, p; Y.shape = n_y, q; U.shape = m_x, p; V.shape = m_y, q; Z.shape = 2m_x, 2m_y</code> </pre>
+<p>  Вычисление градиента и гессиана из этого уравнения крайне необоснованно по сравнению с явным выводом и использованием этих функций.  Так как @bnaul указал, если ваша функция имеет закрытые формы, вы действительно хотите их вычислить и использовать. </p>
+</div>
+<!-- #comment-## -->
+
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+	</div>
+ 
+<ul class="pager">
+  <li class="previous"><a href="http://www.rupython.com/vim-latex-python-mac-os-10-8-1-51330.html" rel="prev">ViM-LaTeX, python и Mac OS 10.8.1 и странная ошибка</a></li>
+  <li class="next"><a href="http://www.rupython.com/51332-51332.html" rel="next">Создайте большую матрицу из меньших матриц в numpy</a></li>
+</ul>
+	<!-- /21669498964/wph-jy/728x90-01-rupython-jy-wph -->
+<div id="div-gpt-ad-1567158138866-0" style="width: 728px; height: 90px;">
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1567158138866-0'); });
+  </script>
+<div id="google_ads_iframe_/21669498964/wph-jy/728x90-01-rupython-jy-wph_0__container__" style="border: 0pt none; width: 728px; height: 90px;"></div></div>
+	<li><a href="http://www.rupython.com/n-13-42530.html" rel="bookmark" title="построение гистограммы массива numpy по метке времени">построение гистограммы массива numpy по метке времени</a></li><li><a href="http://www.rupython.com/90498-90498.html" rel="bookmark" title="Как эффективно рассчитать расстояние до ближайшего 1 в маске в numpy?">Как эффективно рассчитать расстояние до ближайшего 1 в маске в numpy?</a></li><li><a href="http://www.rupython.com/x438-323-84149.html" rel="bookmark" title="Могу ли я использовать научные библиотеки Java в Google App Engine?">Могу ли я использовать научные библиотеки Java в Google App Engine?</a></li><li><a href="http://www.rupython.com/26418-26418.html" rel="bookmark" title="Как читать систему дифференциальных уравнений из текстового файла для решения системы с помощью scipy.odeint?">Как читать систему дифференциальных уравнений из текстового файла для решения системы с помощью scipy.odeint?</a></li><li><a href="http://www.rupython.com/scipy-2-9589.html" rel="bookmark" title="Не удается обновить Scipy">Не удается обновить Scipy</a></li><li><a href="http://www.rupython.com/66371-66371.html" rel="bookmark" title="Встроенная функция вычисления ковариации">Встроенная функция вычисления ковариации</a></li><li><a href="http://www.rupython.com/pyopencv-virtualenv-no-site-63602.html" rel="bookmark" title="Установить pyopencv внутри virtualenv с помощью -no-site-packages">Установить pyopencv внутри virtualenv с помощью -no-site-packages</a></li><li><a href="http://www.rupython.com/scipy-winpython-25758.html" rel="bookmark" title="как я могу обновить scipy в winpython на окнах?">как я могу обновить scipy в winpython на окнах?</a></li></div>
+     		
+</div>
+
+<div class="col-md-4">
+     
+<div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+      </span>
+</div>
+<!-- /21669498964/wph-jy/300x600-01-rupython-wph-jy -->
+<div id="div-gpt-ad-1567156079328-0" style="width: 300px; height: 600px;">
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1567156079328-0'); });
+  </script>
+<div id="google_ads_iframe_/21669498964/wph-jy/300x600-01-rupython-wph-jy_0__container__" style="border: 0pt none; width: 300px; height: 600px;"></div></div>
+
+<div class="panel panel-default">
+ &nbsp;<div class="panel-heading">Interesting Posts for Van-Lav</div>
+
+<div class="list-group">
+<a href="http://www.rupython.com/x432-105-32721.html" class="list-group-item"><h4 class="list-group-item-heading">Возврат Нет или кортеж и распаковка</h4></a>
+
+<a href="http://www.rupython.com/21763-21763.html" class="list-group-item"><h4 class="list-group-item-heading">Переименование нескольких файлов в каталоге с помощью Python</h4></a>
+
+<a href="http://www.rupython.com/virtualenv-python-3-100025.html" class="list-group-item"><h4 class="list-group-item-heading">Как переименовать virtualenv в Python?</h4></a>
+
+<a href="http://www.rupython.com/68584-68584.html" class="list-group-item"><h4 class="list-group-item-heading">Настройка панели инструментов отладки Django</h4></a>
+
+<a href="http://www.rupython.com/python-x445-9-79459.html" class="list-group-item"><h4 class="list-group-item-heading">Python: сохранение данных в эмуляторе хранилища данных Google Cloud</h4></a>
+
+<a href="http://www.rupython.com/jpeg-ubuntu-53658.html" class="list-group-item"><h4 class="list-group-item-heading">Установите jpeg-модуль в ubuntu</h4></a>
+
+<a href="http://www.rupython.com/python-hard-way-ex-49-x44-49894.html" class="list-group-item"><h4 class="list-group-item-heading">Изучите Python Hard Way, Ex 49: Сравнение объектов с использованием assert_equal</h4></a>
+
+<a href="http://www.rupython.com/python-x43b-74-91452.html" class="list-group-item"><h4 class="list-group-item-heading">Python: как переносить массивы длин волн по сетевому соединению</h4></a>
+
+<a href="http://www.rupython.com/29583-29583.html" class="list-group-item"><h4 class="list-group-item-heading">Почему «класс» не запускает новую область, например «def»?</h4></a>
+
+<a href="http://www.rupython.com/99720-99720.html" class="list-group-item"><h4 class="list-group-item-heading">Время загрузки бутылки для сетевого сервера чрезвычайно медленное</h4></a>
+
+<a href="http://www.rupython.com/7447-7447.html" class="list-group-item"><h4 class="list-group-item-heading">динамическое добавление и удаление виджетов в PyQt</h4></a>
+
+<a href="http://www.rupython.com/94188-94188.html" class="list-group-item"><h4 class="list-group-item-heading">Как проверить правильность функций, которые используются случайным образом?</h4></a>
+
+<a href="http://www.rupython.com/pdf-html-css-x4-89044.html" class="list-group-item"><h4 class="list-group-item-heading">Как создать PDF-файл из источника HTML / CSS (включая изображения) в Python?</h4></a>
+
+<a href="http://www.rupython.com/26524-26524.html" class="list-group-item"><h4 class="list-group-item-heading">Невозможно понять построение границы решения в SVM и LR</h4></a>
+
+<a href="http://www.rupython.com/77830-77830.html" class="list-group-item"><h4 class="list-group-item-heading">Взаимодействие с другой программой командной строки в Python</h4></a>
+
+
+</div>
+
+</div>
+
+
+
+</div>
+</div>
+
+<div class="alert alert-dismissible alert-info">
+  <strong>Python</strong> - лучший язык программирования в мире.
+</div>
+<footer>
+        <div class="row">
+          <div class="col-lg-12">
+
+            <ul class="list-unstyled">
+              <li class="pull-right"><a href="http://www.rupython.com/scipy-optimize-minimize-51331.html#top">Back to top</a></li>
+              <li><a href="http://www.rupython.com/">Ru Python</a></li>
+              <li><a href="http://www.rupython.com/contact/">Contact</a></li>
+              <li><a href="http://www.rupython.com/advertising/">Advertising Here</a></li>
+            </ul>
+            <p>Copyright © Ru Python - All Rights Reserved.</p>
+
+          </div>
+        </div>
+
+      </footer>
+
+
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./Якобиан и Гессен в `scipy.optimize.minimize` Ru Python_files/jquery.min.js.Без названия"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./Якобиан и Гессен в `scipy.optimize.minimize` Ru Python_files/bootstrap.min.js.Без названия"></script>
+  
+<script type="text/javascript">
+var sc_project=11469238; 
+var sc_invisible=1; 
+var sc_security="2cda1ca3"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script><script type="text/javascript" src="./Якобиан и Гессен в `scipy.optimize.minimize` Ru Python_files/counter.js.Без названия"></script>
+<noscript><div class="statcounter"><a title="Web Analytics
+Made Easy - StatCounter" href="http://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11469238/0/2cda1ca3/1/" alt="Web
+Analytics Made Easy - StatCounter"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+</body><!-- Start of StatCounter Code for Default Guide --></html>

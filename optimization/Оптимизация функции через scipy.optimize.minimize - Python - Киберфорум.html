@@ -1,0 +1,1977 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0058)http://www.cyberforum.ru/python-science/thread1132503.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ru" class=" ya-page_js_yes"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/analytics.js.Без названия"></script><script async="" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/async-ads.js.Без названия"></script>
+	<title>Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум</title>
+	<link rel="canonical" href="http://www.cyberforum.ru/python-science/thread1132503.html">
+	
+	<!--<base href="http://www.cyberforum.ru/">--><base href=".">
+
+
+<meta name="keywords" content="Python, Оптимизация функции через scipy.optimize.minimize">
+<meta name="description" content="Решено: Оптимизация функции через scipy.optimize.minimize Python Ответ">
+
+<meta name="viewport" content="width=device-width">
+<meta name="robots" content="noyaca">
+<meta name="robots" content="noodp">
+
+<link rel="stylesheet" type="text/css" href="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/cyberforum.css">
+<link rel="stylesheet" type="text/css" href="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/vbulletin_important.css">
+
+
+
+<script type="text/javascript" async="" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/tag.js.Без названия"></script><script type="text/javascript" async="" charset="utf-8" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/all.js.Без названия"></script><script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/context.js.Без названия" async=""></script><script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/context.js.Без названия" async=""></script><script type="text/javascript" async="" charset="utf-8" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/all.js.Без названия"></script><script type="text/javascript" async="" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/f.txt"></script><script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/context.js.Без названия" async=""></script><script type="text/javascript">
+<!--
+var SESSIONURL = "";
+var SECURITYTOKEN = "guest";
+var IMGDIR_MISC = "//cyberstatic.net/images/misc";
+var vb_disable_ajax = parseInt("0", 10);
+// -->
+</script>
+
+<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/yahoo-dom-event.js.Без названия"></script>
+<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/connection-min.js.Без названия"></script>
+<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/jquery.min.js.Без названия"></script>
+<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/jquery.browser.min.js.Без названия"></script>
+<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/vbulletin_global.js.Без названия"></script>
+<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/vbulletin_menu.js.Без названия"></script>
+<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/vbulletin_vbpost.js.Без названия"></script>
+
+<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/vbulletin_post_loader.js.Без названия"></script>
+
+
+<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/vbulletin_md5.js.Без названия"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Форум программистов и сисадминов Киберфорум RSS Feed" href="http://www.cyberforum.ru/external.php?type=RSS2">
+	
+		<link rel="alternate" type="application/rss+xml" title="Python: Научные вычисления - Киберфорум RSS" href="http://www.cyberforum.ru/external.php?type=RSS2&amp;forumids=502">
+	
+
+<link type="application/opensearchdescription+xml" rel="search" href="http://www.cyberforum.ru/opensearch.xml" title="CyberForum.ru">
+<link rel="stylesheet" href="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/geshi.css" type="text/css" media="screen">
+<link rel="stylesheet" type="text/css" href="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/spoiler.css">
+<style type="text/css">
+	span.sortarrow {position:absolute;}
+	span.sortarrow img {border:0;}
+	a.sortheader {text-decoration:none; display:block; width:100%;}
+</style>
+<script type="text/javascript">
+	var IMGDIR_BUTTON = "//cyberstatic.net/images/buttons";
+</script>
+<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/sorttable.js.Без названия"></script>
+
+<script type="text/javascript">
+var krtsts = {
+   "bburl": "http://www.cyberforum.ru"
+};
+</script>
+<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/addedit.js.Без названия"></script><script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/bestanswer.js.Без названия"></script>
+      <script type="text/javascript">
+      var krba_options = {
+          img_is_answer: '//cyberstatic.net/images/buttons/is_answer.png',
+          img_is_not_answer: '//cyberstatic.net/images/buttons/is_not_answer.png'
+      },
+      KRBA = new AJAX_KRBA(krba_options);
+      </script><link rel="stylesheet" type="text/css" href="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/thumbs.css">
+<script type="text/javascript">
+var krthumbs = {
+  confirm_delete_pos: 'Вы действительно хотите удалить все положительные оценки?',
+  confirm_delete_neg: 'Вы действительно хотите удалить все отрицательные оценки?'
+}
+</script>
+<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/thumbsup.js.Без названия"></script>
+	<style type="text/css" id="vbulletin_showthread_css">
+	<!--
+	
+	#links div { white-space: nowrap; }
+	#links img { vertical-align: middle; }
+	-->
+	</style>
+<style type="text/css">.ya-share2,
+.ya-share2 * {
+  line-height: normal;
+}
+.ya-share2 :link:hover,
+.ya-share2 :visited:hover {
+  color: #000 !important;
+}
+.ya-share2 input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  line-height: normal;
+}
+.ya-share2__container_size_m {
+  font-size: 13px;
+}
+.ya-share2__container_size_m .ya-share2__icon {
+  height: 24px;
+  width: 24px;
+  background-size: 24px 24px;
+}
+.ya-share2__container_size_m .ya-share2__title {
+  line-height: 24px;
+}
+.ya-share2__container_size_m .ya-share2__item {
+  margin: 5px 4px 5px 0;
+}
+.ya-share2__container_size_m .ya-share2__item:last-child {
+  margin-right: 0;
+}
+.ya-share2__container_size_m .ya-share2__counter {
+  font-size: 12px;
+  line-height: 24px;
+  padding: 0 8px;
+}
+.ya-share2__container_size_m .ya-share2__counter:before {
+  margin-left: -8px;
+}
+.ya-share2__container_size_m .ya-share2__icon_more:before {
+  font-size: 12px;
+  line-height: 24px;
+}
+.ya-share2__container_size_m .ya-share2__popup {
+  padding: 5px 10px;
+}
+.ya-share2__container_size_m .ya-share2__popup_direction_bottom {
+  top: 28px;
+}
+.ya-share2__container_size_m .ya-share2__popup_direction_top {
+  bottom: 28px;
+}
+.ya-share2__container_size_m .ya-share2__input_copy {
+  width: 140px;
+}
+.ya-share2__container_size_m .ya-share2__badge + .ya-share2__title {
+  margin-left: 10px;
+}
+.ya-share2__container_size_s {
+  font-size: 12px;
+}
+.ya-share2__container_size_s .ya-share2__icon {
+  height: 18px;
+  width: 18px;
+  background-size: 18px 18px;
+}
+.ya-share2__container_size_s .ya-share2__title {
+  line-height: 18px;
+}
+.ya-share2__container_size_s .ya-share2__item {
+  margin: 3px 4px 3px 0;
+}
+.ya-share2__container_size_s .ya-share2__item:last-child {
+  margin-right: 0;
+}
+.ya-share2__container_size_s .ya-share2__counter {
+  font-size: 10px;
+  line-height: 18px;
+  padding: 0 6px;
+}
+.ya-share2__container_size_s .ya-share2__counter:before {
+  margin-left: -6px;
+}
+.ya-share2__container_size_s .ya-share2__icon_more:before {
+  font-size: 10px;
+  line-height: 18px;
+}
+.ya-share2__container_size_s .ya-share2__popup {
+  padding: 3px 6px;
+}
+.ya-share2__container_size_s .ya-share2__popup_direction_bottom {
+  top: 21px;
+}
+.ya-share2__container_size_s .ya-share2__popup_direction_top {
+  bottom: 21px;
+}
+.ya-share2__container_size_s .ya-share2__input_copy {
+  width: 110px;
+}
+.ya-share2__container_size_s .ya-share2__badge + .ya-share2__title {
+  margin-left: 6px;
+}
+.ya-share2__list_direction_horizontal > .ya-share2__item {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.ya-share2__list_direction_horizontal > .ya-share2__item > .ya-share2__link > .ya-share2__title {
+  display: none;
+}
+.ya-share2__list_direction_vertical > .ya-share2__item {
+  display: block;
+  margin-right: 0;
+}
+.ya-share2__list_direction_vertical > .ya-share2__item > .ya-share2__link > .ya-share2__badge > .ya-share2__counter {
+  display: none;
+}
+.ya-share2__list {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.ya-share2__item {
+  font-family: Arial, sans;
+  display: inline-block;
+}
+.ya-share2__item:hover {
+  opacity: 0.9;
+}
+.ya-share2__link {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.ya-share2__badge {
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 2px;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+.ya-share2__icon {
+  display: inline-block;
+  vertical-align: top;
+}
+.ya-share2__icon:active {
+  box-shadow: inset 0 2px 0 0 rgba(0,0,0,0.1);
+}
+.ya-share2__counter {
+  display: none;
+}
+.ya-share2__counter:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  top: 2px;
+  bottom: 2px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX///+nxBvIAAAAAXRSTlMz/za5cAAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=") 0 0 repeat-y;
+}
+.ya-share2__counter_visible {
+  display: inline-block;
+}
+.ya-share2__counter_total-counter {
+  color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ya-share2__item_total-counter.ya-share2__item_total-counter {
+  display: none;
+}
+.ya-share2__item_total-counter.ya-share2__item_total-counter_visible {
+  display: inline-block;
+}
+.ya-share2__title {
+  display: inline-block;
+  color: #000;
+  vertical-align: bottom;
+}
+.ya-share2__title:hover {
+  color: #f00;
+}
+.ya-share2__item_more {
+  position: relative;
+}
+.ya-share2__item_more:hover {
+  opacity: 1;
+}
+.ya-share2__icon_more,
+.ya-share2__icon_total-counter {
+  background-color: #fff;
+  border: 1px solid #cdcdcd;
+  box-sizing: border-box;
+  position: relative;
+}
+.ya-share2__icon_more:before {
+  content: '•••';
+  color: #a0a0a0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+}
+.ya-share2__popup {
+  position: absolute;
+  display: none;
+  border: 1px solid #e6e6e6;
+  z-index: 9999;
+  background-color: #fff;
+}
+.ya-share2__popup_direction_bottom {
+  box-shadow: 0 10px 20px -5px rgba(0,0,0,0.4);
+}
+.ya-share2__popup_direction_top {
+  box-shadow: 0 0 20px -5px rgba(0,0,0,0.4);
+}
+.ya-share2__popup_list-direction_horizontal {
+  right: 0;
+}
+.ya-share2__popup_list-direction_vertical {
+  left: 0;
+}
+.ya-share2__popup_visible {
+  display: block;
+}
+.ya-share2__popup_clipboard .ya-share2__input_copy,
+.ya-share2__link_copy {
+  display: none;
+}
+.ya-share2__popup_clipboard .ya-share2__link_copy {
+  display: inline-block;
+}
+
+.ya-share2__item_service_blogger .ya-share2__badge
+{
+    background-color: #fb8f3d;
+}
+
+.ya-share2__item_service_blogger .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.896 14.833A5.167 5.167 0 0114.729 20H9.166A5.167 5.167 0 014 14.833V9.167A5.166 5.166 0 019.166 4h2.608a5.167 5.167 0 015.167 5.167l.002.011c.037.536.484.96 1.03.96l.018-.002h.872c.57 0 1.034.463 1.034 1.034l-.001 3.663zM9.038 10.176h2.926a.993.993 0 000-1.987H9.038a.994.994 0 000 1.987zm5.867 3.83H9.032a.94.94 0 000 1.879h5.873a.94.94 0 100-1.88z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_collections .ya-share2__badge
+{
+    background-color: #eb1c00;
+}
+
+.ya-share2__item_service_collections .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 18l5-2.71L17 18V6H7v12z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_delicious .ya-share2__badge
+{
+    background-color: #31a9ff;
+}
+
+.ya-share2__item_service_delicious .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 12h8v8H4zm8-8h8v8h-7.984z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_digg .ya-share2__badge
+{
+    background-color: #000;
+}
+
+.ya-share2__item_service_digg .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.555 10.814V14.1h.96s.18.005.18-.222v-3.287h-.96s-.18-.006-.18.222zm8.032 3.065v-3.287h-.96s-.18-.006-.18.222V14.1h.96s.18.006.18-.222zm-5.306 1.32c0 .227-.18.222-.18.222H4V9.497c0-.227.18-.222.18-.222h2.514V7.222c0-.227.18-.222.18-.222h1.408l-.001 8.199zm2.065 0c0 .227-.18.221-.18.221H8.761V9.496c0-.226.18-.221.18-.221h1.406v5.924zm0-7.103c0 .227-.18.222-.18.222H8.76V7.222c0-.227.18-.222.18-.222h1.408l-.001 1.096zm4.827 9.21c0 .228-.18.223-.18.223h-4.1v-1.096c0-.227.18-.222.18-.222h2.513v-.79h-2.694V9.497c0-.227.18-.222.18-.222l4.102.003v8.029zm4.826 0c0 .228-.18.223-.18.223h-4.1v-1.096c0-.227.18-.222.18-.222h2.514v-.79h-2.695V9.497c0-.227.18-.222.18-.222L20 9.279v8.028zm-1.585-3.427v-3.287h-.96s-.18-.006-.18.222V14.1h.96s.18.006.18-.222z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_evernote .ya-share2__badge
+{
+    background-color: #24d666;
+}
+
+.ya-share2__item_service_evernote .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.277 7.109h1.517c.08 0 .16-.08.16-.16V5.313c0-.28.08-.559.159-.758l.04-.12L5.2 7.348l.16-.08c.239-.12.558-.16.917-.16zm11.654-.28c-.12-.638-.479-.917-.838-1.037-.36-.12-.718-.28-1.676-.4-.759-.08-1.557-.12-2.116-.12-.16-.438-.399-.917-1.317-1.156-.638-.16-1.796-.12-2.155-.08-.559.08-.758.319-.918.479-.16.16-.28.598-.28.878v1.556c0 .48-.318.838-.877.838H6.397c-.32 0-.559.04-.758.12-.16.12-.32.28-.4.4-.2.279-.239.598-.239.957 0 0 0 .28.08.798.04.4.479 3.033.878 3.911.16.36.28.48.599.639.718.32 2.354.639 3.152.758.759.08 1.278.32 1.557-.279 0 0 .04-.16.12-.36a6.3 6.3 0 00.28-1.915c0-.04.079-.04.079 0 0 .36-.08 1.557.838 1.876.36.12 1.118.24 1.876.32.678.079 1.197.358 1.197 2.114 0 1.078-.24 1.238-1.397 1.238-.958 0-1.317.04-1.317-.759 0-.598.599-.558 1.078-.558.2 0 .04-.16.04-.52 0-.398.24-.598 0-.598-1.557-.04-2.475 0-2.475 1.956 0 1.796.679 2.115 2.914 2.115 1.756 0 2.354-.04 3.073-2.275.16-.439.479-1.796.678-4.03.16-1.478-.12-5.788-.319-6.866zm-3.033 4.75c-.2 0-.32 0-.519.04h-.08s-.04 0-.04-.04v-.04c.08-.4.28-.878.878-.878.639.04.799.599.799 1.038v.04c0 .04-.04.04-.04.04-.04 0-.04 0-.04-.04-.28-.08-.599-.12-.958-.16z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_facebook .ya-share2__badge
+{
+    background-color: #3b5998;
+}
+
+.ya-share2__item_service_facebook .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.423 20v-7.298h2.464l.369-2.845h-2.832V8.042c0-.824.23-1.385 1.417-1.385h1.515V4.111A20.255 20.255 0 0014.148 4c-2.183 0-3.678 1.326-3.678 3.76v2.097H8v2.845h2.47V20h2.953z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_linkedin .ya-share2__badge
+{
+    background-color: #0083be;
+}
+
+.ya-share2__item_service_linkedin .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.246 8.954h3.41v10.281h-3.41zm1.725-4.935c-1.167 0-1.929.769-1.929 1.776 0 .987.74 1.777 1.884 1.777h.022c1.19 0 1.93-.79 1.93-1.777-.023-1.007-.74-1.776-1.907-1.776zm10.052 4.715c-1.81 0-2.62.997-3.073 1.698V8.976H9.54c.045.965 0 10.281 0 10.281h3.41v-5.742c0-.307.022-.614.112-.834.246-.613.807-1.25 1.75-1.25 1.233 0 1.727.944 1.727 2.325v5.501h3.41v-5.896c0-3.158-1.683-4.627-3.926-4.627z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_lj .ya-share2__badge
+{
+    background-color: #0d425a;
+}
+
+.ya-share2__item_service_lj .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M17.815 13.3c.438 2.114.868 4.221 1.306 6.336.037.178-.148.385-.334.311-2.025-.741-4.006-1.49-6.01-2.24a.625.625 0 01-.318-.23l-7.39-8.903c-.067-.082-.082-.215-.06-.32.312-1.23.72-2.143 1.752-3.019C7.799 4.36 8.779 4.1 10.047 4.004c.156-.015.223.014.312.133 2.418 2.909 4.837 5.817 7.248 8.725a.888.888 0 01.208.438z' fill='%23FFF'/%3E%3Cpath d='M6.175 8.462c.69-1.795 2.3-3.004 3.835-3.301l-.185-.223a4.242 4.242 0 00-3.85 3.272l.2.252z' fill='%230D425A'/%3E%3Cpath d='M10.53 5.792c-1.744.326-3.124 1.513-3.851 3.271l.905 1.091c.787-1.78 2.3-2.997 3.836-3.302l-.89-1.06zm2.76 7.827L9.364 8.9a6.119 6.119 0 00-1.269 1.87l4.89 5.89c.289-.385.867-2.359.303-3.041zM9.647 8.633l3.947 4.748c.445.542 2.456.327 3.086-.193l-4.756-5.72c-.793.156-1.587.564-2.277 1.165zm7.308 5.045c-.609.46-1.9.735-2.931.527.074.823-.096 1.892-.616 2.745l1.885.712 1.528.564c.223-.378.542-.608.913-.764l-.35-1.692-.43-2.092z' fill='%230D425A'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_moimir .ya-share2__badge
+{
+    background-color: #168de2;
+}
+
+.ya-share2__item_service_moimir .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.889 9.667a1.333 1.333 0 100-2.667 1.333 1.333 0 000 2.667zm6.222 0a1.333 1.333 0 100-2.667 1.333 1.333 0 000 2.667zm4.77 6.108l-1.802-3.028a.879.879 0 00-1.188-.307.843.843 0 00-.313 1.166l.214.36a6.71 6.71 0 01-4.795 1.996 6.711 6.711 0 01-4.792-1.992l.217-.364a.844.844 0 00-.313-1.166.878.878 0 00-1.189.307l-1.8 3.028a.844.844 0 00.312 1.166.88.88 0 001.189-.307l.683-1.147a8.466 8.466 0 005.694 2.18 8.463 8.463 0 005.698-2.184l.685 1.151a.873.873 0 001.189.307.844.844 0 00.312-1.166z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_odnoklassniki .ya-share2__badge
+{
+    background-color: #eb722e;
+}
+
+.ya-share2__item_service_odnoklassniki .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.674 6.536a1.69 1.69 0 00-1.688 1.688c0 .93.757 1.687 1.688 1.687a1.69 1.69 0 001.688-1.687 1.69 1.69 0 00-1.688-1.688zm0 5.763a4.08 4.08 0 01-4.076-4.075 4.08 4.08 0 014.076-4.077 4.08 4.08 0 014.077 4.077 4.08 4.08 0 01-4.077 4.075zm-1.649 3.325a7.633 7.633 0 01-2.367-.98 1.194 1.194 0 011.272-2.022 5.175 5.175 0 005.489 0 1.194 1.194 0 111.272 2.022 7.647 7.647 0 01-2.367.98l2.279 2.28a1.194 1.194 0 01-1.69 1.688l-2.238-2.24-2.24 2.24a1.193 1.193 0 11-1.689-1.689l2.279-2.279' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_pinterest .ya-share2__badge
+{
+    background-color: #c20724;
+}
+
+.ya-share2__item_service_pinterest .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9.742c0 1.58.599 2.986 1.884 3.51.21.087.4.003.46-.23.043-.16.144-.568.189-.738.06-.23.037-.31-.133-.512-.37-.436-.608-1.001-.608-1.802 0-2.322 1.74-4.402 4.53-4.402 2.471 0 3.829 1.508 3.829 3.522 0 2.65-1.174 4.887-2.917 4.887-.963 0-1.683-.795-1.452-1.77.276-1.165.812-2.421.812-3.262 0-.752-.405-1.38-1.24-1.38-.985 0-1.775 1.017-1.775 2.38 0 .867.293 1.454.293 1.454L8.69 16.406c-.352 1.487-.053 3.309-.028 3.492.015.11.155.136.22.054.09-.119 1.262-1.564 1.66-3.008.113-.409.647-2.526.647-2.526.32.61 1.254 1.145 2.248 1.145 2.957 0 4.964-2.693 4.964-6.298C18.4 6.539 16.089 4 12.576 4 8.204 4 6 7.13 6 9.742z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_pocket .ya-share2__badge
+{
+    background-color: #ee4056;
+}
+
+.ya-share2__item_service_pocket .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.9 5c1.159 0 2.1.948 2.1 2.117v5.862c0 .108-.008.215-.024.32.016.156.024.314.024.473 0 3.36-3.582 6.085-8 6.085s-8-2.724-8-6.085c0-.159.008-.317.024-.473a2.148 2.148 0 01-.024-.32V7.117C4 5.948 4.94 5 6.1 5h11.8zM8.596 9.392L12 12.795l3.404-3.403a1.063 1.063 0 011.502 1.502l-4.132 4.131c-.21.21-.486.314-.76.311a1.062 1.062 0 01-.788-.31l-4.132-4.132a1.063 1.063 0 011.502-1.502z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_qzone .ya-share2__badge
+{
+    background-color: #f5b53c;
+}
+
+.ya-share2__item_service_qzone .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.367 14.463s-.105.148-.457.299l-.553.222.597 3.273c.062.282.25.983-.082 1.062-.17.04-.307-.067-.395-.121l-.769-.445-2.675-1.545c-.204-.122-.78-.546-1.093-.489-.205.038-.336.127-.483.216l-.77.445-2.39 1.386-.883.508c-.123.06-.301.058-.394-.025-.07-.063-.09-.253-.063-.388l.19-1.004.572-3.02c.047-.2.237-.975.166-1.137-.048-.107-.173-.196-.261-.267l-.61-.565-2.13-1.983c-.189-.153-.345-.345-.533-.496l-.235-.216c-.062-.078-.165-.235-.09-.369.142-.248.974-.218 1.335-.28l2.682-.31.82-.09c.146-.024.299-.004.413-.063.239-.123.51-.809.636-1.087l1.31-2.714c.151-.297.286-.603.431-.896.075-.15.133-.308.305-.356.162-.045.257.105.312.178.177.235.325.685.451.973l1.29 2.853c.104.238.363.964.54 1.074.266.166.858.108 1.227.172l2.841.292c.355.062 1.245.01 1.36.267.076.17-.072.314-.152.394l-.864.814-1.983 1.868c-.185.164-.77.637-.833.858-.04.14.02.414.088.722a95.62 95.62 0 01-1.182-.029c-.63-.007-2.616-.17-2.713-.178l-.84-.076c-.14-.023-.326.012-.4-.076v-.02c1.727-1.168 3.407-2.416 5.142-3.578l-.006-.044c-.146-.072-.359-.059-.54-.095-.385-.077-.79-.078-1.208-.147-.75-.124-1.59-.114-2.434-.114-1.172 0-2.329.03-3.35.21-.45.079-.894.095-1.309.197-.172.042-.358.03-.49.108l.007.012c.1.027.253.02.381.02l.928.019.808.025.813.032.591.032c.486.075 1.007.036 1.475.114.404.068.804.065 1.182.14.113.022.245.015.33.064v.006c-.039.094-.336.255-.432.318l-1.055.743-2.256 1.62-1.417.992c.003.048.024.035.045.061 1.15.167 2.52.258 3.77.262 1.298.005 2.465-.094 3.118-.193.561-.086 1.082-.147 1.653-.287.325-.08.521-.148.521-.148z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_reddit .ya-share2__badge
+{
+    background-color: #ff4500;
+}
+
+.ya-share2__item_service_reddit .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.542 10.63c-1.105-.636-2.494-1.033-4.025-1.118l.808-2.393 2.182.637c0 .963.78 1.742 1.743 1.742.964 0 1.758-.779 1.758-1.742C19.008 6.78 18.214 6 17.25 6c-.609 0-1.148.326-1.459.793l-2.65-.764a.482.482 0 00-.61.311l-1.063 3.172c-1.516.085-2.905.482-4.01 1.119a1.987 1.987 0 00-1.46-.623A1.995 1.995 0 004 12.004c0 .75.425 1.403 1.035 1.742-.029.17-.043.34-.043.51 0 2.62 3.146 4.744 7.015 4.744 3.855 0 7-2.124 7-4.744 0-.17-.013-.34-.042-.51A1.974 1.974 0 0020 12.004a1.995 1.995 0 00-1.998-1.996 2.01 2.01 0 00-1.46.623zM9.499 12.5a1.01 1.01 0 011.006 1.006.998.998 0 01-1.006.991.986.986 0 01-.992-.991.997.997 0 01.992-1.006zm5.002 0a.998.998 0 00-.992 1.006c0 .552.44.991.992.991a.998.998 0 001.006-.991 1.01 1.01 0 00-1.006-1.006zm-5.3 3.597a.484.484 0 01-.085-.694c.156-.226.482-.255.694-.085.567.44 1.474.68 2.197.68.709 0 1.616-.24 2.197-.68a.484.484 0 01.694.085.496.496 0 01-.085.694c-.737.58-1.885.907-2.806.907-.935 0-2.07-.326-2.806-.907zm8.05-7.59a.757.757 0 01-.752-.75c0-.426.34-.752.751-.752s.752.326.752.751c0 .41-.34.75-.752.75z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_renren .ya-share2__badge
+{
+    background-color: #1760a7;
+}
+
+.ya-share2__item_service_renren .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.019 15.562l-.001-.003-.018.002a.055.055 0 00.019.001zM7.71 12.398l.146-.68c.048-.205.03-.452.03-.692V9.812L7.88 8c-.139 0-.278.043-.393.076-.358.102-.666.201-.962.352-1.158.59-2.022 1.565-2.387 2.944-.343 1.297-.007 2.652.522 3.507.118.19.269.48.44.61.135-.02.272-.15.375-.217a6.06 6.06 0 00.622-.452l.24-.229c.63-.506 1.075-1.346 1.373-2.193zm4.276 3.164h.02a.382.382 0 00-.019-.003v.003zm-3.01-.888l-.258-.575-.088-.264h-.01l-.264.498c-.176.288-.358.574-.557.839a6.5 6.5 0 01-.85.944l-.517.422.012.024.287.14c.206.091.43.173.657.235.788.217 1.811.177 2.545-.053.178-.055.643-.194.739-.305v-.017c-.177-.092-.324-.254-.47-.381a5.573 5.573 0 01-1.225-1.507zm10.884-3.302c-.365-1.379-1.23-2.354-2.387-2.944a5.277 5.277 0 00-.962-.352c-.115-.033-.254-.077-.393-.076l-.005 1.812v1.214c0 .24-.019.487.029.692l.147.68c.297.847.741 1.687 1.372 2.193l.24.23c.196.164.402.309.622.45.103.067.24.198.375.218.171-.13.322-.42.44-.61.529-.855.865-2.21.522-3.507zm-3.66 3.8c-.2-.265-.381-.55-.557-.839l-.264-.498h-.011l-.088.264-.258.575a5.576 5.576 0 01-1.226 1.507c-.145.127-.292.29-.469.38v.018c.096.111.561.25.739.305.734.23 1.757.27 2.545.053a4.85 4.85 0 00.657-.234l.287-.141a1.31 1.31 0 00.012-.024l-.516-.422a6.5 6.5 0 01-.85-.944zm-1.653-2.727c.068-.192.097-.402.146-.61.05-.21.024-.484.024-.727V9.753l-.006-1.741c-.015-.008-.02-.01-.047-.012-.197.047-.326.05-.592.14-.357.102-.685.275-.985.44-.289.16-.53.388-.78.587-.097.077-.199.19-.308.312l.01.01a1.19 1.19 0 00-.01.012l.36.47c.232.359.445.763.581 1.213.326 1.079.182 2.411-.235 3.273a4.9 4.9 0 01-.445.75l-.258.323a.018.018 0 01-.003.007c.004.007.01.016.012.022h.008c.395-.215.686-.574 1.027-.844.189-.15.354-.35.504-.54.404-.514.755-1.046.997-1.73zm-2.55 3.085l-.259-.323a4.903 4.903 0 01-.445-.75c-.417-.862-.561-2.194-.235-3.273.136-.45.35-.854.58-1.214L12 9.501l-.01-.011.01-.01a2.791 2.791 0 00-.308-.313c-.25-.2-.491-.427-.78-.586-.3-.166-.628-.339-.985-.44-.266-.09-.395-.094-.592-.141a.083.083 0 00-.047.012l-.006 1.741v1.355c0 .243-.026.517.024.727.049.208.078.418.146.61.242.684.593 1.216.997 1.73.15.19.315.39.505.54.34.27.63.629 1.026.844h.008c.001-.006.008-.015.012-.022a.019.019 0 01-.003-.007z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_sinaWeibo .ya-share2__badge
+{
+    background-color: #c53220;
+}
+
+.ya-share2__item_service_sinaWeibo .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.266 14.696c-.103.421.55.447.64.063.037-.191-.103-.332-.282-.332-.167 0-.333.128-.358.269zm-.128.945c.102-.498-.307-.869-.793-.843-.46.038-.843.358-.92.754-.115.511.307.882.793.844.46-.026.843-.345.92-.755zm3.797-3.157c-1.586-.997-3.707-1.01-5.42-.447-.857.28-1.764.818-2.301 1.495-.627.793-.882 1.815-.23 2.8.958 1.431 3.413 2.033 5.675 1.508 1.33-.307 2.749-1.048 3.35-2.326.562-1.177-.052-2.378-1.074-3.03zm-3.17.498c.945.167 1.7.755 1.827 1.739.243 1.854-2.173 3.336-4.026 2.327a1.933 1.933 0 01-.742-2.723c.435-.767 1.266-1.266 2.148-1.355a2.75 2.75 0 01.793.012zm6.11-.37c-.268-.18-.538-.281-.856-.383-.308-.103-.359-.154-.243-.46.076-.218.14-.41.166-.666.14-1.15-.793-1.495-1.854-1.406-.498.039-.92.167-1.355.307-.281.09-.806.384-.92.205-.064-.09.013-.23.038-.32.166-.626.23-1.496-.384-1.88-.447-.28-1.227-.204-1.7-.038-2.556.87-6.455 4.552-5.663 7.479.18.664.55 1.163.908 1.521 1.061 1.061 2.71 1.65 4.231 1.866 1.112.154 2.263.14 3.375-.064 1.815-.332 3.554-1.15 4.679-2.607.754-.972.997-2.352 0-3.235a3.334 3.334 0 00-.422-.319zm1.623-3.682c.652 1.483-.064 2.148.166 2.66.192.421.767.46 1.023.14.191-.243.294-.959.307-1.278a4.193 4.193 0 00-1.125-3.12c-.984-1.073-2.276-1.444-3.694-1.303-.256.025-.46.064-.601.217-.332.358-.166.882.294.959.384.063 1.342-.23 2.416.396.498.307.971.792 1.214 1.33zm-3.45-.562c-.282.345-.078.87.408.856.294-.012.358-.05.677.051.307.103.626.448.64.857.025.268-.282.895.32 1.061a.523.523 0 00.536-.166c.115-.128.166-.371.192-.575.089-.857-.333-1.598-1.01-2.02-.384-.23-1.445-.46-1.764-.064z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_skype .ya-share2__badge
+{
+    background-color: #00aff0;
+}
+
+.ya-share2__item_service_skype .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.537 13.698c.115-.52.176-1.06.176-1.614 0-4.155-3.415-7.524-7.63-7.524-.444 0-.88.038-1.304.11A4.444 4.444 0 008.425 4C5.981 4 4 5.954 4 8.364c0 .805.222 1.56.608 2.207a7.428 7.428 0 00-.155 1.513c0 4.156 3.416 7.4 7.63 7.4.477 0 .944-.044 1.397-.126.623.33 1.335.642 2.092.642 2.444 0 4.425-1.953 4.425-4.364a4.3 4.3 0 00-.46-1.938zm-3.974 1.457c-.294.418-.725.747-1.293.984-.567.238-1.239.356-2.016.356-.933 0-1.702-.162-2.308-.486a2.986 2.986 0 01-1.047-.934c-.268-.39-.403-.768-.403-1.137 0-.213.08-.395.242-.547a.855.855 0 01.615-.229.76.76 0 01.512.178c.14.119.26.294.358.527.12.278.25.51.39.695.139.185.336.34.589.46.254.12.587.18 1 .18.566 0 1.027-.12 1.382-.364.354-.243.532-.547.532-.91a.919.919 0 00-.287-.702 1.88 1.88 0 00-.741-.412 13.21 13.21 0 00-1.216-.303c-.678-.146-1.247-.318-1.703-.513-.458-.196-.822-.463-1.09-.8-.269-.34-.403-.759-.403-1.26 0-.48.142-.904.426-1.275.283-.372.693-.658 1.23-.858.537-.2 1.17-.299 1.895-.299.58 0 1.082.066 1.505.198.423.133.774.309 1.053.528.28.22.484.45.612.691.13.24.194.477.194.705 0 .21-.08.4-.241.567a.8.8 0 01-.603.252c-.22 0-.386-.05-.5-.151-.114-.101-.237-.266-.37-.495a2.27 2.27 0 00-.618-.768c-.241-.184-.627-.276-1.16-.276-.494 0-.893.1-1.196.3-.303.199-.455.44-.455.72 0 .173.053.324.155.45.103.128.245.235.426.326.18.091.363.162.547.214.185.052.49.126.916.225a15.47 15.47 0 011.446.38c.432.138.8.307 1.103.503.302.198.54.45.709.752.17.302.255.673.255 1.111 0 .525-.148.998-.442 1.417z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_surfingbird .ya-share2__badge
+{
+    background-color: #30baff;
+}
+
+.ya-share2__item_service_surfingbird .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.315 8.49l-.214 1.987-3.436 3.382h-1.826l-.698 1.826v2.523l-2.47-.698 2.846-5.1L4 8.167l5.638.752L6.899 5l7.463 4.027 2.202-2.47h1.02L20 7.631z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_telegram .ya-share2__badge
+{
+    background-color: #64a9dc;
+}
+
+.ya-share2__item_service_telegram .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.92 6.089L4.747 11.555c-.967.388-.962.928-.176 1.168l3.534 1.104 1.353 4.146c.164.454.083.634.56.634.368 0 .53-.168.736-.368.13-.127.903-.88 1.767-1.719l3.677 2.717c.676.373 1.165.18 1.333-.628l2.414-11.374c.247-.99-.378-1.44-1.025-1.146zM8.66 13.573l7.967-5.026c.398-.242.763-.112.463.154l-6.822 6.155-.265 2.833-1.343-4.116z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_tencentWeibo .ya-share2__badge
+{
+    background-color: #53a9d7;
+}
+
+.ya-share2__item_service_tencentWeibo .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.813 6.01a4.397 4.397 0 00-4.326 6.121c.087.199.312.29.511.2a.382.382 0 00.206-.51 3.566 3.566 0 01-.286-1.668A3.616 3.616 0 018.76 6.79a3.615 3.615 0 013.366 3.84 3.615 3.615 0 01-4.65 3.218.39.39 0 00-.486.263.394.394 0 00.262.485c.315.093.647.152.977.174a4.397 4.397 0 004.677-4.087A4.398 4.398 0 008.813 6.01zm-1.348 5.658a1.67 1.67 0 10-.46-.655c-.274.27-.565.59-.854.966-1.022 1.315-2.224 3.694-2.148 7.007.006.204.157.484.355.497l.04.002c.213.015.394-.301.391-.516-.064-2.458.6-4.662 1.955-6.423.242-.316.488-.626.72-.878zm12.388 4.106c-1.307-.48-2.302-1.27-2.95-2.352a4.873 4.873 0 01-.354-.71.819.819 0 00.337-.36.829.829 0 00-.395-1.098.822.822 0 00-1.098.392.822.822 0 00.724 1.177c.091.237.218.516.39.81.483.812 1.431 1.912 3.196 2.558a.226.226 0 00.278-.113c0-.006.005-.01.007-.022a.224.224 0 00-.135-.282zm-3.767-1.676a2.04 2.04 0 01-1.707-3.042 2.039 2.039 0 012.784-.787 2.04 2.04 0 01.786 2.783 1.92 1.92 0 01-.268.378.223.223 0 00.014.314c.09.082.234.074.313-.016a2.489 2.489 0 10-4.017-2.89 2.493 2.493 0 002.08 3.708.224.224 0 00.015-.448z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_tumblr .ya-share2__badge
+{
+    background-color: #547093;
+}
+
+.ya-share2__item_service_tumblr .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.72 7.7h3.699v2.857h-3.7v4.102c0 .928-.01 1.463.087 1.726.098.262.343.534.61.69.355.213.758.32 1.214.32.81 0 1.616-.264 2.417-.79v2.522c-.683.322-1.302.55-1.857.678a7.94 7.94 0 01-1.798.195 4.905 4.905 0 01-1.724-.276 4.215 4.215 0 01-1.438-.79c-.399-.343-.673-.706-.826-1.09-.154-.386-.23-.945-.23-1.676v-5.611H7V8.29c.628-.203 1.357-.496 1.804-.877.45-.382.809-.84 1.08-1.374.272-.534.459-1.214.56-2.039h2.276v3.7z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_twitter .ya-share2__badge
+{
+    background-color: #00aced;
+}
+
+.ya-share2__item_service_twitter .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 7.539a6.56 6.56 0 01-1.885.517 3.294 3.294 0 001.443-1.816 6.575 6.575 0 01-2.085.796 3.283 3.283 0 00-5.593 2.994A9.32 9.32 0 015.114 6.6a3.28 3.28 0 001.016 4.382 3.274 3.274 0 01-1.487-.41v.041a3.285 3.285 0 002.633 3.218 3.305 3.305 0 01-1.482.056 3.286 3.286 0 003.066 2.28A6.585 6.585 0 014 17.524 9.291 9.291 0 009.032 19c6.038 0 9.34-5 9.34-9.337 0-.143-.004-.285-.01-.425A6.672 6.672 0 0020 7.538z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_viber .ya-share2__badge
+{
+    background-color: #7b519d;
+}
+
+.ya-share2__item_service_viber .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFF' fill-rule='evenodd'%3E%3Cpath d='M18.434 15.574c-.484-.391-1.002-.743-1.511-1.102-1.016-.718-1.945-.773-2.703.38-.426.648-1.021.677-1.644.392-1.718-.782-3.044-1.989-3.821-3.743-.344-.777-.34-1.473.465-2.022.425-.29.854-.634.82-1.268-.045-.828-2.043-3.593-2.832-3.885a1.429 1.429 0 00-.984 0C4.373 4.95 3.606 6.48 4.34 8.292c2.19 5.405 6.043 9.167 11.349 11.463.302.13.638.183.808.23 1.208.012 2.623-1.158 3.032-2.318.393-1.117-.438-1.56-1.096-2.093zM12.485 4.88c3.879.6 5.668 2.454 6.162 6.38.045.363-.09.909.426.919.538.01.408-.528.413-.89.045-3.699-3.163-7.127-6.888-7.253-.281.04-.863-.195-.9.438-.024.427.466.357.787.406z'/%3E%3Cpath d='M13.244 5.957c-.373-.045-.865-.222-.953.299-.09.546.458.49.811.57 2.395.538 3.23 1.414 3.624 3.802.057.349-.057.89.532.8.436-.066.278-.53.315-.802.02-2.293-1.936-4.38-4.329-4.669z'/%3E%3Cpath d='M13.464 7.832c-.249.006-.493.033-.585.3-.137.4.152.496.446.544.983.158 1.5.74 1.598 1.725.027.268.195.484.452.454.356-.043.389-.361.378-.664.017-1.106-1.227-2.385-2.289-2.359z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_vkontakte .ya-share2__badge
+{
+    background-color: #4680c2;
+}
+
+.ya-share2__item_service_vkontakte .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.623 7.66c.12-.372 0-.643-.525-.643h-1.745c-.44 0-.644.237-.763.491 0 0-.898 2.17-2.152 3.576-.406.406-.593.542-.813.542-.119 0-.271-.136-.271-.508V7.644c0-.44-.136-.644-.509-.644H10.1c-.27 0-.44.203-.44.407 0 .423.627.525.694 1.711v2.576c0 .559-.101.66-.322.66-.593 0-2.033-2.185-2.897-4.676-.17-.492-.339-.678-.78-.678H4.593C4.085 7 4 7.237 4 7.491c0 .458.593 2.762 2.762 5.813 1.44 2.084 3.49 3.202 5.338 3.202 1.118 0 1.254-.254 1.254-.678v-1.575c0-.509.101-.594.457-.594.254 0 .712.136 1.746 1.136 1.186 1.186 1.39 1.728 2.05 1.728h1.745c.509 0 .746-.254.61-.745-.152-.492-.728-1.203-1.474-2.05-.407-.475-1.017-1-1.203-1.255-.254-.339-.186-.474 0-.78-.017 0 2.118-3.015 2.338-4.032' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ya-share2__item_service_whatsapp .ya-share2__badge
+{
+    background-color: #65bc54;
+}
+
+.ya-share2__item_service_whatsapp .ya-share2__icon
+{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 11.794c0 4.304-3.517 7.794-7.855 7.794a7.87 7.87 0 01-3.796-.97L4 20l1.418-4.182a7.714 7.714 0 01-1.127-4.024C4.29 7.489 7.807 4 12.145 4S20 7.49 20 11.794zm-7.855-6.553c-3.641 0-6.603 2.94-6.603 6.553A6.48 6.48 0 006.8 15.636l-.825 2.433 2.537-.806a6.6 6.6 0 003.633 1.084c3.642 0 6.604-2.94 6.604-6.553s-2.962-6.553-6.604-6.553zm3.967 8.348c-.049-.08-.177-.128-.37-.223-.192-.095-1.139-.558-1.315-.621-.177-.064-.305-.096-.434.095a10.92 10.92 0 01-.61.749c-.112.128-.224.143-.416.048-.193-.096-.813-.297-1.549-.948a5.76 5.76 0 01-1.07-1.323c-.113-.191-.013-.295.084-.39.086-.086.192-.223.289-.334.096-.112.128-.191.192-.319s.032-.239-.016-.335c-.048-.095-.433-1.035-.594-1.418-.16-.382-.32-.318-.433-.318-.112 0-.24-.016-.369-.016a.71.71 0 00-.513.239c-.177.19-.674.653-.674 1.593s.69 1.848.786 1.976c.096.127 1.332 2.119 3.289 2.884 1.958.764 1.958.51 2.31.477.353-.031 1.14-.461 1.3-.908.16-.446.16-.829.113-.908z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+</style><script src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/cse_element__ru.js.Без названия" type="text/javascript"></script><link type="text/css" rel="stylesheet" href="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/default+ru.css"><link type="text/css" rel="stylesheet" href="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/default.css"><style type="text/css">#ya-site-form0,#ya-site-form0 .ya-site-form__form,#ya-site-form0 .ya-site-form__input,#ya-site-form0 .ya-site-form__input-text,#ya-site-form0 .ya-site-form__submit,#ya-site-form0 .ya-site-form__search-precise{font-size:12px!important;color:#000!important}#ya-site-form0 .ya-site-form__form-form{display:block}#ya-site-form0 .ya-site-form__form-form,#ya-site-form0 .ya-site-form__input,#ya-site-form0 .ya-site-form__search-precise,#ya-site-form0 .ya-site-form__search-precise__radio,#ya-site-form0 .ya-site-form__gap,#ya-site-form0 .ya-site-form__gap-i,#ya-site-form0 .ya-site-form__logo-img{margin:0;padding:0}#ya-site-form0{margin:0!important;padding:0!important}#ya-site-form0 .ya-site-form__logo-wrap{width:65px;vertical-align:top;border-collapse:collapse}#ya-site-form0 .ya-site-form__logo{display:block;width:52px;margin:0;padding:0 6px 0 0;text-decoration:none}#ya-site-form0 .ya-site-form__logo-img{width:52px;height:21px;border:0!important}#ya-site-form0 .ya-site-form__search-wrap{border-collapse:collapse}#ya-site-form0 .ya-site-form__search{font-size:12px!important;width:100%}#ya-site-form0 .ya-site-form__search-input,#ya-site-form0 .ya-site-form__search-precise,{border:0}#ya-site-form0 .ya-site-form__search-input{padding:6px}#ya-site-form0 .ya-site-form__search-input-layout,#ya-site-form0 .ya-site-form__search-input-layout-l,#ya-site-form0 .ya-site-form__search-input-layout-r{font-size:12px!important;padding:0;vertical-align:middle;border:0;border-collapse:collapse}#ya-site-form0 .ya-site-form__search-input-layout,#ya-site-form0 .ya-site-form__search-input-layout-l{width:100%}#ya-site-form0 .ya-site-form__search-precise{padding:0 18px 5px 6px;text-align:left;vertical-align:top}#ya-site-form0 .ya-site-form__search-precise-i{white-space:nowrap}#ya-site-form0 .ya-site-form__search-precise__radio{width:auto;margin:0 .3em 0 0;vertical-align:middle;background:none}#ya-site-form0 .ya-site-form__search-precise__label{margin:0 .4em 0 0;padding:0;vertical-align:middle}#ya-site-form0 .ya-site-form__input-text{width:100%;margin:0!important;cursor:text;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;background-color:#fff;border:1px solid #7f9db9;outline-style:none;-webkit-appearance:textfield}#ya-site-form0 .ya-site-form__input-text_type_hint{background-repeat:no-repeat;background-position:.2em 50%}#ya-site-form0 .ya-site-form__submit{display:block;width:auto;margin:0 0 0 5px}#ya-site-form0 .ya-site-form__arrow-wrap{overflow:hidden;width:30px;padding:0;vertical-align:middle}#ya-site-form0 .ya-site-form__arrow{position:relative}#ya-site-form0 .ya-site-form__arrow-a{position:absolute;top:50%;right:0;width:0;height:0;margin-top:-59px;border:solid transparent;border-width:59px 0 59px 30px;-moz-border-end-style:dotted}#ya-site-form0 .ya-site-form__wrap{width:100%;table-layout:fixed;border-collapse:collapse}#ya-site-form0 .ya-site-form__gap{border:0}#ya-site-form0 .ya-site-form__gap-i{width:9em}#ya-site-form0.ya-site-form_arrow_yes .ya-site-form__search-input{padding-right:0}#ya-site-form0.ya-site-form_logo_left .ya-site-form__logo{margin-top:4px;margin-left:5px}#ya-site-form0.ya-site-form_logo_top .ya-site-form__logo{display:block;margin:6px 0 0 6px}#ya-site-form0 .ya-site-form__submit_type_image{width:19px;height:15px;outline:none;cursor:pointer;border:0}#ya-site-form0 .ya-site-form__submit_type_image { background: url(https://site.yandex.net/v2.0/i/search.png) no-repeat }#ya-site-form0 .ya-site-form__input-text_type_hint { background-image:url(https://site.yandex.net/v2.0/i/yandex-hint-rb.png) }#ya-site-form0 .ya-site-form__form * { font-size: 13px !important }#ya-site-form0 .ya-site-form__form .ya-site-form__input-text { font-style: normal!important }#ya-site-form0 .ya-site-form__form .ya-site-form__input-text { font-weight: normal!important }#ya-site-form0 .ya-site-form__form .ya-site-form__input-text { color: #000000!important }#ya-site-form0 .ya-site-form__form .ya-site-form__input-text { border-color: #7f9db9!important }#ya-site-form0 .ya-site-form__form .ya-site-form__input-text:focus { border-color: #7f9db9!important }#ya-site-form0 .ya-site-form__form .ya-site-form__input-text { background-color: #ffffff!important }#ya-site-form0 .ya-site-form__search, #ya-site-form0 .ya-site-form__search td, #ya-site-form0 .yaform__precise-i { background-color: transparent !important }#ya-site-form0 .ya-site-form__search-precise__label { color:#000000 !important }#ya-site-form0 .ya-site-form__arrow-a { border-left-color: transparent }</style><style type="text/css">#ya-site-form1,#ya-site-form1 .ya-site-form__form,#ya-site-form1 .ya-site-form__input,#ya-site-form1 .ya-site-form__input-text,#ya-site-form1 .ya-site-form__submit,#ya-site-form1 .ya-site-form__search-precise{font-size:12px!important;color:#000!important}#ya-site-form1 .ya-site-form__form-form{display:block}#ya-site-form1 .ya-site-form__form-form,#ya-site-form1 .ya-site-form__input,#ya-site-form1 .ya-site-form__search-precise,#ya-site-form1 .ya-site-form__search-precise__radio,#ya-site-form1 .ya-site-form__gap,#ya-site-form1 .ya-site-form__gap-i,#ya-site-form1 .ya-site-form__logo-img{margin:0;padding:0}#ya-site-form1{margin:0!important;padding:0!important}#ya-site-form1 .ya-site-form__logo-wrap{width:65px;vertical-align:top;border-collapse:collapse}#ya-site-form1 .ya-site-form__logo{display:block;width:52px;margin:0;padding:0 6px 0 0;text-decoration:none}#ya-site-form1 .ya-site-form__logo-img{width:52px;height:21px;border:0!important}#ya-site-form1 .ya-site-form__search-wrap{border-collapse:collapse}#ya-site-form1 .ya-site-form__search{font-size:12px!important;width:100%}#ya-site-form1 .ya-site-form__search-input,#ya-site-form1 .ya-site-form__search-precise,{border:0}#ya-site-form1 .ya-site-form__search-input{padding:6px}#ya-site-form1 .ya-site-form__search-input-layout,#ya-site-form1 .ya-site-form__search-input-layout-l,#ya-site-form1 .ya-site-form__search-input-layout-r{font-size:12px!important;padding:0;vertical-align:middle;border:0;border-collapse:collapse}#ya-site-form1 .ya-site-form__search-input-layout,#ya-site-form1 .ya-site-form__search-input-layout-l{width:100%}#ya-site-form1 .ya-site-form__search-precise{padding:0 18px 5px 6px;text-align:left;vertical-align:top}#ya-site-form1 .ya-site-form__search-precise-i{white-space:nowrap}#ya-site-form1 .ya-site-form__search-precise__radio{width:auto;margin:0 .3em 0 0;vertical-align:middle;background:none}#ya-site-form1 .ya-site-form__search-precise__label{margin:0 .4em 0 0;padding:0;vertical-align:middle}#ya-site-form1 .ya-site-form__input-text{width:100%;margin:0!important;cursor:text;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;background-color:#fff;border:1px solid #7f9db9;outline-style:none;-webkit-appearance:textfield}#ya-site-form1 .ya-site-form__input-text_type_hint{background-repeat:no-repeat;background-position:.2em 50%}#ya-site-form1 .ya-site-form__submit{display:block;width:auto;margin:0 0 0 5px}#ya-site-form1 .ya-site-form__arrow-wrap{overflow:hidden;width:30px;padding:0;vertical-align:middle}#ya-site-form1 .ya-site-form__arrow{position:relative}#ya-site-form1 .ya-site-form__arrow-a{position:absolute;top:50%;right:0;width:0;height:0;margin-top:-59px;border:solid transparent;border-width:59px 0 59px 30px;-moz-border-end-style:dotted}#ya-site-form1 .ya-site-form__wrap{width:100%;table-layout:fixed;border-collapse:collapse}#ya-site-form1 .ya-site-form__gap{border:0}#ya-site-form1 .ya-site-form__gap-i{width:9em}#ya-site-form1.ya-site-form_arrow_yes .ya-site-form__search-input{padding-right:0}#ya-site-form1.ya-site-form_logo_left .ya-site-form__logo{margin-top:4px;margin-left:5px}#ya-site-form1.ya-site-form_logo_top .ya-site-form__logo{display:block;margin:6px 0 0 6px}#ya-site-form1 .ya-site-form__submit_type_image{width:19px;height:15px;outline:none;cursor:pointer;border:0}#ya-site-form1 .ya-site-form__submit_type_image { background: url(https://site.yandex.net/v2.0/i/search.png) no-repeat }#ya-site-form1 .ya-site-form__input-text_type_hint { background-image:url(https://site.yandex.net/v2.0/i/yandex-hint-rb.png) }#ya-site-form1 .ya-site-form__form * { font-size: 13px !important }#ya-site-form1 .ya-site-form__form .ya-site-form__input-text { font-style: normal!important }#ya-site-form1 .ya-site-form__form .ya-site-form__input-text { font-weight: normal!important }#ya-site-form1 .ya-site-form__form .ya-site-form__input-text { color: #000000!important }#ya-site-form1 .ya-site-form__form .ya-site-form__input-text { border-color: #7f9db9!important }#ya-site-form1 .ya-site-form__form .ya-site-form__input-text:focus { border-color: #7f9db9!important }#ya-site-form1 .ya-site-form__form .ya-site-form__input-text { background-color: #ffffff!important }#ya-site-form1 .ya-site-form__search, #ya-site-form1 .ya-site-form__search td, #ya-site-form1 .yaform__precise-i { background-color: transparent !important }#ya-site-form1 .ya-site-form__search-precise__label { color:#000000 !important }#ya-site-form1 .ya-site-form__arrow-a { border-left-color: transparent }</style><style type="text/css">.gsc-control-cse{font-family:arial, sans-serif}.gsc-control-cse .gsc-table-result{font-family:arial, sans-serif}.gsc-refinementsGradient{background:linear-gradient(to left,rgba(255,255,255,1),rgba(255,255,255,0))}.gsc-control-cse{border-color:#FFFFFF;background-color:#FFFFFF}input.gsc-input,.gsc-input-box,.gsc-input-box-hover,.gsc-input-box-focus{border-color:#D9D9D9}.gsc-search-button-v2,.gsc-search-button-v2:hover,.gsc-search-button-v2:focus{border-color:#666666;background-color:#CECECE;background-image:none;filter:none}.gsc-search-button-v2 svg{fill:#FFFFFF}.gsc-tabHeader.gsc-tabhActive,.gsc-refinementHeader.gsc-refinementhActive{color:#CCCCCC;border-color:#CCCCCC;background-color:#FFFFFF}.gsc-tabHeader.gsc-tabhInactive,.gsc-refinementHeader.gsc-refinementhInactive{color:#CCCCCC;border-color:#CCCCCC;background-color:#FFFFFF}.gsc-webResult.gsc-result,.gsc-results .gsc-imageResult{border-color:#FFFFFF;background-color:#FFFFFF}.gsc-webResult.gsc-result:hover,.gsc-imageResult:hover{border-color:#FFFFFF;background-color:#FFFFFF}.gs-webResult.gs-result a.gs-title:link,.gs-webResult.gs-result a.gs-title:link b,.gs-imageResult a.gs-title:link,.gs-imageResult a.gs-title:link b{color:#000080}.gs-webResult.gs-result a.gs-title:visited,.gs-webResult.gs-result a.gs-title:visited b,.gs-imageResult a.gs-title:visited,.gs-imageResult a.gs-title:visited b{color:#0066FF}.gs-webResult.gs-result a.gs-title:hover,.gs-webResult.gs-result a.gs-title:hover b,.gs-imageResult a.gs-title:hover,.gs-imageResult a.gs-title:hover b{color:#0066FF}.gs-webResult.gs-result a.gs-title:active,.gs-webResult.gs-result a.gs-title:active b,.gs-imageResult a.gs-title:active,.gs-imageResult a.gs-title:active b{color:#0000CC}.gsc-cursor-page{color:#000080}a.gsc-trailing-more-results:link{color:#000080}.gs-webResult .gs-snippet,.gs-imageResult .gs-snippet,.gs-fileFormatType{color:#000000}.gs-webResult div.gs-visibleUrl,.gs-imageResult div.gs-visibleUrl{color:#008000}.gs-webResult div.gs-visibleUrl-short{color:#008000}.gs-webResult div.gs-visibleUrl-short{display:none}.gs-webResult div.gs-visibleUrl-long{display:block}.gs-promotion div.gs-visibleUrl-short{display:none}.gs-promotion div.gs-visibleUrl-long{display:block}.gsc-cursor-box{border-color:#FFFFFF}.gsc-results .gsc-cursor-box .gsc-cursor-page{border-color:#CCCCCC;background-color:#FFFFFF;color:#CCCCCC}.gsc-results .gsc-cursor-box .gsc-cursor-current-page{border-color:#CCCCCC;background-color:#FFFFFF;color:#CCCCCC}.gsc-webResult.gsc-result.gsc-promotion{border-color:#336699;background-color:#FFFFFF}.gsc-completion-title{color:#000080}.gsc-completion-snippet{color:#000000}.gs-promotion a.gs-title:link,.gs-promotion a.gs-title:link *,.gs-promotion .gs-snippet a:link{color:#0000CC}.gs-promotion a.gs-title:visited,.gs-promotion a.gs-title:visited *,.gs-promotion .gs-snippet a:visited{color:#0000CC}.gs-promotion a.gs-title:hover,.gs-promotion a.gs-title:hover *,.gs-promotion .gs-snippet a:hover{color:#0000CC}.gs-promotion a.gs-title:active,.gs-promotion a.gs-title:active *,.gs-promotion .gs-snippet a:active{color:#0000CC}.gs-promotion .gs-snippet,.gs-promotion .gs-title .gs-promotion-title-right,.gs-promotion .gs-title .gs-promotion-title-right *{color:#000000}.gs-promotion .gs-visibleUrl,.gs-promotion .gs-visibleUrl-short{color:#008000}.gcsc-find-more-on-google{color:#000080}.gcsc-find-more-on-google-magnifier{fill:#000080}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{vertical-align:middle;opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gssb_a{padding:0 9px}.gsib_a{padding:5px 9px 4px 9px}.gscb_a{line-height:27px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style><link title="www.cyberforum.ru" rel="search" type="application/opensearchdescription+xml" href="https://yandex.ru/search/site/opensearch.xml?ShortName=www.cyberforum.ru&amp;InputEncoding=utf-8&amp;Image=&amp;Url-results=http%3A%2F%2Fwww.cyberforum.ru%2Fyandex.php%3Fsearchid%3D364949%26web%3D0%26text%3D%7BsearchTerms%7D&amp;Url-suggest=https%3A%2F%2Fsitesearch-suggest.yandex.ru%2Fv1%2Fsuggest%3F%26site%3D364949%26lang%3Dru%26part%3D%7BsearchTerms%7D&amp;Url-opensearchdescr=https%3A%2F%2Fyandex.ru%2Fsearch%2Fsite%2Fopensearch.xml%3FShortName%3Dwww.cyberforum.ru%26InputEncoding%3Dutf-8%26Image%3D%26Url-results%3Dhttp%253A%252F%252Fwww.cyberforum.ru%252Fyandex.php%253Fsearchid%253D364949%2526web%253D0%2526text%253D%257BsearchTerms%257D%26Url-suggest%3Dhttps%253A%252F%252Fsitesearch-suggest.yandex.ru%252Fv1%252Fsuggest%253F%2526site%253D364949%2526lang%253Dru%2526part%253D%257BsearchTerms%257D"><style type="text/css">#ya-site-form0 .ya-site-suggest{position:relative;margin:0}#ya-site-form0 .ya-site-suggest-popup{position:absolute;width:100%}#ya-site-form0 .ya-site-suggest__opera-gap{position:absolute;height:25em;border:1px solid transparent}#ya-site-form0 .ya-site-suggest-list{position:absolute;z-index:9999;overflow:hidden;min-width:25em;width:100%;margin-top:-1px;border-collapse:separate;-webkit-box-shadow:0 1px 7px #9a9a9a;-moz-box-shadow:0 1px 7px #9a9a9a;box-shadow:0 1px 7px #9a9a9a;border:1px solid #dedede;border-color:rgba(154,154,154,0.5);border-top-color:rgba(154,154,154,0.4);border-bottom-color:rgba(154,154,154,0.6)}#ya-site-form0 .ya-site-suggest-list{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}#ya-site-form0 .ya-site-suggest__iframe{position:absolute;z-index:-1;min-width:25em;width:100%;height:100%;background:#fff}#ya-site-form0 .ya-site-suggest-items{font-size:16px;min-width:25em;width:100%;margin:0;padding:0 1px 0 0;list-style:none}#ya-site-form0 .ya-site-suggest-items li{margin:0;padding:0;line-height:normal}#ya-site-form0 .ya-site-suggest-elem{display:block;padding:.25em .3em;cursor:pointer;background:url()}#ya-site-form0 a.ya-site-suggest-elem:link,#ya-site-form0 a.ya-site-suggest-elem:visited{text-decoration:none}html body #ya-site-form0 .ya-site-suggest-elem:link,html body #ya-site-form0 .ya-site-suggest-elem-link{color:#000!important}#ya-site-form0 .ya-site-suggest-elem:hover,html body #ya-site-form0 .ya-site-suggest-elem_state_hover{background:#fef6d7}#ya-site-form0 .ya-site-suggest-elem_nav:hover,#ya-site-form0 .ya-site-suggest-elem_translate:hover{text-decoration:none;color:#000!important}#ya-site-form0 .ya-site-suggest-elem_nav .ya-site-suggest__link{text-decoration:underline;color:#1a3dc1}#ya-site-form0 .ya-site-suggest-elem_translate .ya-site-suggest__link{text-decoration:underline;color:#000}#ya-site-form0 .ya-site-suggest-elem .ya-site-suggest__info{white-space:nowrap;color:#666}#ya-site-form0 .ya-site-suggest-elem_selected{background:#fdedaf}#ya-site-form0 .ya-site-suggest__fact{color:#555}#ya-site-form0 .ya-site-suggest__highlight{font-weight:bold}</style><style type="text/css">#ya-site-form1 .ya-site-suggest{position:relative;margin:0}#ya-site-form1 .ya-site-suggest-popup{position:absolute;width:100%}#ya-site-form1 .ya-site-suggest__opera-gap{position:absolute;height:25em;border:1px solid transparent}#ya-site-form1 .ya-site-suggest-list{position:absolute;z-index:9999;overflow:hidden;min-width:25em;width:100%;margin-top:-1px;border-collapse:separate;-webkit-box-shadow:0 1px 7px #9a9a9a;-moz-box-shadow:0 1px 7px #9a9a9a;box-shadow:0 1px 7px #9a9a9a;border:1px solid #dedede;border-color:rgba(154,154,154,0.5);border-top-color:rgba(154,154,154,0.4);border-bottom-color:rgba(154,154,154,0.6)}#ya-site-form1 .ya-site-suggest-list{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}#ya-site-form1 .ya-site-suggest__iframe{position:absolute;z-index:-1;min-width:25em;width:100%;height:100%;background:#fff}#ya-site-form1 .ya-site-suggest-items{font-size:16px;min-width:25em;width:100%;margin:0;padding:0 1px 0 0;list-style:none}#ya-site-form1 .ya-site-suggest-items li{margin:0;padding:0;line-height:normal}#ya-site-form1 .ya-site-suggest-elem{display:block;padding:.25em .3em;cursor:pointer;background:url()}#ya-site-form1 a.ya-site-suggest-elem:link,#ya-site-form1 a.ya-site-suggest-elem:visited{text-decoration:none}html body #ya-site-form1 .ya-site-suggest-elem:link,html body #ya-site-form1 .ya-site-suggest-elem-link{color:#000!important}#ya-site-form1 .ya-site-suggest-elem:hover,html body #ya-site-form1 .ya-site-suggest-elem_state_hover{background:#fef6d7}#ya-site-form1 .ya-site-suggest-elem_nav:hover,#ya-site-form1 .ya-site-suggest-elem_translate:hover{text-decoration:none;color:#000!important}#ya-site-form1 .ya-site-suggest-elem_nav .ya-site-suggest__link{text-decoration:underline;color:#1a3dc1}#ya-site-form1 .ya-site-suggest-elem_translate .ya-site-suggest__link{text-decoration:underline;color:#000}#ya-site-form1 .ya-site-suggest-elem .ya-site-suggest__info{white-space:nowrap;color:#666}#ya-site-form1 .ya-site-suggest-elem_selected{background:#fdedaf}#ya-site-form1 .ya-site-suggest__fact{color:#555}#ya-site-form1 .ya-site-suggest__highlight{font-weight:bold}</style></head>
+<body onload="" itemscope="" itemtype="https://schema.org/QAPage">
+
+
+<div style="min-width: 1000px;  margin: 7px 20px 7px 20px;">
+
+
+<div>
+	<div class="page" style="text-align: left;">
+		<div style="margin: 0px 3px 0px 3px" align="left">
+
+<div class="vbmenu_popup" id="vbbloglinks_menu" style="display: none; margin-top: 3px; position: absolute; z-index: 50;" align="left">
+	<table cellpadding="4" cellspacing="1" border="0">
+
+	<tbody><tr>
+		<td class="vbmenu_option vbmenu_option_alink"><a href="http://www.cyberforum.ru/blogs/recent-entries/">Блоги программистов и сисадминов</a></td>
+	</tr>
+
+	</tbody></table>
+</div>
+<table class="tborder" cellpadding="5" cellspacing="1" border="0" width="100%" align="center">
+<tbody><tr>
+
+	<td class="alt1" width="100%" style="padding-left: 10px">
+		<a href="http://www.cyberforum.ru/" style="display: block; float: left; margin: 5px 25px 10px 0px"><img border="0" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/cyberforum_logo.png" height="50px" alt="Форум программистов, компьютерный форум, киберфорум" title="Форум программистов, компьютерный форум, киберфорум"></a>
+		<div class="smallfont" style="float: right; margin: 0px 0px 0px 20px;">
+			<div class="ya-share2 ya-share2_inited" data-services="vkontakte,facebook,odnoklassniki,gplus,twitter" data-image="http://cyberstatic.net/images/cyberforum_logo.png"><div class="ya-share2__container ya-share2__container_size_m"><ul class="ya-share2__list ya-share2__list_direction_horizontal"><li class="ya-share2__item ya-share2__item_service_vkontakte"><a class="ya-share2__link" href="https://vk.com/share.php?url=http%3A%2F%2Fwww.cyberforum.ru%2Fpython-science%2Fthread1132503.html&amp;title=%D0%9E%D0%BF%D1%82%D0%B8%D0%BC%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8%20%D1%87%D0%B5%D1%80%D0%B5%D0%B7%20scipy.optimize.minimize%20-%20Python%20-%20%D0%9A%D0%B8%D0%B1%D0%B5%D1%80%D1%84%D0%BE%D1%80%D1%83%D0%BC&amp;image=http%3A%2F%2Fcyberstatic.net%2Fimages%2Fcyberforum_logo.png&amp;utm_source=share2" rel="nofollow noopener" target="_blank" title="ВКонтакте"><span class="ya-share2__badge"><span class="ya-share2__icon"></span><span class="ya-share2__counter"></span></span><span class="ya-share2__title">ВКонтакте</span></a></li><li class="ya-share2__item ya-share2__item_service_facebook"><a class="ya-share2__link" href="https://www.facebook.com/sharer.php?src=sp&amp;u=http%3A%2F%2Fwww.cyberforum.ru%2Fpython-science%2Fthread1132503.html&amp;title=%D0%9E%D0%BF%D1%82%D0%B8%D0%BC%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8%20%D1%87%D0%B5%D1%80%D0%B5%D0%B7%20scipy.optimize.minimize%20-%20Python%20-%20%D0%9A%D0%B8%D0%B1%D0%B5%D1%80%D1%84%D0%BE%D1%80%D1%83%D0%BC&amp;picture=http%3A%2F%2Fcyberstatic.net%2Fimages%2Fcyberforum_logo.png&amp;utm_source=share2" rel="nofollow noopener" target="_blank" title="Facebook"><span class="ya-share2__badge"><span class="ya-share2__icon"></span><span class="ya-share2__counter"></span></span><span class="ya-share2__title">Facebook</span></a></li><li class="ya-share2__item ya-share2__item_service_odnoklassniki"><a class="ya-share2__link" href="https://connect.ok.ru/offer?url=http%3A%2F%2Fwww.cyberforum.ru%2Fpython-science%2Fthread1132503.html&amp;title=%D0%9E%D0%BF%D1%82%D0%B8%D0%BC%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8%20%D1%87%D0%B5%D1%80%D0%B5%D0%B7%20scipy.optimize.minimize%20-%20Python%20-%20%D0%9A%D0%B8%D0%B1%D0%B5%D1%80%D1%84%D0%BE%D1%80%D1%83%D0%BC&amp;imageUrl=http%3A%2F%2Fcyberstatic.net%2Fimages%2Fcyberforum_logo.png&amp;utm_source=share2" rel="nofollow noopener" target="_blank" title="Одноклассники"><span class="ya-share2__badge"><span class="ya-share2__icon"></span><span class="ya-share2__counter"></span></span><span class="ya-share2__title">Одноклассники</span></a></li><li class="ya-share2__item ya-share2__item_service_twitter"><a class="ya-share2__link" href="https://twitter.com/intent/tweet?text=%D0%9E%D0%BF%D1%82%D0%B8%D0%BC%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8%20%D1%87%D0%B5%D1%80%D0%B5%D0%B7%20scipy.optimize.minimize%20-%20Python%20-%20%D0%9A%D0%B8%D0%B1%D0%B5%D1%80%D1%84%D0%BE%D1%80%D1%83%D0%BC&amp;url=http%3A%2F%2Fwww.cyberforum.ru%2Fpython-science%2Fthread1132503.html&amp;utm_source=share2" rel="nofollow noopener" target="_blank" title="Twitter"><span class="ya-share2__badge"><span class="ya-share2__icon"></span></span><span class="ya-share2__title">Twitter</span></a></li></ul></div></div>
+			<div style="margin: 5px 0px 0px 0px">Наши страницы</div>
+			<div><b><a href="http://www.cyberforum.ru/go.php?url=1" target="_blank" rel="nofollow noopener noreferrer">Vkontakte</a>, </b></div>
+			<div><b><a href="http://www.cyberforum.ru/go.php?url=2" target="_blank" rel="nofollow noopener noreferrer">Facebook</a>, <a href="http://www.cyberforum.ru/go.php?url=3" target="_blank" rel="nofollow noopener noreferrer">Twitter</a></b></div>
+		</div>
+		
+			
+				<span class="forumtitle">Python: Научные вычисления</span>
+			
+			<div class="smallfont"><a href="http://www.cyberforum.ru/" accesskey="1">Форум программистов и сисадминов Киберфорум</a>
+	<span class="navbar"> &gt; <a href="http://www.cyberforum.ru/programming/">Форум программистов</a></span>
+
+	<span class="navbar"> &gt; <a href="http://www.cyberforum.ru/python/">Python</a></span>
+
+	<span class="navbar"> &gt; <a href="http://www.cyberforum.ru/python-science/">Python: Научные вычисления</a></span>
+</div>
+		
+	</td>
+
+	<td class="alt2" style="padding: 0px">
+		<table cellpadding="5" cellspacing="3" border="0" width="230px">
+		<tbody><tr>
+			<td class="smallfont" style="white-space: nowrap"><b><a href="http://www.cyberforum.ru/log-in.php" style="font-size: 19px;">Войти</a></b></td>
+		</tr>
+		<tr>
+			<td>
+				<b><a href="http://www.cyberforum.ru/register.php">Регистрация</a></b><br>
+				<a href="http://www.cyberforum.ru/login.php?do=lostpw">Восстановить пароль</a>
+			</td>
+		</tr>
+		</tbody></table>
+
+	</td>
+
+</tr>
+</tbody></table>
+<div class="tborder" style="padding:1px; border-top-width:0px; margin-bottom: 3px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+	<tbody><tr align="center">
+		
+		 
+    <td id="krtests" class="vbmenu_control"><a href="http://www.cyberforum.ru/krtests.php?do=testslist">Тесты</a></td>
+<td class="vbmenu_control"><a id="vbbloglinks" href="http://www.cyberforum.ru/blogs/" style="cursor: pointer;">Блоги <img src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/menu_open.gif" border="0" title="" alt=""></a><script type="text/javascript">vbmenu_register("vbbloglinks");</script></td>
+
+		
+			<td class="vbmenu_control"><a id="community" href="http://www.cyberforum.ru/python-science/thread1132503.html?nojs=1#community" accesskey="6" style="cursor: pointer;">Сообщество <img src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/menu_open.gif" border="0" title="" alt=""></a> <script type="text/javascript"> vbmenu_register("community"); </script></td>
+		
+		
+			
+				
+				<td class="vbmenu_control"><a id="navbar_search" href="http://www.cyberforum.ru/search.php" accesskey="4" style="cursor: pointer;">Поиск <img src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/menu_open.gif" border="0" title="" alt=""></a> <script type="text/javascript"> vbmenu_register("navbar_search"); </script></td>
+			
+			
+		
+		
+		<td class="vbmenu_control" width="100%">&nbsp;</td>
+		</tr>
+	</tbody></table>
+</div>
+
+
+<table id="yatopbanner" cellspacing="0" cellpadding="2" border="0" align="center" width="100%" class="tborder" style="margin: 0px 0px 3px 0px;"><tbody><tr>
+<td width="100%" class="alt1" align="center" valign="middle">
+
+
+<div id="yandex_ad_R-29317-1" style="display: table; margin: auto"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-29317-1",
+                renderTo: "yandex_ad_R-29317-1",
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+
+
+
+
+</td>
+</tr></tbody></table>
+
+
+
+
+
+	
+	<div class="vbmenu_popup" id="community_menu" style="display:none;margin-top:3px" align="left">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tbody><tr><td class="thead">Ссылки сообщества</td></tr>
+		
+	
+		
+			<tr><td class="vbmenu_option"><a href="http://www.cyberforum.ru/groups/">Социальные группы</a></td></tr>
+		
+		
+		
+		
+		
+		
+
+
+		</tbody></table>
+	</div>
+	
+	
+	
+	<div class="vbmenu_popup" id="navbar_search_menu" style="display:none;margin-top:3px" align="left">
+		<table cellpadding="4" cellspacing="1" border="0" width="320px">
+
+    <tbody><tr>
+            <td class="thead">Самые популярные темы</td>
+    </tr>
+    <tr><td style="background: #BBC7CE; padding: 0px">
+        <table cellpadding="4" cellspacing="1" border="0"><tbody><tr>
+            <td class="vbmenu_option" style="padding: 4px 27px; border-right: 1px solid #FFFFFF"><a href="http://www.cyberforum.ru/search.php?do=getpopular1">За сутки</a></td>
+            <td class="vbmenu_option" style="padding: 4px 27px; border-right: 1px solid #FFFFFF" "=""><a href="http://www.cyberforum.ru/search.php?do=getpopular3">За 3 дня</a></td>
+            <td class="vbmenu_option" style="padding: 4px 20px"><a href="http://www.cyberforum.ru/search.php?do=getpopular7">За неделю</a></td>
+        </tr></tbody></table>
+    </td></tr>
+    <tr>
+            <td class="thead">Поиск Google по форуму</td>
+    </tr>
+<tr>
+<td class="vbmenu_option" title="nohilite" width="300px">
+
+<script>
+  (function() {
+    var cx = 'partner-pub-6796001588681838:1260530199';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<div id="___gcse_0"><div class="gsc-control-searchbox-only gsc-control-searchbox-only-ru" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id1"><table cellspacing="0" cellpadding="0" id="gs_id50" class="gstl_50 gsc-input" style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti50" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="поиск" id="gsc-i-id1" placeholder="Система пользовательского поиска" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; background: url(&quot;http://www.google.com/cse/static/images/1x/googlelogo_lightgrey_46x16dp.png&quot;) left center no-repeat rgb(255, 255, 255); text-indent: 48px; outline: none;" dir="ltr" spellcheck="false"></td><td class="gsib_b"><div class="gsst_b" id="gs_st50" dir="ltr"><a class="gsst_a" href="javascript:void(0)" style="display: none;" title="Очистить окно поиска" role="button"><span class="gscb_a" id="gs_cb50" aria-hidden="true">×</span></a></div></td></tr></tbody></table></div></td><td class="gsc-search-button"><button class="gsc-search-button gsc-search-button-v2"><svg width="13" height="13" viewBox="0 0 13 13"><title>поиск</title><path d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"></path></svg></button></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="удалить результаты">&nbsp;</div></td></tr></tbody></table></form></div></div>
+
+</td>
+</tr>
+
+    <tr>
+            <td class="thead">Поиск Yandex по форуму</td>
+    </tr>
+<tr>
+<td class="vbmenu_option" title="nohilite">
+
+<div class="ya-site-form ya-site-form_bg_transparent ya-site-form_logo_hint ya-site-form_inited_yes" id="ya-site-form0"><div class="ya-site-form__form"><table class="ya-site-form__wrap" cellpadding="0" cellspacing="0"><tbody><tr><td class="ya-site-form__search-wrap"><table class="ya-site-form__search" cellpadding="0" cellspacing="0"><tbody><tr><td class="ya-site-form__search-input"><table class="ya-site-form__search-input-layout"><tbody><tr><td class="ya-site-form__search-input-layout-l"><div class="ya-site-form__input"><input name="text" type="search" value="" class="ya-site-form__input-text ya-site-form__input-text_type_hint" autocomplete="off"><div class="ya-site-suggest"><div class="ya-site-suggest-popup" style="display: none;"><i class="ya-site-suggest__opera-gap"></i><div class="ya-site-suggest-list"><div class="ya-site-suggest__iframe"></div><ul class="ya-site-suggest-items"></ul></div></div></div></div></td><td class="ya-site-form__search-input-layout-r"><input class="ya-site-form__submit" type="button" value="Найти"></td></tr></tbody></table></td></tr><tr><td class="ya-site-form__gap"><div class="ya-site-form__gap-i"></div></td></tr></tbody></table></td></tr></tbody></table></div></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+
+</td>
+</tr>
+		<tr>
+			<td class="thead">Поиск по форуму</td>
+		</tr>
+
+		<tr>
+			<td class="vbmenu_option"><a href="http://www.cyberforum.ru/search.php" accesskey="4">Расширенный поиск</a></td>
+		</tr>
+
+
+		</tbody></table>
+	</div>
+	
+	
+	
+<!-- Custom Menus -->
+	<div class="vbmenu_popup" id="pagenav_menu" style="display:none">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tbody><tr>
+			<td class="thead" nowrap="nowrap">К странице...</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+			<form action="http://www.cyberforum.ru/index.php" method="get" onsubmit="return this.gotopage()" id="pagenav_form">
+				<input type="text" class="bginput smallfont" id="pagenav_itxt" size="4">
+				<input type="button" class="button" id="pagenav_ibtn" value="Вперёд">
+			</form>
+			</td>
+		</tr>
+		</tbody></table>
+	</div>
+
+
+
+
+<a name="poststop" id="poststop"></a>
+
+<div style="margin: 0px 0px 3px 0px;"></div>
+
+<table class="tborder" cellpadding="5" cellspacing="1" border="0" width="100%" align="center" style="border-bottom-width:0px">
+<tbody><tr>
+	<td class="tcat" width="100%">
+		<div class="smallfont">
+		
+		&nbsp;
+		</div>
+	</td>
+
+<td class="vbmenu_control" id="threadrating" nowrap="nowrap">
+	
+		<span id="threadrating_current">
+			Рейтинг&nbsp;<span title="Средняя оценка">4.99</span>/<span title="Всего голосов">75</span>: <img class="inlineimg" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/rating_5.gif" alt="Рейтинг темы: голосов - 75, средняя оценка - 4.99" border="0" title="Рейтинг темы: голосов - 75, средняя оценка - 4.99">
+		</span>
+
+	
+</td>
+
+
+
+
+</tr>
+</tbody></table>
+
+
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<div id="posts">
+<div itemprop="mainEntity" itemscope="" itemtype="http://schema.org/Question">
+
+	
+<div>
+	<div class="page" style="text-align: left;">
+		<div style="margin: 0px 3px 0px 3px" align="left">
+
+	<div id="edit5966051" style="padding:0px 0px 3px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+
+<table id="post5966051" class="tborder" cellpadding="5" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr valign="top">
+	<td itemprop="author" itemscope="" itemtype="http://schema.org/Person" class="alt2" width="170px" style="border-right: 1px solid #AAAAAA;" rowspan="3">
+            <div>
+               
+                    
+                        <span itemprop="name" class="bigusername"><span id="tagg_465712" style="display:none;">@</span>Sidnik</span>
+                    
+                    
+               
+            </div>
+			
+			
+			
+			
+		
+			<div class="smallfont" style="margin-top: 2px;">
+				
+					
+					<div><span id="repdisplay_5966051_465712" title="Репутация пользователя" style="font-weight: bold">0</span> / <span title="Общая оценка (+, -)">0</span> / <span title="Лучшие ответы" style="font-weight: bold">0</span></div>
+				<div>Регистрация: 28.03.2014</div>
+				
+				
+				<div>Сообщений: 6</div>
+				
+				
+				
+<!-- show awards -->
+
+<!-- /show awards -->
+
+				
+			</div>
+		
+	</td>
+</tr>
+<tr>
+	
+		<td class="alt2 smallfont" style="font-weight:normal; border-bottom: 1px solid #AAAAAA; border-right: 0px; padding: 3px 5px 3px 5px;" height="15px">
+			
+		</td>
+		<td class="alt2 smallfont" style="font-weight: normal; border-bottom: 1px solid #AAAAAA; border-right: 0px; padding: 3px 5px 3px 5px; text-align: right;" width="30px" height="15px">
+
+
+	
+	<a href="http://www.cyberforum.ru/post5966051.html" target="_blank" id="postcount5966051" name="1"><b>1</b></a>
+	
+	
+</td>
+	
+</tr>
+
+<tr valign="top">
+		<td class="alt1" colspan="2" id="td_post_5966051" style="padding-top: 3px;">
+
+		
+			<a href="http://www.cyberforum.ru/python-science/thread1132503.html" style="text-decoration: none" itemprop="url"><h1 itemprop="name" style="color: #3774A4">Оптимизация функции через scipy.optimize.minimize</h1></a>
+			<div class="smallfont shade" style="margin: 10px 0px 0px 30px"><span itemprop="dateCreated">28.03.2014, 19:56</span>. <b>Просмотров</b> 14950. <b>Ответов</b> <a target="_blank" href="http://www.cyberforum.ru/threadposts1132503.html"><span itemprop="answerCount">3</span></a></div>
+			<div class="smallfont shade" style="margin: 5px 0px 0px 30px"><b>Метки</b> нет <img src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/11x11progress.gif" id="tag_form_progress" class="inlineimg" style="display:none" alt=""> (<a href="http://www.cyberforum.ru/tags/">Все метки</a>)</div>
+			<hr size="1" style="color: #AAAAAA; margin: 5px 0px 20px 0px">
+		
+
+		
+
+		
+			
+		
+
+		<div id="post_message_5966051" style="margin: 2px 2px 2px 5px;">
+			
+
+			<div itemprop="text">Добрый день!<br>
+<br>
+Начинаю осваивать язык. Помогите, пожалуйста, разобраться с оптимизацией в SciFy. На простых примерах все естественно понятно и работает прекрасно, однако у меня сложная формула с условиями (возможно не оптимально записал).<br>
+<br>
+Суть в том, что сначала из файла .csv считываются данные в массивы (в простом варианте 2 ряда). Из этих двух рядов необходимо составить один (соответственно функция зависит от доли каждого ряда в общем). Общий ряд должен быть оптимизирован на основе коэффициента, представленного формулой, т.е. необходимо найти доли при которых этот коэффициент минимален.<br>
+<br>
+Сам файл во вложении, код ниже.<br>
+<br>
+Заранее спасибо<br>
+<br>
+<div style="margin: 5px 10px 20px 30px"><table class="python"><thead><tr><td colspan="2" class="head">Python<a href="http://www.cyberforum.ru/#" style="float: right; color: rgb(96, 96, 96); font-weight: normal;">Выделить код</a></td></tr></thead><tbody><tr class="li1"><td><div id="463993540" style="height: 505px" class="codeframe"><table><tbody><tr class="li1"><td class="ln" style="padding: 0px 10px 0px 5px;"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+</pre></td><td class="de1"><pre class="de1"><span class="kw1">import</span> numpy <span class="kw1">as</span> np
+<span class="kw1">from</span> scipy.<span class="me1">optimize</span> <span class="kw1">import</span> minimize
+&nbsp;
+&nbsp;
+filename <span class="sy0">=</span> <span class="st0">"D:<span class="es0">\p</span>ort.csv"</span>
+portfolio <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span>
+temps <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span>
+&nbsp;
+<span class="kw1">for</span> line <span class="kw1">in</span> <span class="kw2">open</span><span class="br0">(</span>filename<span class="br0">)</span>:
+&nbsp; &nbsp; &nbsp; &nbsp; fields <span class="sy0">=</span> line.<span class="me1">split</span><span class="br0">(</span><span class="st0">","</span><span class="br0">)</span>
+&nbsp; &nbsp; &nbsp; &nbsp; name <span class="sy0">=</span> fields<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span>
+&nbsp; &nbsp; &nbsp; &nbsp; price1 <span class="sy0">=</span> <span class="kw2">float</span><span class="br0">(</span>fields<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="br0">)</span>
+&nbsp; &nbsp; &nbsp; &nbsp; price2 <span class="sy0">=</span> <span class="kw2">float</span><span class="br0">(</span>fields<span class="br0">[</span><span class="nu0">2</span><span class="br0">]</span><span class="br0">)</span>
+&nbsp; &nbsp; &nbsp; &nbsp; price3 <span class="sy0">=</span> <span class="kw2">float</span><span class="br0">(</span>fields<span class="br0">[</span><span class="nu0">3</span><span class="br0">]</span><span class="br0">)</span>
+&nbsp; &nbsp; &nbsp; &nbsp; price4 <span class="sy0">=</span> <span class="kw2">float</span><span class="br0">(</span>fields<span class="br0">[</span><span class="nu0">4</span><span class="br0">]</span><span class="br0">)</span>
+&nbsp; &nbsp; &nbsp; &nbsp; price5 <span class="sy0">=</span> <span class="kw2">float</span><span class="br0">(</span>fields<span class="br0">[</span><span class="nu0">5</span><span class="br0">]</span><span class="br0">)</span>
+&nbsp; &nbsp; &nbsp; &nbsp; stock <span class="sy0">=</span> <span class="br0">(</span>name<span class="sy0">,</span> price1<span class="sy0">,</span> price2<span class="sy0">,</span>price3<span class="sy0">,</span>price4<span class="sy0">,</span>price5<span class="br0">)</span>
+&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; t0 <span class="sy0">=</span> price1 / price1
+&nbsp; &nbsp; &nbsp; &nbsp; t1 <span class="sy0">=</span> price2 / price1 - <span class="nu0">1</span>
+&nbsp; &nbsp; &nbsp; &nbsp; t2 <span class="sy0">=</span> price3 / price1 - <span class="nu0">1</span>
+&nbsp; &nbsp; &nbsp; &nbsp; t3 <span class="sy0">=</span> price4 / price1 - <span class="nu0">1</span>
+&nbsp; &nbsp; &nbsp; &nbsp; t4 <span class="sy0">=</span> price5 / price1 - <span class="nu0">1</span>
+&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; portfolio.<span class="me1">append</span><span class="br0">(</span>stock<span class="br0">)</span>
+&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; tt <span class="sy0">=</span> <span class="br0">(</span>t0<span class="sy0">,</span>t1<span class="sy0">,</span> t2<span class="sy0">,</span> t3<span class="sy0">,</span> t4<span class="br0">)</span>
+&nbsp; &nbsp; &nbsp; &nbsp; temps.<span class="me1">append</span><span class="br0">(</span>tt<span class="br0">)</span>
+&nbsp;
+&nbsp;
+investment <span class="sy0">=</span> <span class="nu0">100000</span>
+&nbsp;
+<span class="kw1">def</span> sortino<span class="br0">(</span>x1<span class="sy0">,</span> x2<span class="br0">)</span>:
+&nbsp; &nbsp; a <span class="sy0">=</span> investment * <span class="br0">(</span>temps<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span> * x1 + temps<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span> * x2<span class="br0">)</span>
+&nbsp; &nbsp; b <span class="sy0">=</span> investment * <span class="br0">(</span>temps<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span> * x1 + temps<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span> * x2<span class="br0">)</span>
+&nbsp; &nbsp; c <span class="sy0">=</span> investment * <span class="br0">(</span>temps<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="br0">[</span><span class="nu0">2</span><span class="br0">]</span> * x1 + temps<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="br0">[</span><span class="nu0">2</span><span class="br0">]</span> * x2<span class="br0">)</span>
+&nbsp; &nbsp; d <span class="sy0">=</span> investment * <span class="br0">(</span>temps<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="br0">[</span><span class="nu0">3</span><span class="br0">]</span> * x1 + temps<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="br0">[</span><span class="nu0">3</span><span class="br0">]</span> * x2<span class="br0">)</span>
+&nbsp; &nbsp; e <span class="sy0">=</span> investment * <span class="br0">(</span>temps<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="br0">[</span><span class="nu0">4</span><span class="br0">]</span> * x1 + temps<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="br0">[</span><span class="nu0">4</span><span class="br0">]</span> * x2<span class="br0">)</span>
+&nbsp;
+&nbsp; &nbsp; mar <span class="sy0">=</span> <span class="nu0">0.05</span>
+&nbsp;
+&nbsp; &nbsp; q1 <span class="sy0">=</span> <span class="br0">(</span>b / a - <span class="nu0">1</span><span class="br0">)</span> - mar
+&nbsp; &nbsp; q2 <span class="sy0">=</span> <span class="br0">(</span>c / b - <span class="nu0">1</span><span class="br0">)</span> - mar
+&nbsp; &nbsp; q3 <span class="sy0">=</span> <span class="br0">(</span>d / c - <span class="nu0">1</span><span class="br0">)</span> - mar
+&nbsp; &nbsp; q4 <span class="sy0">=</span> <span class="br0">(</span>e / d - <span class="nu0">1</span><span class="br0">)</span> - mar
+&nbsp;
+&nbsp; &nbsp; porttemp <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span>
+&nbsp; &nbsp; qq <span class="sy0">=</span> <span class="br0">(</span>q1<span class="sy0">,</span> q2<span class="sy0">,</span> q3<span class="sy0">,</span> q4<span class="br0">)</span>
+&nbsp; &nbsp; porttemp.<span class="me1">append</span><span class="br0">(</span>qq<span class="br0">)</span>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp; &nbsp; negative <span class="sy0">=</span> <span class="nu0">0</span>
+&nbsp;
+&nbsp; &nbsp; <span class="kw1">if</span> porttemp<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span> <span class="sy0">&lt;</span> mar:
+&nbsp; &nbsp; &nbsp; &nbsp; negative <span class="sy0">=</span> + <span class="br0">(</span>porttemp<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="br0">)</span>**<span class="nu0">2</span>
+&nbsp; &nbsp; <span class="kw1">if</span> porttemp<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span> <span class="sy0">&lt;</span> <span class="nu0">0.0</span>:
+&nbsp; &nbsp; &nbsp; &nbsp; negative <span class="sy0">=</span> + <span class="br0">(</span>porttemp<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="br0">)</span>**<span class="nu0">2</span>
+&nbsp; &nbsp; <span class="kw1">if</span> porttemp<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="br0">[</span><span class="nu0">2</span><span class="br0">]</span> <span class="sy0">&lt;</span> <span class="nu0">0.0</span>:
+&nbsp; &nbsp; &nbsp; &nbsp; negative <span class="sy0">=</span> + <span class="br0">(</span>porttemp<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="br0">[</span><span class="nu0">2</span><span class="br0">]</span><span class="br0">)</span>**<span class="nu0">2</span>
+&nbsp; &nbsp; <span class="kw1">if</span> porttemp<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="br0">[</span><span class="nu0">3</span><span class="br0">]</span> <span class="sy0">&lt;</span> <span class="nu0">0.0</span>:
+&nbsp; &nbsp; &nbsp; &nbsp; negative <span class="sy0">=</span> + <span class="br0">(</span>porttemp<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="br0">[</span><span class="nu0">3</span><span class="br0">]</span><span class="br0">)</span>**<span class="nu0">2</span>
+&nbsp;
+&nbsp; &nbsp; profit <span class="sy0">=</span> e / a
+&nbsp; &nbsp; n <span class="sy0">=</span> <span class="nu0">4</span>
+&nbsp;
+&nbsp; &nbsp; a<span class="sy0">=</span><span class="br0">(</span>profit - mar*n<span class="br0">)</span>
+&nbsp; &nbsp; b<span class="sy0">=</span><span class="br0">(</span><span class="br0">(</span>negative / n<span class="br0">)</span> ** <span class="br0">(</span><span class="nu0">0.5</span><span class="br0">)</span><span class="br0">)</span>
+&nbsp; &nbsp; sortin <span class="sy0">=</span> a / b
+&nbsp;
+&nbsp; &nbsp; <span class="kw1">return</span> sortin
+&nbsp;
+s <span class="sy0">=</span> sortino<span class="br0">(</span><span class="nu0">0.3</span><span class="sy0">,</span> <span class="nu0">0.7</span><span class="br0">)</span>
+<span class="kw1">print</span> s
+x0 <span class="sy0">=</span> <span class="br0">(</span><span class="nu0">0.4</span><span class="sy0">,</span> <span class="nu0">0.6</span><span class="br0">)</span>
+res <span class="sy0">=</span> minimize<span class="br0">(</span>sortino<span class="sy0">,</span> x0<span class="sy0">,</span> method<span class="sy0">=</span><span class="st0">'SLSQP'</span><span class="sy0">,</span> bounds <span class="sy0">=</span> <span class="br0">(</span><span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">)</span><span class="sy0">,</span> <span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span>
+<span class="kw1">print</span> res</pre></td></tr></tbody></table></div></td></tr></tbody></table></div></div>
+
+
+
+		</div>
+
+
+
+
+	<div style="margin-top: 5px">
+		<span id="thumbs_box_5966051">
+    <span class="post">
+        <span>
+            
+            <span class="thumbs-post-rate" title="Рейтинг сообщения 0" itemprop="upvoteCount">0</span>
+            
+        </span>
+    </span>
+</span>
+	</div>
+
+		
+			<div style="padding:5px">
+			
+			
+			
+			
+				<fieldset class="fieldset">
+					<legend>Вложения</legend>
+					<table cellpadding="0" cellspacing="3" border="0">
+					<tbody><tr>
+	<td><img class="inlineimg" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/rar.gif" alt="Тип файла: rar" width="16" height="16" border="0" style="vertical-align:baseline" title="Тип файла: rar"></td>
+	<td><a href="http://www.cyberforum.ru/attachments/382143d1396021945" target="_blank"><b>port.rar</b></a> (136 байт, 8 просмотров)</td>
+</tr>
+					</tbody></table>
+				</fieldset>
+			
+			
+			</div>
+		
+		
+		
+		
+		
+		
+	</td>
+</tr>
+
+</tbody></table>
+
+
+
+
+<div style="margin: 3px 0px 3px 0px; display: block">
+	<table class="tborder" cellpadding="5" cellspacing="0" border="0" width="100%">
+		<tbody><tr valign="top">
+			<td class="alt2" width="170px" style="border-right: 1px solid #AAAAAA;">
+			</td>
+			<td class="alt1" align="left">
+
+<div id="vidplay_over_float" vid_el_width="600px" vid_el_height="320px" vid_roll_width="400px" vid_roll_height="250px" vid_el_locate="1" vid_el_top="0"></div>
+<script src="https://ad.mox.tv/mox/mwayss_invocation.min.js?pzoneid=1441&amp;height=405&amp;width=720&amp;tld=cyberforum.ru&amp;ctype=div"></script><div id="_mwayss-f47509295535dfe2b0798178893c63631580659078921"></div>
+                    <script>      
+                        (function(window, document, undefined) {
+                            var script_tag = document.createElement('script');
+                            script_tag.src = 'https://ad.mox.tv/mox/mwayss_invocation.min.js?pzoneid=1441&height=405&width=720&tld=cyberforum.ru&ctype=div';
+                            var container = document.querySelectorAll('[data-id=_mwayss-f47509295535dfe2b0798178893c6363]')[0];    
+                            container.setAttribute('id', (container.getAttribute('data-id')+(new Date()).getTime()));
+                            container.removeAttribute('data-id');
+                            container.parentNode.insertBefore(script_tag, container);
+                        })(window, document);
+                    </script>
+
+
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+
+
+
+
+<div style="margin: 3px 0px 0px 0px" itemprop="suggestedAnswer" itemscope="" itemtype="http://schema.org/Answer">
+	<table class="tborder" cellpadding="5" cellspacing="0" border="0" width="100%">
+		<tbody><tr valign="top">
+			<td class="alt2" width="170px" style="border-right: 1px solid #AAAAAA;" rowspan="2">
+				<div class="smallfont" style="margin-top: 2px;" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+					<span class="bigusername" itemprop="name">QA</span>
+					<div class="smallfont">Эксперт</div>
+					<div><span title="Репутация пользователя"><b>41792</b></span> / <span title="Благодарности за сообщения">34177</span> / <span title="Лучшие ответы"><b>6122</b></span></div>
+				<div>Регистрация: 12.04.2006</div>
+				<div>Сообщений: 57,940</div>
+				</div>
+			</td>
+		    <td itemprop="dateCreated" class="alt2 smallfont" style="font-weight:normal; border-bottom: 1px solid #AAAAAA; padding: 3px 5px 3px 5px;" height="15px">
+			28.03.2014, 19:56
+		    </td>
+		</tr>
+		<tr>
+			<td class="alt1" align="left">
+			<div style="margin: 2px 2px 2px 5px;" itemprop="text">
+<div style="float: right; margin: 0px 0px 10px 10px"><script type="text/javascript" async="" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/cyberforumru"></script></div>
+Ответы с готовыми решениями: 
+<br>
+<p><strong><a target="_blank" href="http://www.cyberforum.ru/python-science/thread2032592.html">Установка SciPy библиотек через Анаконду</a></strong><br>Мне по работе снова понадобилось работать с питоном. Питон и ПиШарм установились превосходно и...</p><p><strong><a target="_blank" href="http://www.cyberforum.ru/python/thread2063121.html">Оптимизация функции через scipy.optimize.minimize</a></strong><br>Добрый день!  
+  
+Я только начинаю осваивать язык, совсем ещё новичок. Помогите, пожалуйста,...</p><p><strong><a target="_blank" href="http://www.cyberforum.ru/python/thread1810851.html">Scipy.optimize ошибка</a></strong><br>def sqerror(w0,w1):  
+    err=0  
+    for i,j in zip(data,data):  
+       err=err+(i-(w0+w1*j))**2  
+  ...</p><p><strong><a target="_blank" href="http://www.cyberforum.ru/python/thread1972442.html">SciPy библиотека</a></strong><br>Всем добрый день. Подскажите, что я делаю не так?  
+Нужна библиотека Scipy.  Устаналиваю pip install...</p><p><img class="inlineimg" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/tick.png" title="Есть решение (1)" border="0" alt=""> <strong><a target="_blank" href="http://www.cyberforum.ru/python/thread1961503.html">Не устанавливается модуль scipy</a></strong><br>Python 3.5 32bit  
+windows 8.1 64bit  
+устанавливаю через командную строку(pip3 install scipy) и...</p>
+
+			</div>
+<span class="thumbs-post-rate" title="Рейтинг сообщения 3" itemprop="upvoteCount">3</span>
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+
+
+<div id="cyber_adsc1" style="margin: 3px 0px 0px; display: none !important;">
+	<table class="tborder" cellpadding="5" cellspacing="0" border="0" width="100%">
+		<tbody><tr valign="top">
+			<td class="alt2" width="170px" style="border-right: 1px solid #AAAAAA;">
+			</td>
+			<td class="alt1" align="left">
+
+<div id="yandex_rtb_R-A-29317-17" style="display: table; margin-right: auto"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-29317-17",
+                renderTo: "yandex_rtb_R-A-29317-17",
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+
+
+
+
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+
+	
+<div>
+	<div class="page" style="text-align: left;">
+		<div style="margin: 0px 3px 0px 3px" align="left">
+
+	<div id="edit5969993" style="padding:0px 0px 3px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<div itemprop="suggestedAnswer" itemscope="" itemtype="http://schema.org/Answer">
+<table id="post5969993" class="tborder" cellpadding="5" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr valign="top">
+	<td itemprop="author" itemscope="" itemtype="http://schema.org/Person" class="alt2" width="170px" style="border-right: 1px solid #AAAAAA;" rowspan="3">
+            <div>
+               
+                    
+                        <span itemprop="name" class="bigusername"><span id="tagg_465712" style="display:none;">@</span>Sidnik</span>
+                    
+                    
+               
+            </div>
+			
+			
+			
+			
+		
+			<div class="smallfont" style="margin-top: 2px;">
+				
+					
+					<div><span id="repdisplay_5969993_465712" title="Репутация пользователя" style="font-weight: bold">0</span> / <span title="Общая оценка (+, -)">0</span> / <span title="Лучшие ответы" style="font-weight: bold">0</span></div>
+				<div>Регистрация: 28.03.2014</div>
+				
+				
+				<div>Сообщений: 6</div>
+				
+				
+				
+<!-- show awards -->
+
+<!-- /show awards -->
+
+				
+			</div>
+		
+	</td>
+</tr>
+<tr>
+	
+		<td class="alt2 smallfont" style="font-weight:normal; border-bottom: 1px solid #AAAAAA; border-right: 0px; padding: 3px 5px 3px 5px;" height="15px">
+			
+				<span itemprop="dateCreated">29.03.2014, 20:06</span>
+				
+				&nbsp;<b>[ТС]</b>
+				
+			
+		</td>
+		<td class="alt2 smallfont" style="font-weight: normal; border-bottom: 1px solid #AAAAAA; border-right: 0px; padding: 3px 5px 3px 5px; text-align: right;" width="30px" height="15px">
+
+
+	
+	<a href="http://www.cyberforum.ru/post5969993.html" target="_blank" id="postcount5969993" name="2" itemprop="url"><b>2</b></a>
+	
+	
+</td>
+	
+</tr>
+
+<tr valign="top">
+		<td class="alt1" colspan="2" id="td_post_5969993" style="padding-top: 3px;">
+
+		
+
+		
+
+		
+			
+		
+
+		<div id="post_message_5969993" style="margin: 2px 2px 2px 5px;">
+			
+
+			<div itemprop="text">Можно закрывать, решение найдено</div>
+
+
+
+		</div>
+
+
+
+
+	<div style="margin-top: 5px">
+		<span id="thumbs_box_5969993">
+    <span class="post">
+        <span>
+            
+            <span class="thumbs-post-rate" title="Рейтинг сообщения 0" itemprop="upvoteCount">0</span>
+            
+        </span>
+    </span>
+</span>
+	</div>
+
+		
+		
+		
+		
+		
+		
+	</td>
+</tr>
+
+</tbody></table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+
+	
+<div>
+	<div class="page" style="text-align: left;">
+		<div style="margin: 0px 3px 0px 3px" align="left">
+
+	<div id="edit5970042" style="padding:0px 0px 3px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<div itemprop="suggestedAnswer" itemscope="" itemtype="http://schema.org/Answer">
+<table id="post5970042" class="tborder" cellpadding="5" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr valign="top">
+	<td itemprop="author" itemscope="" itemtype="http://schema.org/Person" class="alt2" width="170px" style="border-right: 1px solid #AAAAAA;" rowspan="3">
+            <div>
+               
+                    
+                        <span itemprop="name" class="bigusername"><span id="tagg_363182" style="display:none;">@</span>Zarex</span>
+                    
+                    
+               
+            </div>
+			
+			
+			
+			
+		
+			<div class="smallfont" style="margin-top: 2px;">
+				
+					
+					<div><span id="repdisplay_5970042_363182" title="Репутация пользователя" style="font-weight: bold">54</span> / <span title="Общая оценка (+54, -0)">54</span> / <span title="Лучшие ответы" style="font-weight: bold">16</span></div>
+				<div>Регистрация: 25.03.2013</div>
+				
+				
+				<div>Сообщений: 178</div>
+				
+				
+				
+<!-- show awards -->
+
+<!-- /show awards -->
+
+				
+			</div>
+		
+	</td>
+</tr>
+<tr>
+	
+		<td class="alt2 smallfont" style="font-weight:normal; border-bottom: 1px solid #AAAAAA; border-right: 0px; padding: 3px 5px 3px 5px;" height="15px">
+			
+				<span itemprop="dateCreated">29.03.2014, 20:18</span>
+				
+				
+				
+			
+		</td>
+		<td class="alt2 smallfont" style="font-weight: normal; border-bottom: 1px solid #AAAAAA; border-right: 0px; padding: 3px 5px 3px 5px; text-align: right;" width="30px" height="15px">
+
+
+	
+	<a href="http://www.cyberforum.ru/post5970042.html" target="_blank" id="postcount5970042" name="3" itemprop="url"><b>3</b></a>
+	
+	
+</td>
+	
+</tr>
+
+<tr valign="top">
+		<td class="alt1" colspan="2" id="td_post_5970042" style="padding-top: 3px;">
+
+		
+
+		
+
+		
+			
+		
+
+		<div id="post_message_5970042" style="margin: 2px 2px 2px 5px;">
+			
+
+			<div itemprop="text"><b>Sidnik</b>, так вы бы написали какое именно решение было найдено. Может в будущем кому и пригодилось бы.</div>
+
+
+
+		</div>
+
+
+
+
+	<div style="margin-top: 5px">
+		<span id="thumbs_box_5970042">
+    <span class="post">
+        <span>
+            
+            <span class="thumbs-post-rate" title="Рейтинг сообщения 0" itemprop="upvoteCount">0</span>
+            
+        </span>
+    </span>
+</span>
+	</div>
+
+		
+		
+		
+		
+		
+		
+	</td>
+</tr>
+
+</tbody></table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+
+	
+<div>
+	<div class="page" style="text-align: left;">
+		<div style="margin: 0px 3px 0px 3px" align="left">
+
+	<div id="edit5970431" style="padding:0px 0px 3px 0px">
+	
+
+
+
+<div itemprop="suggestedAnswer" itemscope="" itemtype="http://schema.org/Answer">
+<table id="post5970431" class="tborder" cellpadding="5" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr valign="top">
+	<td itemprop="author" itemscope="" itemtype="http://schema.org/Person" class="alt2" width="170px" style="border-right: 1px solid #AAAAAA;" rowspan="3">
+            <div>
+               
+                    
+                        <span itemprop="name" class="bigusername"><span id="tagg_465712" style="display:none;">@</span>Sidnik</span>
+                    
+                    
+               
+            </div>
+			
+			
+			
+			
+		
+			<div class="smallfont" style="margin-top: 2px;">
+				
+					
+					<div><span id="repdisplay_5970431_465712" title="Репутация пользователя" style="font-weight: bold">0</span> / <span title="Общая оценка (+, -)">0</span> / <span title="Лучшие ответы" style="font-weight: bold">0</span></div>
+				<div>Регистрация: 28.03.2014</div>
+				
+				
+				<div>Сообщений: 6</div>
+				
+				
+				
+<!-- show awards -->
+
+<!-- /show awards -->
+
+				
+			</div>
+		
+	</td>
+</tr>
+<tr>
+	
+		<td class="alt2 smallfont" style="font-weight:normal; border-bottom: 1px solid #AAAAAA; border-right: 0px; padding: 3px 5px 3px 5px;" height="15px">
+			
+				<span itemprop="dateCreated">29.03.2014, 21:38</span>
+				
+				&nbsp;<b>[ТС]</b>
+				
+			
+		</td>
+		<td class="alt2 smallfont" style="font-weight: normal; border-bottom: 1px solid #AAAAAA; border-right: 0px; padding: 3px 5px 3px 5px; text-align: right;" width="30px" height="15px">
+
+
+	
+	<a href="http://www.cyberforum.ru/post5970431.html" target="_blank" id="postcount5970431" name="4" itemprop="url"><b>4</b></a>
+	
+	
+</td>
+	
+</tr>
+
+<tr valign="top">
+		<td class="alt1" colspan="2" id="td_post_5970431" style="padding-top: 3px;">
+
+		
+
+		
+
+		
+			
+		
+
+		<div id="post_message_5970431" style="margin: 2px 2px 2px 5px;">
+			
+
+			<div itemprop="text"><b>Zarex</b>, <br>
+суть в переопределении функции, то что я написал - это функция от 2 переменных.<br>
+необходимо написать новую функцию от одной переменной, которая будет ссылаться на уже написанную. Так как параметр оптимизации х0 - это одна переменная, но она может быть представлена списком<br>
+<br>
+Например,<br>
+<br>
+<div style="margin: 5px 10px 5px 30px"><table class="python"><thead><tr><td colspan="2" class="head">Python<a href="http://www.cyberforum.ru/#" style="float: right; color: rgb(96, 96, 96); font-weight: normal;">Выделить код</a></td></tr></thead><tbody><tr class="li1"><td><div id="464353478" style="height: 169px" class="codeframe"><table><tbody><tr class="li1"><td class="ln" style="padding: 0px 10px 0px 5px;"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="de1"><pre class="de1"><span class="kw1">def</span> fun1<span class="br0">(</span>x<span class="sy0">,</span> y<span class="br0">)</span>
+&nbsp; &nbsp;<span class="kw1">return</span> <span class="nu0">2</span>*x**<span class="nu0">2</span>+<span class="nu0">3</span>*y**<span class="nu0">2</span>
+&nbsp;
+<span class="kw1">def</span> fun2<span class="br0">(</span>x<span class="br0">)</span>
+&nbsp; &nbsp;<span class="kw1">return</span> fun1<span class="br0">(</span>*x<span class="br0">)</span>
+&nbsp;
+x0 <span class="sy0">=</span> <span class="br0">(</span><span class="nu0">0.5</span><span class="sy0">,</span> <span class="nu0">0.5</span><span class="br0">)</span>
+res <span class="sy0">=</span> minimize<span class="br0">(</span>fun2<span class="sy0">,</span> x0<span class="sy0">,</span> method<span class="sy0">=</span><span class="st0">'SLSQP'</span><span class="sy0">,</span> bounds <span class="sy0">=</span> <span class="br0">(</span><span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">)</span><span class="sy0">,</span> <span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span>
+<span class="kw1">print</span> res</pre></td></tr></tbody></table></div></td></tr></tbody></table></div>И все заработает, так как fun2 - функция от одной переменной, которая является списком переменных fun1</div>
+
+
+
+		</div>
+
+
+
+
+	<div style="margin-top: 5px">
+		<span id="thumbs_box_5970431">
+    <span class="post">
+        <span>
+            
+            <span class="thumbs-post-rate" title="Рейтинг сообщения 0" itemprop="upvoteCount">0</span>
+            
+        </span>
+    </span>
+</span>
+	</div>
+
+		
+		
+		
+		
+		
+		
+	</td>
+</tr>
+
+</tbody></table>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div style="margin: 3px 0px 0px 0px;">
+	<table class="tborder" cellpadding="5" cellspacing="0" border="0" width="100%">
+		<tbody><tr valign="top">
+			<td class="alt2" width="170px" style="border-right: 1px solid #AAAAAA;" rowspan="2">
+			</td>
+		    <td class="alt2 smallfont" style="font-weight:normal; border-bottom: 1px solid #AAAAAA; padding: 3px 5px 3px 5px" height="15px">
+			29.03.2014, 21:38
+		    </td>
+		</tr>
+		<tr>
+		    <td class="alt1" align="left">
+
+<div id="yandex_rtb_R-A-29317-2" style="display: table; margin-right: auto"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-29317-2",
+                renderTo: "yandex_rtb_R-A-29317-2",
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+
+
+<div style="margin: 3px 0px 0px 0px">
+	<table class="tborder" cellpadding="5" cellspacing="0" border="0" width="100%">
+		<tbody><tr valign="top">
+			<td class="alt2" width="170px" style="border-right: 1px solid #AAAAAA;" rowspan="2">
+				<div class="smallfont" style="margin-top: 2px;">
+					<span class="bigusername">Answers</span>
+					<div class="smallfont">Эксперт</div>
+					<div><span title="Репутация пользователя"><b>37091</b></span> / <span title="Благодарности за сообщения">29110</span> / <span title="Лучшие ответы"><b>5898</b></span></div>
+				<div>Регистрация: 17.06.2006</div>
+				<div>Сообщений: 43,301</div>
+				</div>
+			</td>
+		    <td class="alt2 smallfont" style="font-weight:normal; border-bottom: 1px solid #AAAAAA; padding: 3px 5px 3px 5px;" height="15px">
+			29.03.2014, 21:38
+		    </td>
+		</tr>
+		<tr>
+		    <td class="alt1" align="left">
+			<div style="margin: 2px 2px 2px 5px;">
+<p><a target="_blank" href="http://www.cyberforum.ru/python/thread1742254.html">Нужен питон со Scipy и Pylab</a><br>Всем привет! Нужны библиотеки Scipy и Pylab! Установил интерпретатор питона 3.5.1. И еще надо будет...</p><p><a target="_blank" href="http://www.cyberforum.ru/python-science/thread2204539.html">Как установить numpy и scipy?</a><br>Как установить numpy и scipy?</p><p><img class="inlineimg" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/tick.png" title="Есть решение (1)" border="0" alt=""> <a target="_blank" href="http://www.cyberforum.ru/python-science/thread745661.html">python 2,7 numpy scipy matplotlib</a><br>Здравствуйте народ!  
+Только начал изучение python и сразу-же тупик какой-то!!!  
+Хотел сохранить...</p>
+
+<br>
+<a target="_blank" href="http://www.cyberforum.ru/search.php?do=process&amp;q=%D0%9E%D0%BF%D1%82%D0%B8%D0%BC%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8%20%D1%87%D0%B5%D1%80%D0%B5%D0%B7%20scipy.optimize.minimize&amp;forumchoice[]=502&amp;childforums=1&amp;replyless=0&amp;replylimit=1&amp;nocache=0">Искать еще темы с ответами</a>
+<br><br>
+Или воспользуйтесь поиском по форуму:
+<table width="700px"><tbody><tr><td>
+<div class="ya-site-form ya-site-form_bg_transparent ya-site-form_logo_hint ya-site-form_inited_yes" id="ya-site-form1"><div class="ya-site-form__form"><table class="ya-site-form__wrap" cellpadding="0" cellspacing="0"><tbody><tr><td class="ya-site-form__search-wrap"><table class="ya-site-form__search" cellpadding="0" cellspacing="0"><tbody><tr><td class="ya-site-form__search-input"><table class="ya-site-form__search-input-layout"><tbody><tr><td class="ya-site-form__search-input-layout-l"><div class="ya-site-form__input"><input name="text" type="search" value="" class="ya-site-form__input-text ya-site-form__input-text_type_hint" autocomplete="off"><div class="ya-site-suggest"><div class="ya-site-suggest-popup" style="display: none;"><i class="ya-site-suggest__opera-gap"></i><div class="ya-site-suggest-list"><div class="ya-site-suggest__iframe"></div><ul class="ya-site-suggest-items"></ul></div></div></div></div></td><td class="ya-site-form__search-input-layout-r"><input class="ya-site-form__submit" type="button" value="Найти"></td></tr></tbody></table></td></tr><tr><td class="ya-site-form__gap"><div class="ya-site-form__gap-i"></div></td></tr></tbody></table></td></tr></tbody></table></div></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</td></tr></tbody></table>
+
+			</div>
+<span class="thumbs-post-rate" title="Рейтинг сообщения 4">4</span>
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<div id="lastpost"></div>
+</div>
+</div>
+
+
+<div>
+	<div class="page" style="text-align: left;">
+		<div style="margin: 0px 3px 0px 3px" align="left">
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tbody><tr valign="top">
+	
+		<td>
+			<table class="smallfont" width="240px" cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+				<td>
+					<a target="_blank" href="http://www.cyberforum.ru/newreply.php?do=newreply&amp;noquote=1&amp;p=5970431"><img class="buttonimg" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/reply.png" alt="Ответ" border="0" title="Ответ"></a>
+				</td>
+				<td>
+					<a target="_blank" href="http://www.cyberforum.ru/newthread.php?do=newthread&amp;f=502"><img class="buttonimg" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/newthread.png" alt="Создать тему" border="0" title="Создать тему"></a>
+				</td>
+			</tr></tbody></table>
+		</td>
+	
+	
+	
+</tr>
+</tbody></table>
+
+
+
+
+
+
+	<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/vbulletin_lightbox.js.Без названия"></script>
+	<script type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_Lightbox_Container", "posts", 1);
+	//-->
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr valign="bottom">
+	<td width="100%" valign="top">
+		
+	</td>
+	<td class="smallfont" align="right">
+		
+	</td>
+</tr>
+</tbody></table>
+
+<table cellspacing="0" cellpadding="2" border="0" align="center" width="100%" class="tborder" style="margin: 3px 0px; display: none !important;"><tbody><tr>
+<td width="100%" class="alt1" align="center" valign="middle">
+
+<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/enter.php"></script>
+
+
+
+</td>
+</tr></tbody></table>
+
+
+<div id="vdo_ai_div"></div>
+<script src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/fly.js.Без названия"></script><script>var FrolvidFlyRoll = new FrolvidFlyRoll(); FrolvidFlyRoll.start("ROQOFutpFkRluCHuSb1i0rB5iDqaD5rB");</script>
+
+
+
+		</div>
+	</div>
+</div>
+
+<div style="margin: 5px 3px 0px 3px">
+<form action="http://www.cyberforum.ru/index.php" method="get" style="clear:left">
+<table cellpadding="5" cellspacing="0" border="0" class="tborder" align="center" style="width: 100%;">
+<tbody><tr>
+	
+	
+		<td class="tfoot">
+			<span class="smallfont">КиберФорум - форум программистов, компьютерный форум, программирование</span>
+		</td>
+	<td class="tfoot" align="right" colspan="2">
+		<div class="smallfont">
+			<strong>
+				
+				<a href="http://www.cyberforum.ru/advert.php" target="_blank">Реклама</a> -
+				
+				
+				
+				
+				
+				
+				
+				<a href="http://www.cyberforum.ru/sendmessage.php" accesskey="9" target="_blank">Обратная связь</a>
+			</strong>
+		</div>
+	</td>
+</tr>
+</tbody></table>
+<table cellpadding="5" cellspacing="0" border="0" class="tborder" align="center" style="width: 100%;">
+<tbody><tr class="alt1" align="right">
+	<td align="left" class="smallfont">
+		Powered by vBulletin® Version 3.8.9<br>Copyright ©2000 - 2020, vBulletin Solutions, Inc.
+	</td>
+	<td align="right">	
+<script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t12.2;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,80))+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><a href="http://www.liveinternet.ru/click" target="_blank"><img src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/hit" alt="" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня" border="0" width="88" height="31"></a>
+
+
+	</td>
+</tr>
+</tbody></table>
+</form>
+</div>
+
+<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/vbulletin_autosave.js.Без названия"></script>
+<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/CtrlPagenav.js.Без названия"></script>
+<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/spoiler.js.Без названия"></script>
+<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/topbutton.js.Без названия"></script>
+
+<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/selectcode.js.Без названия"></script>
+
+
+<script async="" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-595018-2');
+</script>
+
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter50312308 = new Ya.Metrika2({
+                    id:50312308,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks2");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/50312308" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+
+<script type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//-->
+</script>
+
+<div id="top-link" style="padding-bottom: 674px;">
+	<span id="topicon" title="Наверх"></span><span id="toptext">Наверх</span>
+</div>
+
+<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/es5-shims.min.js.Без названия"></script>
+<script type="text/javascript" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/share.js.Без названия"></script>
+</div>
+<script type="text/javascript">
+var krtsts = new krtsts_ctrl();
+</script>
+<div style="display:none">
+	
+		
+	
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+window.orig_onload = window.onload;
+window.onload = function() {
+var cpost=document.location.hash.substring(1);var cpost2='';if(cpost){ var ispost=cpost.substring(0,4)=='post';if(ispost)cpost2='post_'+cpost.substring(4);if((cobj = fetch_object(cpost))||(cobj = fetch_object(cpost2))){cobj.scrollIntoView(true);}else if(ispost){cpostno = cpost.substring(4,cpost.length);if(parseInt(cpostno)>0){location.replace('http://www.cyberforum.ru/showthread.php?p='+cpostno);};} }
+
+if(typeof window.orig_onload == "function") window.orig_onload();
+}
+
+//]]>
+</script>
+
+<iframe name="ym-native-frame" title="ym-native-frame" frameborder="0" aria-hidden="true" style="opacity: 0 !important; width: 0px !important; height: 0px !important; position: absolute !important; left: 100% !important; bottom: 100% !important; border: 0px !important;" src="./Оптимизация функции через scipy.optimize.minimize - Python - Киберфорум_files/saved_resource.html"></iframe><table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 2px; display: none; top: 3px; left: -1px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table></body></html>

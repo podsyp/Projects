@@ -1,0 +1,23 @@
+/*
+Theme Name:     Yelly Child
+Theme URI:      http: //example.com/
+Description:    Yelly
+Author:         Yelly
+Author URI:     http: //example.com/about/
+Template:       yelly
+Version:        0.1.0
+*/
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+
+@media all and (orientation:landscape)
+    pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        text-align: justify;
+    }
+}

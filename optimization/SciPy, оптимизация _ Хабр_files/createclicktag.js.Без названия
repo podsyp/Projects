@@ -1,0 +1,19 @@
+(function()
+{
+    try
+    {
+        var q       = window.location.search;
+        var re      = /click=([^&]*)/;
+        var found   = q ? q.match( re ) : false;
+        var ifrm;
+
+        if ( found )
+        {
+            window.clickTag = decodeURIComponent(found[1]);
+        }
+    }
+    catch(e)
+    {
+
+    }
+})();

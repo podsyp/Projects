@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<!-- saved from url=(0139)https://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize -->
+<html class="html__responsive"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <title>python - Использование scipy.optimize - Stack Overflow на русском</title>
+        <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/ru/img/favicon.ico?v=b95a7516ec95">
+        <link rel="apple-touch-icon" href="https://cdn.sstatic.net/Sites/ru/img/apple-touch-icon.png?v=0dd80f442adc">
+        <link rel="image_src" href="https://cdn.sstatic.net/Sites/ru/img/apple-touch-icon.png?v=0dd80f442adc"> 
+        <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow на русском" href="https://ru.stackoverflow.com/opensearch.xml">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+
+
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://ru.stackoverflow.com/questions/483540/Использование-scipy-optimize">
+        <meta property="og:site_name" content="Stack Overflow на русском">
+        <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/ru/img/apple-touch-icon@2.png?v=387ab71bdafd">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:domain" content="ru.stackoverflow.com">
+        <meta name="twitter:title" property="og:title" itemprop="name" content="Использование scipy.optimize">
+        <meta name="twitter:description" property="og:description" itemprop="description" content="Нужно минимизировать функцию, зависящую от двух переменных, используя алгоритм Нелдера-Мида. В документации сказано (ссылка), что в options у данной функции можно указать xtol, но при этом оно ">
+            <script src="./python - Использование scipy.optimize - Stack Overflow на русском_files/pubads_impl_rendering_2020012701.js.Без названия"></script><script src="./python - Использование scipy.optimize - Stack Overflow на русском_files/rules-p-c1rF4kxgLUzNc.js.Без названия" async=""></script><script type="text/javascript" async="" src="./python - Использование scipy.optimize - Stack Overflow на русском_files/watch.js.Без названия"></script><script async="" src="./python - Использование scipy.optimize - Stack Overflow на русском_files/quant.js.Без названия"></script><script async="" src="./python - Использование scipy.optimize - Stack Overflow на русском_files/beacon.js.Без названия"></script><script async="" src="./python - Использование scipy.optimize - Stack Overflow на русском_files/analytics.js.Без названия"></script><script src="./python - Использование scipy.optimize - Stack Overflow на русском_files/jquery.min.js.Без названия"></script>
+        <script src="./python - Использование scipy.optimize - Stack Overflow на русском_files/stub.ru.js.Без названия"></script>
+    
+    <link rel="stylesheet" type="text/css" href="./python - Использование scipy.optimize - Stack Overflow на русском_files/stacks.css">
+    <link rel="stylesheet" type="text/css" href="./python - Использование scipy.optimize - Stack Overflow на русском_files/primary.css">
+
+    
+            <link rel="alternate" type="application/atom+xml" title="Лента для вопроса «Использование scipy.optimize»" href="https://ru.stackoverflow.com/feeds/question/483540">
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+            StackExchange.ready(function () {
+                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:1,shownCommentCount:1,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:483540});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('609', '483540');
+                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script>
+
+        
+        
+        
+        
+        
+        
+        
+
+
+        <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com');
+                StackExchange.realtime.subscribeToReputationNotifications('609');
+        StackExchange.realtime.subscribeToTopBarNotifications('609');
+        });
+    </script>
+    <script>
+        StackExchange.init({"locale":"ru","serverTime":1580658526,"routeName":"Questions/Show","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","site":{"name":"Stack Overflow на русском","description":"Вопросы и ответы для программистов","isNoticesTabEnabled":true,"enableNewTagCreationWarning":false,"insertSpaceAfterNameTabCompletion":false,"id":609,"childUrl":"https://ru.meta.stackoverflow.com","negativeVoteScoreFloor":null,"enableSocialMediaInSharePopup":true,"protocol":"https"},"user":{"fkey":"8020f7a0eae530f546fa4828b3b41676debd3b904dd9b842b27821015977741a","tid":"0840fa99-2899-444a-63e9-c2e6dec6c3f5","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true},"realtime":{"newest":true,"active":true,"tagged":true,"staleDisconnectIntervalInHours":0},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75,"likedTagsMaxLength":300,"dislikedTagsMaxLength":300},"jobPreferences":{"maxNumDeveloperRoles":2,"maxNumIndustries":4},"svgIconPath":"https://cdn.sstatic.net/Img/svg-icons","svgIconHash":"db6a9bf1709e"}, {"userProfile":{},"userMessaging":{},"tags":{"allowNonAsciiTags":true},"snippets":{"renderDomain":"stacksnippets.net","snippetsEnabled":true},"slack":{"sidebarAdDismissCookie":"slack-sidebar-ad"},"site":{"allowImageUploads":true,"enableImgurHttps":true,"enableUserHovercards":true,"forceHttpsImages":true,"styleCode":true},"paths":{},"monitoring":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000},"mentions":{"maxNumUsersInDropdown":50},"markdown":{"asteriskIntraWordEmphasis":true},"flags":{"allowRetractingCommentFlags":true,"allowRetractingFlags":true},"comments":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.ru.js":"909fbd791d21","js/moderator.ru.js":"7498fc0ba4ce","js/full-anon.ru.js":"66bb32fe1896","js/full.ru.js":"6c787c1ab15a","js/wmd.ru.js":"58171b43dcbe","js/mobile.ru.js":"40aec35cf6c9","js/help.ru.js":"d8dd652be222","js/tageditor.ru.js":"743a6cb4f8c1","js/tageditornew.ru.js":"4a19497d634e","js/inline-tag-editing.ru.js":"bcdb092c1db0","js/revisions.ru.js":"502a78f9b656","js/review.ru.js":"72e25294df3a","js/tagsuggestions.ru.js":"bf3acb8c879a","js/post-validation.ru.js":"1519ceb91f57","js/explore-qlist.ru.js":"fdeebc5008d7","js/events.ru.js":"a07a218f97e4","js/keyboard-shortcuts.ru.js":"2896237d26fb","js/adops.ru.js":"6b9883f0531e","js/begin-edit-event.ru.js":"b6f47dd7a88c","js/ask.ru.js":"c3d2e303d4c6","js/question-editor.ru.js":"","js/snippet-javascript-codemirror.ru.js":"cbcfb746b46e"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    <noscript id="noscript-css"><style>body,.top-bar{margin-top:1.9em}</style></noscript>
+    <script async="" src="./python - Использование scipy.optimize - Stack Overflow на русском_files/full-anon.ru.js.Без названия"></script><link rel="preload" href="./python - Использование scipy.optimize - Stack Overflow на русском_files/f.txt" as="script"><script type="text/javascript" src="./python - Использование scipy.optimize - Stack Overflow на русском_files/f.txt"></script><link rel="preload" href="./python - Использование scipy.optimize - Stack Overflow на русском_files/f(1).txt" as="script"><script type="text/javascript" src="./python - Использование scipy.optimize - Stack Overflow на русском_files/f(1).txt"></script><script src="./python - Использование scipy.optimize - Stack Overflow на русском_files/pubads_impl_2020012701.js.Без названия" async=""></script><script async="" src="./python - Использование scipy.optimize - Stack Overflow на русском_files/post-validation.ru.js.Без названия"></script><script async="" src="./python - Использование scipy.optimize - Stack Overflow на русском_files/prettify-full.ru.js.Без названия"></script><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-37/html/container.html"></head>
+        <body class="question-page unified-theme">
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+
+
+
+<header class="top-bar js-top-bar top-bar__network _fixed">
+    <div class="wmx12 mx-auto grid ai-center h100" role="menubar">
+        <div class="-main grid--cell">
+                <a href="https://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize#" class="left-sidebar-toggle p0 ai-center jc-center js-left-sidebar-toggle" role="menuitem" aria-haspopup="true" aria-controls="left-sidebar" aria-expanded="false"><span class="ps-relative"></span></a>
+                <div class="topbar-dialog leftnav-dialog js-leftnav-dialog dno">
+                    <div class="left-sidebar js-unpinned-left-sidebar" data-can-be="left-sidebar" data-is-here-when="sm"></div>
+                </div>
+                                <a href="https://ru.stackoverflow.com/" class="-logo js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:8})">
+                        <span class="-img _glyph">Stack Overflow на русском</span>
+                    </a>
+
+
+
+        </div>
+
+
+            <form id="search" role="search" action="https://ru.stackoverflow.com/search" method="get" class="grid--cell fl-grow1 searchbar px12 js-searchbar " autocomplete="off">
+                    <div class="ps-relative">
+                        <input name="q" type="text" placeholder="Поиск..." value="" autocomplete="off" maxlength="240" class="s-input s-input__search js-search-field " aria-label="Поиск" aria-controls="top-search" data-controller="s-popover" data-action="focus-&gt;s-popover#show" data-s-popover-placement="bottom-start">
+                        <svg aria-hidden="true" class="svg-icon s-input-icon s-input-icon__search iconSearch" width="18" height="18" viewBox="0 0 18 18"><path d="M18 16.5l-5.14-5.18h-.35a7 7 0 1 0-1.19 1.19v.35L16.5 18l1.5-1.5zM12 7A5 5 0 1 1 2 7a5 5 0 0 1 10 0z"></path></svg>
+<div class="s-popover p0 wmx100 wmn4 sm:wmn-initial js-top-search-popover s-popover--arrow__tl" id="top-search" role="menu">
+    <div class="js-spinner p24 grid ai-center jc-center d-none">
+        <div class="s-spinner s-spinner__sm fc-orange-400">
+            <div class="v-visible-sr">Loading…</div>
+        </div>
+    </div>
+
+    <span class="v-visible-sr js-screen-reader-info"></span>
+    <div class="js-ac-results overflow-y-auto hmx3 d-none"></div>
+
+    <div class="js-search-hints" aria-describedby="Tips for searching"></div>
+</div>
+                    </div>
+            </form>
+
+        
+
+
+
+<ol class="overflow-x-auto ml-auto -secondary grid ai-center list-reset h100 user-logged-out" role="presentation">
+        <li class="-item searchbar-trigger"><a href="https://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize#" class="-link js-searchbar-trigger" role="button" aria-label="Поиск" aria-haspopup="true" aria-controls="search" title="Click to show search"><svg aria-hidden="true" class="svg-icon iconSearch" width="18" height="18" viewBox="0 0 18 18"><path d="M18 16.5l-5.14-5.18h-.35a7 7 0 1 0-1.19 1.19v.35L16.5 18l1.5-1.5zM12 7A5 5 0 1 1 2 7a5 5 0 0 1 10 0z"></path></svg></a></li>
+            <li class="-item inbox-button-item">
+        <a href="https://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize#" class="-link js-inbox-button" aria-label="Входящие сообщения" title="Последние входящие сообщения" role="menuitem" aria-haspopup="true" aria-expanded="false" data-unread-count="0">
+            <svg aria-hidden="true" class="svg-icon iconInbox" width="20" height="18" viewBox="0 0 20 18"><path d="M4.63 1h10.56a2 2 0 0 1 1.94 1.35L20 10.79V15a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-4.21l2.78-8.44c.25-.8 1-1.36 1.85-1.35zm8.28 12l2-2h2.95l-2.44-7.32a1 1 0 0 0-.95-.68H5.35a1 1 0 0 0-.95.68L1.96 11h2.95l2 2h6z"></path></svg>
+            <span class="indicator-badge js-unread-count _important d-none">0</span>
+        </a>
+    </li>
+    <li class="-item achievements-button-item">
+        <a href="https://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize#" class="-link js-achievements-button" data-unread-class="_highlighted-positive" aria-label="Achievements" title="Последние достижения: репутация, знаки и привилегии" role="menuitem" aria-haspopup="true" aria-expanded="false" data-unread-count="0" data-lit-up="false">
+            <svg aria-hidden="true" class="svg-icon iconAchievements" width="18" height="18" viewBox="0 0 18 18"><path d="M15 2V1H3v1H0v4c0 1.6 1.4 3 3 3v1c.4 1.5 3 2.6 5 3v2H5s-1 1.5-1 2h10c0-.4-1-2-1-2h-3v-2c2-.4 4.6-1.5 5-3V9c1.6-.2 3-1.4 3-3V2h-3zM3 7c-.5 0-1-.5-1-1V4h1v3zm8.4 2.5L9 8 6.6 9.4l1-2.7L5 5h3l1-2.7L10 5h2.8l-2.3 1.8 1 2.7h-.1zM16 6c0 .5-.5 1-1 1V4h1v2z"></path></svg>
+            <span class="indicator-badge js-unread-count _positive d-none">+0</span>
+        </a>
+    </li>
+    <li class="-item help-button-item">
+        <a href="https://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize#" class="-link js-help-button" title="Справка и прочие ресурсы" role="menuitem" aria-haspopup="true" aria-controls="topbar-help-dialog" data-ga="[&quot;top navigation&quot;,&quot;help menu click&quot;,null,null,null]"><svg aria-hidden="true" class="svg-icon iconHelp" width="18" height="18" viewBox="0 0 18 18"><path d="M9 1a8 8 0 1 0 0 16A8 8 0 0 0 9 1zm.81 12.13c-.02.71-.55 1.15-1.24 1.13-.66-.02-1.17-.49-1.15-1.2.02-.72.56-1.18 1.22-1.16.7.03 1.2.51 1.17 1.23zM11.77 8c-.3.34-.65.65-1.02.91l-.53.37c-.26.2-.42.43-.5.69a4 4 0 0 0-.09.75c0 .05-.03.16-.18.16H7.88c-.16 0-.18-.1-.18-.15.03-.66.12-1.21.4-1.66.4-.49.88-.9 1.43-1.22.16-.12.28-.25.38-.39a1.34 1.34 0 0 0 .02-1.71c-.24-.31-.51-.46-1.03-.46-.51 0-.8.26-1.02.6-.21.33-.18.73-.18 1.1H5.75c0-1.38.35-2.25 1.1-2.76.52-.35 1.17-.5 1.93-.5 1 0 1.79.18 2.49.71.64.5.98 1.18.98 2.12 0 .57-.2 1.05-.48 1.44z"></path></svg></a>
+    </li>
+    <div class="topbar-dialog help-dialog js-help-dialog dno" id="topbar-help-dialog" role="menu">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="https://ru.stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })" data-ga="[&quot;top navigation&quot;,&quot;tour submenu click&quot;,null,null,null]">
+                            Тур
+                            <span class="item-summary">
+                                Начните с этой страницы, чтобы быстро ознакомиться с сайтом
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="https://ru.stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })" data-ga="[&quot;top navigation&quot;,&quot;help center&quot;,null,null,null]">
+                        Справка
+                        <span class="item-summary">
+                            Подробные ответы на любые возможные вопросы
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="https://ru.meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })" data-ga="[&quot;top navigation&quot;,&quot;meta submenu click&quot;,null,null,null]">
+                                Мета
+                                <span class="item-summary">
+                                    Обсудить принципы работы и политику сайта
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })" data-ga="[&quot;top navigation&quot;,&quot;about us submenu click&quot;,null,null,null]">
+                                О нас
+                                <span class="item-summary">
+                                    Узнать больше о компании Stack Overflow
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflowbusiness.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })" data-ga="[&quot;top navigation&quot;,&quot;business submenu click&quot;,null,null,null]">
+                                Бизнес
+                                <span class="item-summary">
+                                    Узнать больше о поиске разработчиков или рекламе на сайте
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+    <li class="-item site-switcher-item">
+        <a href="https://stackexchange.com/" class="-link js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" aria-label="Site switcher" title="Список всех сайтов Stack Exchange (175 сайтов)" role="menuitem" aria-haspopup="true" aria-expanded="false" data-ga="[&quot;top navigation&quot;,&quot;stack exchange click&quot;,null,null,null]">
+            <svg aria-hidden="true" class="svg-icon iconStackExchange" width="18" height="18" viewBox="0 0 18 18"><path d="M15 1H3a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2zM1 13c0 1.1.9 2 2 2h8v3l3-3h1a2 2 0 0 0 2-2v-2H1v2zm16-7H1v4h16V6z"></path></svg>
+        </a>
+    </li>
+
+            <li class="-ctas">
+                        <a href="https://ru.stackoverflow.com/users/login?ssrc=head&amp;returnurl=https%3a%2f%2fru.stackoverflow.com%2fquestions%2f483540%2f%25D0%2598%25D1%2581%25D0%25BF%25D0%25BE%25D0%25BB%25D1%258C%25D0%25B7%25D0%25BE%25D0%25B2%25D0%25B0%25D0%25BD%25D0%25B8%25D0%25B5-scipy-optimize" class="login-link s-btn s-btn__filled py8 js-gps-track" rel="nofollow" data-gps-track="login.click" data-ga="[&quot;top navigation&quot;,&quot;login button click&quot;,null,null,null]">Войти</a>
+                        <a href="https://ru.stackoverflow.com/users/signup?ssrc=head&amp;returnurl=https%3a%2f%2fru.stackoverflow.com%2fquestions%2f483540%2f%25D0%2598%25D1%2581%25D0%25BF%25D0%25BE%25D0%25BB%25D1%258C%25D0%25B7%25D0%25BE%25D0%25B2%25D0%25B0%25D0%25BD%25D0%25B8%25D0%25B5-scipy-optimize" class="login-link s-btn s-btn__primary py8" rel="nofollow" data-ga="[&quot;sign up&quot;,&quot;Sign Up Navigation&quot;,&quot;Header&quot;,null,null]">Регистрация</a>
+
+            </li>
+
+    <li class="js-topbar-dialog-corral" role="presentation">
+
+
+    <div class="topbar-dialog siteSwitcher-dialog dno" role="menu">
+        <div class="header">
+            <h3><a href="https://ru.stackoverflow.com/">текущее сообщество</a>
+            </h3>
+        </div>
+        <div class="modal-content current-site-container">
+            <ul class="current-site">
+                    <li class="grid">
+                            <div class="fl1">
+            <a href="https://ru.stackoverflow.com/" class="current-site-link site-link js-gps-track grid gs8 gsx" data-id="609" data-gps-track="site_switcher.click({ item_type:3 })">
+        <div class="favicon favicon-ru site-icon grid--cell" title="Stack Overflow на русском"></div>
+        <span class="grid--cell fl1">
+            Stack Overflow на русском
+        </span>
+    </a>
+
+    </div>
+    <div class="related-links">
+            <a href="https://ru.stackoverflow.com/help" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:14 })">справка</a>
+                    <a href="https://chat.stackexchange.com/?tab=site&amp;host=ru.stackoverflow.com" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">чат</a>
+            </div>
+
+                    </li>
+                    <li class="related-site grid">
+                            <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                            <a href="https://ru.meta.stackoverflow.com/" class="site-link js-gps-track grid gs8 gsx" data-id="610" data-gps-track="site.switch({ target_site:610, item_type:3 }),site_switcher.click({ item_type:4 })">
+        <div class="favicon favicon-rumeta site-icon grid--cell" title="Stack Overflow на русском Meta"></div>
+        <span class="grid--cell fl1">
+            Stack Overflow на русском Meta
+        </span>
+    </a>
+
+                    </li>
+            </ul>
+        </div>
+
+        <div class="header" id="your-communities-header">
+            <h3>
+Ваши сообщества            </h3>
+
+        </div>
+        <div class="modal-content" id="your-communities-section">
+
+                <div class="call-to-login">
+Чтобы изменить список, <a href="https://ru.stackoverflow.com/users/signup?ssrc=site_switcher&amp;returnurl=https%3a%2f%2fru.stackoverflow.com%2fquestions%2f483540%2f%25D0%2598%25D1%2581%25D0%25BF%25D0%25BE%25D0%25BB%25D1%258C%25D0%25B7%25D0%25BE%25D0%25B2%25D0%25B0%25D0%25BD%25D0%25B8%25D0%25B5-scipy-optimize" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">зарегистрируйтесь</a> или <a href="https://ru.stackoverflow.com/users/login?ssrc=site_switcher&amp;returnurl=https%3a%2f%2fru.stackoverflow.com%2fquestions%2f483540%2f%25D0%2598%25D1%2581%25D0%25BF%25D0%25BE%25D0%25BB%25D1%258C%25D0%25B7%25D0%25BE%25D0%25B2%25D0%25B0%25D0%25BD%25D0%25B8%25D0%25B5-scipy-optimize" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">войдите</a>.
+                </div>
+        </div>
+
+        <div class="header">
+            <h3><a href="https://stackexchange.com/sites">другие сообщества stack exchange</a>
+            </h3>
+            <a href="https://stackoverflow.blog/" class="fr">блог компании</a>
+        </div>
+        <div class="modal-content">
+                <div class="child-content"></div>
+        </div>        
+    </div>
+    </li>
+</ol>
+
+    </div>
+</header>
+    <div id="js-gdpr-consent-banner" class="p8 ff-sans ps-fixed b0 l0 r0 z-banner" role="banner" aria-hidden="false" style="background-color: #3b4045; color: white;"> 
+        <div class="wmx8 mx-auto grid grid__center" role="alertdialog" aria-describedby="notice-message">
+            <div class="grid--cell mr12" aria-label="notice-message">
+                <p class="mb0 lh-lg">
+                    Используя наш сайт, вы подтверждаете, что прочитали и поняли <a class="s-link s-link__inherit td-underline fc-white" target="_blank" href="https://stackoverflow.com/legal/cookie-policy">политику о куки</a>, <a class="s-link s-link__inherit td-underline fc-white" target="_blank" href="https://stackoverflow.com/legal/privacy-policy">политику конфиденциальности</a> и <a class="s-link s-link__inherit td-underline fc-white" target="_blank" href="https://stackoverflow.com/legal/terms-of-service/public">пользовательское соглашение</a>.
+                </p>
+            </div>
+            <div class="grid--cell">
+                <a class="s-btn s-btn__muted s-btn__icon js-notice-close" aria-label="notice-dismiss">
+                    <svg aria-hidden="true" class="svg-icon iconClear" width="18" height="18" viewBox="0 0 18 18"><path d="M15 4.41L13.59 3 9 7.59 4.41 3 3 4.41 7.59 9 3 13.59 4.41 15 9 10.41 13.59 15 15 13.59 10.41 9 15 4.41z"></path></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        StackExchange.ready(function () { StackExchange.topbar.init(); });
+        StackExchange.scrollPadding.setPaddingTop(50, 10);     </script>
+
+
+
+
+
+
+    <div class="container">
+
+
+
+
+
+
+<div id="left-sidebar" data-is-here-when="md lg" class="left-sidebar js-pinned-left-sidebar ps-relative">
+    <div class="left-sidebar--sticky-container js-sticky-leftnav">
+        <nav role="navigation">
+            <ol class="nav-links">
+    <li>
+        <a href="https://ru.stackoverflow.com/" class="pl8 js-gps-track nav-links--link" data-gps-track="top_nav.click({is_current:false, location:2, destination:8})">
+Главная        </a>
+    </li>
+                <li>
+                    <ol class="nav-links">
+                            <li class=" youarehere">
+        <a id="nav-questions" href="https://ru.stackoverflow.com/questions" class="pl8 js-gps-track nav-links--link" data-gps-track="top_nav.click({is_current:true, location:2, destination:1})">
+Вопросы        </a>
+    </li>
+
+    <li>
+        <a id="nav-tags" href="https://ru.stackoverflow.com/tags" class="pl8 js-gps-track nav-links--link" data-gps-track="top_nav.click({is_current:false, location:2, destination:2})">
+Метки        </a>
+    </li>
+    <li>
+        <a id="nav-users" href="https://ru.stackoverflow.com/users" class="pl8 js-gps-track nav-links--link" data-gps-track="top_nav.click({is_current:false, location:2, destination:3})">
+Участники        </a>
+    </li>
+                                                                    </ol>
+                </li>
+            </ol>
+        </nav>
+    </div>
+
+
+
+</div>
+
+
+        <div id="content" class="snippet-hidden">
+
+
+            
+
+
+<div itemprop="mainEntity" itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="https://cdn.sstatic.net/Sites/ru/img/apple-touch-icon.png?v=0dd80f442adc">
+
+    <div class="inner-content clearfix">
+
+        
+
+                    <div id="question-header" class="grid sm:fd-column">
+                        <h1 itemprop="name" class="grid--cell fs-headline1 fl1 ow-break-word mb8"><a href="https://ru.stackoverflow.com/questions/483540/%d0%98%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-scipy-optimize" class="question-hyperlink">Использование scipy.optimize</a></h1>
+
+                <div class="ml12 aside-cta grid--cell print:d-none sm:ml0 sm:mb12 sm:order-first sm:as-end">
+
+    <a href="https://ru.stackoverflow.com/questions/ask" class="ws-nowrap s-btn s-btn__primary">
+        Задать вопрос
+    </a>
+
+                </div>
+            </div>
+            <div class="grid fw-wrap pb8 mb16 bb bc-black-2">
+                    <div class="grid--cell ws-nowrap mr16 mb8" title="2016-01-17 12:55:26Z">
+                        <span class="fc-light mr2">Вопрос задан</span>
+                        <time itemprop="dateCreated" datetime="2016-01-17T12:55:26">4 года назад</time>
+                    </div>
+                        <div class="grid--cell ws-nowrap mr16 mb8">
+                            <span class="fc-light mr2">Последняя активность</span>
+                            <a href="https://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize?lastactivity" class="s-link s-link__inherit" title="2016-04-02 14:52:54Z">3 года 10 месяцев назад</a>
+                        </div>
+                    <div class="grid--cell ws-nowrap mb8" title="Просмотрен 7,940 раз">
+                        <span class="fc-light mr2">Просмотрен</span>
+                        8k раз
+                    </div>
+            </div>
+                    <div id="mainbar" role="main" aria-label="question and answers">
+
+                
+
+<div class="question" data-questionid="483540" id="question">
+
+    <style>.everyoneloves__top-leaderboard:empty,.everyoneloves__mid-leaderboard:empty,.everyoneloves__bot-mid-leaderboard:empty{
+            margin-bottom:0;
+}
+</style>
+<div id="dfp-tlb" class="everyonelovesstackoverflow everyoneloves__top-leaderboard" style="min-height: auto; height: auto; display: none;"></div>
+    <div class="post-layout">
+        <div class="votecell post-layout--left">
+            
+
+<div class="js-voting-container grid fd-column ai-stretch gs4 fc-black-200" data-post-id="483540">
+        <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" title="Вопрос отражает стремление разобраться; он понятен и несёт пользу" aria-pressed="false" aria-label="голос «за»" data-selected-classes="fc-theme-primary"><svg aria-hidden="true" class="svg-icon m0 iconArrowUpLg" width="36" height="36" viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+        <div class="js-vote-count grid--cell fc-black-500 fs-title grid fd-column ai-center" itemprop="upvoteCount" data-value="2">2</div>
+        <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" title="Вопрос не отражает стремления разобраться; он непонятен или не несёт пользы" aria-pressed="false" aria-label="голос «‎против»" data-selected-classes="fc-theme-primary"><svg aria-hidden="true" class="svg-icon m0 iconArrowDownLg" width="36" height="36" viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+
+        <button class="js-favorite-btn s-btn s-btn__unset c-pointer py4 js-gps-track" aria-pressed="false" aria-label="избранное" data-selected-classes="fc-yellow-600" data-gps-track="post.click({ item: 1, priv: 0, post_type: 1 })">
+            <svg aria-hidden="true" class="svg-icon iconStar" width="18" height="18" viewBox="0 0 18 18"><path d="M9 12.65l-5.29 3.63 1.82-6.15L.44 6.22l6.42-.17L9 0l2.14 6.05 6.42.17-5.1 3.9 1.83 6.16L9 12.65z"></path></svg>
+            <div class="js-favorite-count mt4 d-none" data-value="0">0</div>
+        </button>
+    
+
+    
+        <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py8 mx-auto" href="https://ru.stackoverflow.com/posts/483540/timeline" data-shortcut="T" title="Временная шкала"><svg aria-hidden="true" class="svg-icon mln2 mr0 iconHistory" width="19" height="18" viewBox="0 0 19 18"><path d="M3 9a8 8 0 1 1 3.73 6.77L8.2 14.3A6 6 0 1 0 5 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+
+</div>
+
+        </div>
+
+        
+
+
+<div class="postcell post-layout--right">
+    
+    <div class="post-text" itemprop="text">
+
+<p>Нужно минимизировать функцию, зависящую от двух переменных, используя алгоритм <em>Нелдера-Мида</em>. В документации сказано (<a href="http://docs.scipy.org/doc/scipy/reference/optimize.minimize-neldermead.html#optimize-minimize-neldermead" rel="nofollow">ссылка</a>), что в <code>options</code> у данной функции можно указать <code>xtol</code>, но при этом оно принимается как <code>float</code>.<br>
+Как указать <code>xtol</code> для каждой из двух варьируемых переменных, притом, что они имеют разный порядок? Пробовал запись вида <code>'xtol':[1,0.01]</code> - ругается.
+Код:</p>
+
+<pre class="lang-py prettyprint prettyprinted" style=""><code><span class="kwd">import</span><span class="pln"> </span><span class="typ">Residual_calc</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> res_c
+</span><span class="kwd">from</span><span class="pln"> scipy</span><span class="pun">.</span><span class="pln">optimize </span><span class="kwd">import</span><span class="pln"> minimize
+
+var_ar0</span><span class="pun">=[</span><span class="lit">25</span><span class="pun">,</span><span class="lit">1.0</span><span class="pun">];</span><span class="pln">
+
+var_ar_min</span><span class="pun">=</span><span class="pln">minimize</span><span class="pun">(</span><span class="pln">res_c</span><span class="pun">.</span><span class="pln">x_extr_res</span><span class="pun">,</span><span class="pln">var_ar0</span><span class="pun">,(),</span><span class="str">'Nelder-Mead'</span><span class="pun">,</span><span class="pln">options</span><span class="pun">={</span><span class="str">'disp'</span><span class="pun">:</span><span class="kwd">True</span><span class="pun">,</span><span class="str">'maxiter'</span><span class="pun">:</span><span class="lit">10</span><span class="pun">});</span></code></pre>
+    </div>
+
+        <div class="post-taglist grid gs4 gsy fd-column">
+            <div class="grid ps-relative d-block">
+                <a href="https://ru.stackoverflow.com/questions/tagged/python" class="post-tag js-gps-track" title="показать вопросы с меткой [python]" rel="tag">python</a> <a href="https://ru.stackoverflow.com/questions/tagged/scipy" class="post-tag js-gps-track" title="показать вопросы с меткой [scipy]" rel="tag">scipy</a> 
+            </div>
+        </div>
+
+    <div class="mb0 ">
+        <div class="mt16 grid gs8 gsy fw-wrap jc-end ai-start pt4">
+            <div class="grid--cell mr16" style="flex: 1 1 100px;">
+                <div class="post-menu"><a href="https://ru.stackoverflow.com/q/483540" itemprop="url" class="js-share-link js-gps-track" title="короткая постоянная ссылка на этот вопрос" data-gps-track="post.click({ item: 2, priv: 0, post_type: 1 })" data-controller="se-share-sheet s-popover" data-se-share-sheet-title="Поделиться ссылкой на вопрос" data-se-share-sheet-subtitle="" data-se-share-sheet-post-type="question" data-se-share-sheet-social="facebook twitter " data-se-share-sheet-location="1" data-s-popover-placement="bottom-start" aria-controls="se-share-sheet-0" data-action=" s-popover#toggle se-share-sheet#preventNavigation s-popover:show-&gt;se-share-sheet#willShow s-popover:shown-&gt;se-share-sheet#didShow">поделиться</a><div class="s-popover z-dropdown" style="width: unset; max-width: 28em;" id="se-share-sheet-0"><div class="s-popover--arrow"></div><div><span class="js-title fw-bold">Поделиться ссылкой на вопрос</span> <span class="js-subtitle"></span></div><div class="my8"><input type="text" class="js-input s-input wmn3 sm:wmn-initial" readonly=""></div><div class="d-flex jc-space-between mbn4"><button class="js-copy-link-btn s-btn s-btn__link">Скопировать ссылку</button><div class="js-social-container"></div></div></div><span class="lsep">|</span><a href="https://ru.stackoverflow.com/posts/483540/edit" class="suggest-edit-post js-gps-track" data-gps-track="post.click({ item: 6, priv: 0, post_type: 1 })" title="">улучшить этот вопрос</a></div>
+            </div>
+
+                <div class="post-signature grid--cell">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="https://ru.stackoverflow.com/posts/483540/revisions" title="показать все правки данного сообщения" class="js-gps-track" data-gps-track="post.click({ item: 4, priv: 0, post_type: 1 })">изменён <span title="2016-01-17 14:08:38Z" class="relativetime">17 янв '16 в 14:08</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="https://ru.stackoverflow.com/users/178576/aleksandr-barakin"><div class="gravatar-wrapper-32"><img src="./python - Использование scipy.optimize - Stack Overflow на русском_files/photo.jpg" alt="" width="32" height="32" class="bar-sm"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="https://ru.stackoverflow.com/users/178576/aleksandr-barakin">aleksandr barakin</a>
+        <div class="-flair">
+            <span class="reputation-score" title="уровень репутации 59,649" dir="ltr">59.6k</span><span title="13 золотых знаков" aria-hidden="true"><span class="badge1"></span><span class="badgecount">13</span></span><span class="v-visible-sr">13 золотых знаков</span><span title="51 серебряный знак" aria-hidden="true"><span class="badge2"></span><span class="badgecount">51</span></span><span class="v-visible-sr">51 серебряный знак</span><span title="180 бронзовых знаков" aria-hidden="true"><span class="badge3"></span><span class="badgecount">180</span></span><span class="v-visible-sr">180 бронзовых знаков</span>
+        </div>
+    </div>
+</div>                </div>
+            <div class="post-signature owner grid--cell">
+<div class="user-info ">
+    <div class="user-action-time">
+        задан <span title="2016-01-17 12:55:26Z" class="relativetime">17 янв '16 в 12:55</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="https://ru.stackoverflow.com/users/199412/jukovn"><div class="gravatar-wrapper-32"><img src="./python - Использование scipy.optimize - Stack Overflow на русском_files/SGGf9.jpg" alt="" width="32" height="32" class="bar-sm"></div></a>
+    </div>
+    <div class="user-details" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <a href="https://ru.stackoverflow.com/users/199412/jukovn">Jukovn</a><span class="d-none" itemprop="name">Jukovn</span>
+        <div class="-flair">
+            <span class="reputation-score" title="уровень репутации " dir="ltr">21</span><span title="1 серебряный знак" aria-hidden="true"><span class="badge2"></span><span class="badgecount">1</span></span><span class="v-visible-sr">1 серебряный знак</span><span title="3 бронзовых знака" aria-hidden="true"><span class="badge3"></span><span class="badgecount">3</span></span><span class="v-visible-sr">3 бронзовых знака</span>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+    <div class="post-layout--right">
+        <div id="comments-483540" class="comments js-comments-container bt bc-black-2 mt12 " data-post-id="483540" data-min-length="15">
+            <ul class="comments-list js-comments-list" data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+    <li id="comment-559828" class="comment js-comment " data-comment-id="559828">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score js-comment-edit-hide">
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div class="comment-body js-comment-edit-hide">
+                
+                <span class="comment-copy">В коде функции 'Nelder-Mead' не предусмотрено использование нескольких значений для 'xtol'. Как вариант, написать свою функцию для минимизации. Взять код из функции scipy.optimize.optimize._minimize_neldermead и добавить проверку на несколько значений xtol.</span>
+                
+                    –&nbsp;<a href="https://ru.stackoverflow.com/users/178429/avernial" title="3,295 баллов репутации" class="comment-user">Avernial</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize#comment559828_483540"><span title="2016-01-18 02:26:34Z" class="relativetime-clean">18 янв '16 в 2:26</span></a></span>
+                                                            </div>
+        </div>
+    </li>
+            </ul>
+	    </div>
+
+        <div id="comments-link-483540" data-rep="50" data-anon="true">
+
+                    <a class="js-add-link comments-link disabled-link" title="Используйте комментарии для запроса дополнительной информации или предложения улучшений. Избегайте публикации ответа на вопросы в комментариях." href="https://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize#" role="button">добавить комментарий</a>
+                <span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="разверните, чтобы увидеть все комментарии к сообщению" href="https://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize#" onclick="" role="button"></a>
+        </div>         
+    </div>            </div>
+</div>
+
+
+
+                <div id="answers">
+
+                    <a name="tab-top"></a>
+                    <div id="answers-header">
+                        <div class="subheader answers-subheader">
+                            <h2 data-answercount="1">
+                                    1 ответ
+                                <span style="display:none;" itemprop="answerCount">1</span>
+                            </h2>
+                            <div>
+                                
+<div id="tabs">
+        <a href="https://ru.stackoverflow.com/questions/483540/%d0%98%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-scipy-optimize?answertab=active#tab-top" data-nav-xhref="" title="Сначала недавно обновлённые ответы" data-value="active" data-shortcut="A">
+            текущие</a>
+        <a href="https://ru.stackoverflow.com/questions/483540/%d0%98%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-scipy-optimize?answertab=oldest#tab-top" data-nav-xhref="" title="Ответы отображаются в порядке их публикации" data-value="oldest" data-shortcut="O">
+            по дате публикации</a>
+        <a class="youarehere is-selected " href="https://ru.stackoverflow.com/questions/483540/%d0%98%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-scipy-optimize?answertab=votes#tab-top" data-nav-xhref="" title="Сначала ответы с наивысшим рейтингом" data-value="votes" data-shortcut="V">
+            голоса</a>
+    </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+  
+<a name="498901"></a>
+<div id="answer-498901" class="answer" data-answerid="498901" itemprop="suggestedAnswer" itemscope="" itemtype="http://schema.org/Answer">
+    <div class="post-layout">
+        <div class="votecell post-layout--left">
+            
+
+<div class="js-voting-container grid fd-column ai-stretch gs4 fc-black-200" data-post-id="498901">
+        <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" title="Ответ полезен" aria-pressed="false" aria-label="голос «за»" data-selected-classes="fc-theme-primary"><svg aria-hidden="true" class="svg-icon m0 iconArrowUpLg" width="36" height="36" viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+        <div class="js-vote-count grid--cell fc-black-500 fs-title grid fd-column ai-center" itemprop="upvoteCount" data-value="1">1</div>
+        <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" title="Ответ не является полезным" aria-pressed="false" aria-label="голос «‎против»" data-selected-classes="fc-theme-primary"><svg aria-hidden="true" class="svg-icon m0 iconArrowDownLg" width="36" height="36" viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+
+    
+            <div class="js-accepted-answer-indicator grid--cell fc-green-500 ta-center py4 d-none" title="загружается, когда ответ был принят…" tabindex="0" role="note" aria-label="принят">
+                <svg aria-hidden="true" class="svg-icon iconCheckmarkLg" width="36" height="36" viewBox="0 0 36 36"><path d="M6 14l8 8L30 6v8L14 30l-8-8v-8z"></path></svg>
+            </div>
+
+    
+        <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py8 mx-auto" href="https://ru.stackoverflow.com/posts/498901/timeline" data-shortcut="T" title="Временная шкала"><svg aria-hidden="true" class="svg-icon mln2 mr0 iconHistory" width="19" height="18" viewBox="0 0 19 18"><path d="M3 9a8 8 0 1 1 3.73 6.77L8.2 14.3A6 6 0 1 0 5 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+
+</div>
+
+        </div>
+
+        
+
+
+<div class="answercell post-layout--right">
+    
+    <div class="post-text" itemprop="text">
+        <p>Если переменные имеют разный порядок, надо сделать линейную замену переменных, чтобы порядок был тем же. Тогда одного значения xtol хватит, и заодно, вероятно, улучшится производительность метода. </p>
+
+<p>Привожу пример такой замены. У функции f переменные разного порядка; и этот дефект функция scaledf исправляет. </p>
+
+<pre class="lang-py prettyprint prettyprinted" style=""><code><span class="kwd">from</span><span class="pln"> scipy</span><span class="pun">.</span><span class="pln">optimize </span><span class="kwd">import</span><span class="pln"> minimize
+
+</span><span class="kwd">def</span><span class="pln"> f</span><span class="pun">(</span><span class="pln">x</span><span class="pun">):</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">3</span><span class="pun">**(</span><span class="pln">x</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]**</span><span class="lit">2</span><span class="pun">)</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="lit">3</span><span class="pun">**(</span><span class="lit">1e-8</span><span class="pun">*</span><span class="pln">x</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]**</span><span class="lit">2</span><span class="pun">)</span><span class="pln">
+
+</span><span class="kwd">def</span><span class="pln"> scaledf</span><span class="pun">(</span><span class="pln">x</span><span class="pun">):</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> f</span><span class="pun">([</span><span class="pln">x</span><span class="pun">[</span><span class="lit">0</span><span class="pun">],</span><span class="pln"> </span><span class="lit">1e4</span><span class="pun">*</span><span class="pln">x</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]])</span><span class="pln">
+
+res </span><span class="pun">=</span><span class="pln"> minimize</span><span class="pun">(</span><span class="pln">f</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="lit">1</span><span class="pun">,</span><span class="lit">1</span><span class="pun">],</span><span class="pln"> method</span><span class="pun">=</span><span class="str">'Nelder-Mead'</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">={</span><span class="str">'xtol'</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1e-6</span><span class="pun">})</span><span class="pln">
+</span><span class="kwd">print</span><span class="pun">(</span><span class="pln">res</span><span class="pun">)</span><span class="pln">
+res2 </span><span class="pun">=</span><span class="pln"> minimize</span><span class="pun">(</span><span class="pln">scaledf</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="lit">1</span><span class="pun">,</span><span class="lit">1</span><span class="pun">],</span><span class="pln"> method</span><span class="pun">=</span><span class="str">'Nelder-Mead'</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">={</span><span class="str">'xtol'</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1e-6</span><span class="pun">})</span><span class="pln">
+</span><span class="kwd">print</span><span class="pun">(</span><span class="pln">res2</span><span class="pun">)</span></code></pre>
+
+<p>Сравнение результатов (настоящий минимум в (0,0)): </p>
+
+<pre class="lang-py prettyprint prettyprinted" style=""><code><span class="pun">[</span><span class="pln"> </span><span class="lit">8.64722640e-09</span><span class="pun">,</span><span class="pln">   </span><span class="lit">1.65971984e-04</span><span class="pun">]</span><span class="pln">   </span><span class="pun">для</span><span class="pln"> f
+</span><span class="pun">[-</span><span class="lit">3.37014990e-07</span><span class="pun">,</span><span class="pln">  </span><span class="pun">-</span><span class="lit">8.87487948e-08</span><span class="pun">]</span><span class="pln">   </span><span class="pun">для</span><span class="pln"> scaledf</span></code></pre>
+
+<hr>
+
+<p>Заодно замечу, что происходит, если не устанавливать опции: </p>
+
+<pre class="lang-py prettyprint prettyprinted" style=""><code><span class="pln">res </span><span class="pun">=</span><span class="pln"> minimize</span><span class="pun">(</span><span class="pln">f</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="lit">1</span><span class="pun">,</span><span class="lit">1</span><span class="pun">])</span><span class="pln">
+</span><span class="kwd">print</span><span class="pun">(</span><span class="pln">res</span><span class="pun">)</span><span class="pln">
+res2 </span><span class="pun">=</span><span class="pln"> minimize</span><span class="pun">(</span><span class="pln">scaledf</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="lit">1</span><span class="pun">,</span><span class="lit">1</span><span class="pun">])</span><span class="pln">
+</span><span class="kwd">print</span><span class="pun">(</span><span class="pln">res2</span><span class="pun">)</span></code></pre>
+
+<p>Результат для f никуда не годится;  для scaledf вполне приемлемый. </p>
+
+<pre class="lang-py prettyprint prettyprinted" style=""><code><span class="pun">[-</span><span class="lit">1.10723146e-07</span><span class="pun">,</span><span class="pln">   </span><span class="lit">9.99999971e-01</span><span class="pun">]</span><span class="pln">   </span><span class="pun">для</span><span class="pln"> f
+</span><span class="pun">[-</span><span class="lit">1.13095095e-07</span><span class="pun">,</span><span class="pln">  </span><span class="pun">-</span><span class="lit">1.13095095e-07</span><span class="pun">]</span><span class="pln">   </span><span class="pun">для</span><span class="pln"> scaledf</span></code></pre>
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+        <time itemprop="dateCreated" datetime="2016-03-01T22:50:02"></time>
+        <div class="grid--cell mr16" style="flex: 1 1 100px;">
+            <div class="post-menu"><a href="https://ru.stackoverflow.com/a/498901" itemprop="url" class="js-share-link js-gps-track" title="короткая постоянная ссылка на этот ответ" data-gps-track="post.click({ item: 2, priv: 0, post_type: 2 })" data-controller="se-share-sheet s-popover" data-se-share-sheet-title="Поделиться ссылкой на ответ" data-se-share-sheet-subtitle="" data-se-share-sheet-post-type="answer" data-se-share-sheet-social="facebook twitter " data-se-share-sheet-location="2" data-s-popover-placement="bottom-start" aria-controls="se-share-sheet-1" data-action=" s-popover#toggle se-share-sheet#preventNavigation s-popover:show-&gt;se-share-sheet#willShow s-popover:shown-&gt;se-share-sheet#didShow">поделиться</a><div class="s-popover z-dropdown" style="width: unset; max-width: 28em;" id="se-share-sheet-1"><div class="s-popover--arrow"></div><div><span class="js-title fw-bold">Поделиться ссылкой на ответ</span> <span class="js-subtitle"></span></div><div class="my8"><input type="text" class="js-input s-input wmn3 sm:wmn-initial" readonly=""></div><div class="d-flex jc-space-between mbn4"><button class="js-copy-link-btn s-btn s-btn__link">Скопировать ссылку</button><div class="js-social-container"></div></div></div><span class="lsep">|</span><a href="https://ru.stackoverflow.com/posts/498901/edit" class="suggest-edit-post js-gps-track" data-gps-track="post.click({ item: 6, priv: 0, post_type: 2 })" title="">улучшить этот ответ</a></div>
+        </div>
+
+
+
+    <div class="post-signature grid--cell fl0">
+<div class="user-info ">
+    <div class="user-action-time">
+        ответ дан <span title="2016-03-01 22:50:02Z" class="relativetime">1 мар '16 в 22:50</span>
+    </div>
+    <div class="user-gravatar32">
+        <span class="anonymous-gravatar"></span>
+    </div>
+    <div class="user-details" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        user176149<span class="d-none" itemprop="name">user176149</span>
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    </div>
+    
+</div>
+
+    <div class="post-layout--right">
+        <div id="comments-498901" class="comments js-comments-container bt bc-black-2 mt12  dno" data-post-id="498901" data-min-length="15">
+            <ul class="comments-list js-comments-list" data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+            </ul>
+	    </div>
+
+        <div id="comments-link-498901" data-rep="50" data-anon="true">
+
+                    <a class="js-add-link comments-link disabled-link" title="Используйте комментарии для запроса дополнительной информации или предложения улучшений. Избегайте комментариев в стиле «+1» или «Спасибо»." href="https://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize#" role="button">добавить комментарий</a>
+                <span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="разверните, чтобы увидеть все комментарии к сообщению" href="https://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize#" onclick="" role="button"></a>
+        </div>         
+    </div>    </div>
+</div>
+
+                        <a name="new-answer"></a>
+                            <form id="post-form" action="https://ru.stackoverflow.com/questions/483540/answer/submit" method="post" class="js-add-answer-component post-form">
+                                <input type="hidden" id="post-id" value="483540">
+                                <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false">
+                                <input type="hidden" name="referrer" value="https://www.google.com/">
+                                <h2 class="space">
+                                    Ваш ответ
+                                </h2>
+
+
+
+    <script>
+        StackExchange.ifUsing("editor", function () {
+            StackExchange.using("externalEditor", function () {
+                StackExchange.using("snippets", function () {
+                    StackExchange.snippets.init();
+                });
+            });
+        }, "code-snippets");
+    </script>
+
+
+<script>
+    StackExchange.ready(function() {
+        var channelOptions = {
+            tags: "".split(" "),
+            id: "609"
+        };
+        initTagRenderer("".split(" "), "".split(" "), channelOptions);
+       
+        StackExchange.using("externalEditor", function() {
+            // Have to fire editor after snippets, if snippets enabled
+            if (StackExchange.settings.snippets.snippetsEnabled) {
+                StackExchange.using("snippets", function() {
+                    createEditor();
+                });
+            }
+            else {
+                createEditor();
+            }
+        });
+
+        function createEditor() {
+            StackExchange.prepareEditor({
+                heartbeatType: 'answer',
+                autoActivateHeartbeat: false,
+                convertImagesToLinks: false,
+                noModals: true,
+                showLowRepImageUploadWarning: true,
+                reputationToPostImages: null,
+                bindNavPrevention: true,
+                postfix: "",
+                imageUploader: {
+                brandingHtml: "на платформе \u003ca class=\"icon-imgur-white\" href=\"https://imgur.com/\"\u003e\u003c/a\u003e",
+                    contentPolicyHtml: "Материалы пользователей предоставляются на условиях лицензии \u003ca href=\"https://creativecommons.org/licenses/by-sa/4.0/\"\u003ecc by-sa 4.0 с указанием ссылки на источник\u003c/a\u003e \u003ca href=\"https://stackoverflow.com/legal/content-policy\"\u003e(правила для размещаемых материалов)\u003c/a\u003e",
+                    allowUrls: true
+                },
+                onDemand: true,
+                discardSelector: ".discard-answer"
+                ,immediatelyShowMarkdownHelp:true
+            });
+            
+
+        }
+    });
+</script>
+<div id="post-editor" class="post-editor js-post-editor">
+
+    <div class="ps-relative">
+        
+        <div class="wmd-container mb8">
+            <div id="wmd-button-bar" class="wmd-button-bar btr-sm"><ul id="wmd-button-row" class="wmd-button-row"><li id="wmd-bold-button" class="wmd-button" style="left: 0px;"><span style="background-position: 0px -20px;"></span></li><li id="wmd-italic-button" class="wmd-button" style="left: 25px;"><span style="background-position: -20px -20px;"></span></li><li id="wmd-spacer1" class="wmd-spacer" style="left: 50px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-link-button" class="wmd-button" style="left: 75px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-quote-button" class="wmd-button" style="left: 100px;"><span style="background-position: -60px -20px;"></span></li><li id="wmd-code-button" class="wmd-button" style="left: 125px;"><span style="background-position: -80px -20px;"></span></li><li id="wmd-image-button" class="wmd-button" style="left: 150px;"><span style="background-position: -100px -20px;"></span></li><li id="wmd-spacer2" class="wmd-spacer" style="left: 175px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-olist-button" class="wmd-button" style="left: 200px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-ulist-button" class="wmd-button" style="left: 225px;"><span style="background-position: -140px -20px;"></span></li><li id="wmd-heading-button" class="wmd-button" style="left: 250px;"><span style="background-position: -160px -20px;"></span></li><li id="wmd-hr-button" class="wmd-button" style="left: 275px;"><span style="background-position: -180px -20px;"></span></li><li id="wmd-spacer3" class="wmd-spacer" style="left: 300px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-undo-button" class="wmd-button" style="left: 325px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-redo-button" class="wmd-button" style="left: 350px;"><span style="background-position: -220px -20px;"></span></li><li class="wmd-spacer wmd-spacer-max"></li></ul></div>
+            <div class="js-stacks-validation">
+                <div class="ps-relative">
+                    <textarea id="wmd-input" name="post-text" class="wmd-input s-input bar0 js-post-body-field" data-post-type-id="2" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+                </div>
+                <div class="s-input-message mt4 d-none js-stacks-validation-message"></div>
+            </div>
+        </div>
+    </div>
+
+    <aside class="grid ai-start jc-space-between js-answer-help s-notice s-notice__warning pb0 pr4 pt4 mb8 d-none" role="status" aria-hidden="true">
+    <div class="grid--cell pt8">
+        <p>Спасибо за ваш ответ на Stack Overflow на русском!</p><ul><li>Пожалуйста, убедитесь, что <em>публикуемое сообщение отвечает на поставленный вопрос</em>. Предоставьте как можно больше деталей, расскажите про проведенное исследование!</li></ul><p>Но <em>избегайте</em> …</p><ul><li>Просьб помощи, уточнений или ответов на темы не относящиеся к вопросу.</li><li>Ответов основанных на мнениях; приводите аргументы основанные только на реальном опыте.</li></ul><p>Также, обратите внимание на заметку в справочном центре о том, <a href="https://ru.stackoverflow.com/help/how-to-answer">как писать ответы</a>.</p>
+    </div>
+    <button class="grid--cell js-answer-help-close-btn s-btn s-btn__muted fc-dark">
+        <svg aria-hidden="true" class="svg-icon iconClear" width="18" height="18" viewBox="0 0 18 18"><path d="M15 4.41L13.59 3 9 7.59 4.41 3 3 4.41 7.59 9 3 13.59 4.41 15 9 10.41 13.59 15 15 13.59 10.41 9 15 4.41z"></path></svg>
+    </button>
+</aside>
+
+
+    <div id="draft-saved" class="draft-saved community-option fl" style="height:24px; display:none;">черновик сохранён</div>
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="height:24px; display:none;">черновик удалён</div>
+
+
+
+        <div id="wmd-preview" class="wmd-preview"></div>
+        <div></div>
+            <div class="edit-block">
+            <input id="fkey" name="fkey" type="hidden" value="8020f7a0eae530f546fa4828b3b41676debd3b904dd9b842b27821015977741a">
+            <input id="author" name="author" type="text">
+        </div>
+
+</div>
+
+                                <div class="ps-relative">
+                                    
+                                                <div class="form-item new-post-login p0 my16">
+                <div class="grid gs16 md:fd-column new-login-form">
+                    <div class="grid fd-column w50 md:w-auto gsy gs8 jc-space-between new-login-left">
+                        <h3 class="grid--cell fs-title">Зарегистрируйтесь или <a id="login-link" href="https://ru.stackoverflow.com/users/login?ssrc=question_page&amp;returnurl=https%3a%2f%2fru.stackoverflow.com%2fquestions%2f483540%2f%25d0%2598%25d1%2581%25d0%25bf%25d0%25be%25d0%25bb%25d1%258c%25d0%25b7%25d0%25be%25d0%25b2%25d0%25b0%25d0%25bd%25d0%25b8%25d0%25b5-scipy-optimize%23new-answer">войдите</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script>
+                        <div class="grid--cell s-btn s-btn__muted s-btn__outlined s-btn__icon google-login" data-ga="[&quot;sign up&quot;,&quot;Sign Up Started - Google&quot;,&quot;New Post&quot;,null,null]">
+                            <svg aria-hidden="true" class="svg-icon native iconGoogle" width="18" height="18" viewBox="0 0 18 18"><path d="M16.51 8H8.98v3h4.3c-.18 1-.74 1.48-1.6 2.04v2.01h2.6a7.8 7.8 0 0 0 2.38-5.88c0-.57-.05-.66-.15-1.18z" fill="#4285F4"></path><path d="M8.98 17c2.16 0 3.97-.72 5.3-1.94l-2.6-2a4.8 4.8 0 0 1-7.18-2.54H1.83v2.07A8 8 0 0 0 8.98 17z" fill="#34A853"></path><path d="M4.5 10.52a4.8 4.8 0 0 1 0-3.04V5.41H1.83a8 8 0 0 0 0 7.18l2.67-2.07z" fill="#FBBC05"></path><path d="M8.98 4.18c1.17 0 2.23.4 3.06 1.2l2.3-2.3A8 8 0 0 0 1.83 5.4L4.5 7.49a4.77 4.77 0 0 1 4.48-3.3z" fill="#EA4335"></path></svg> Регистрация через Google
+                        </div>
+                        <div class="grid--cell s-btn s-btn__muted s-btn__icon facebook-login" data-ga="[&quot;sign up&quot;,&quot;Sign Up Started - Facebook&quot;,&quot;New Post&quot;,null,null]">
+                            <svg aria-hidden="true" class="svg-icon iconFacebook" width="18" height="18" viewBox="0 0 18 18"><path d="M3 1a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H3zm6.55 16v-6.2H7.46V8.4h2.09V6.61c0-2.07 1.26-3.2 3.1-3.2.88 0 1.64.07 1.87.1v2.16h-1.29c-1 0-1.19.48-1.19 1.18V8.4h2.39l-.31 2.42h-2.08V17h-2.5z" fill="#4167B2"></path></svg> Регистрация через Facebook
+                        </div>
+                        <div class="grid--cell s-btn s-btn__muted s-btn__outlined s-btn__icon stackexchange-login" data-ga="[&quot;sign up&quot;,&quot;Sign Up Navigation&quot;,&quot;New Post&quot;,null,null]">
+                            <svg aria-hidden="true" class="svg-icon native iconLogoGlyphXSm" width="18" height="18" viewBox="0 0 18 18"><path d="M14 16v-5h2v7H2v-7h2v5h10z" fill="#BCBBBB"></path><path d="M12.09.72l-1.21.9 4.5 6.07 1.22-.9L12.09.71zM5 15h8v-2H5v2zm9.15-5.87L8.35 4.3l.96-1.16 5.8 4.83-.96 1.16zm-7.7-1.47l6.85 3.19.63-1.37-6.85-3.2-.63 1.38zm6.53 5L5.4 11.39l.38-1.67 7.42 1.48-.22 1.46z" fill="#F48024"></path></svg> Регистрация через почту
+                        </div>
+                    </div>
+                    <input type="hidden" name="use-facebook" class="use-facebook" value="false">
+                    <input type="hidden" name="use-google" class="use-google" value="false">
+                    <input type="button" class="submit-openid" value="Submit" style="display:none">
+                    <div class="grid gsy gs8 fd-column w50 md:w-auto new-login-right form-item p0">
+                                <h3 class="grid--cell fs-title">Отправить без регистрации</h3>
+            <div class="grid--cell">
+                <div class="grid gs4 gsy fd-column">
+                    <label class="s-label" for="display-name">Имя</label>
+                    <div class="grid ps-relative">
+                        <input class="s-input" id="display-name" name="display-name" maxlength="30" type="text" value="" tabindex="105" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="grid--cell">
+                <div class="grid gs4 gsy fd-column">
+                    <div class="grid--cell">
+                        <div class="grid gs2 gsy fd-column">
+                            <label class="grid--cell s-label" for="m-address">Почта</label>
+                            <p class="grid--cell s-description">Необходима, но никому не показывается</p>
+                        </div>
+                    </div>
+                    <div class="grid ps-relative">
+                        <input class="s-input js-post-email-field" id="m-address" name="m-address" type="text" value="" size="40" tabindex="106" placeholder="">
+                    </div>
+                </div>
+            </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', 'https%3a%2f%2fru.stackoverflow.com%2fquestions%2f483540%2f%25d0%2598%25d1%2581%25d0%25bf%25d0%25be%25d0%25bb%25d1%258c%25d0%25b7%25d0%25be%25d0%25b2%25d0%25b0%25d0%25bd%25d0%25b8%25d0%25b5-scipy-optimize%23new-answer', 'question_page');
+                    }
+                );
+            </script>
+            <noscript>
+                        <h3 class="grid--cell fs-title">Отправить без регистрации</h3>
+            <div class="grid--cell">
+                <div class="grid gs4 gsy fd-column">
+                    <label class="s-label" for="display-name">Имя</label>
+                    <div class="grid ps-relative">
+                        <input class="s-input" id="display-name" name="display-name" maxlength="30" type="text" value="" tabindex="105" placeholder="" />
+                    </div>
+                </div>
+            </div>
+            <div class="grid--cell">
+                <div class="grid gs4 gsy fd-column">
+                    <div class="grid--cell">
+                        <div class="grid gs2 gsy fd-column">
+                            <label class="grid--cell s-label" for="m-address">Почта</label>
+                            <p class="grid--cell s-description">Необходима, но никому не показывается</p>
+                        </div>
+                    </div>
+                    <div class="grid ps-relative">
+                        <input class="s-input js-post-email-field" id="m-address" name="m-address" type="text" value="" size="40" tabindex="106" placeholder="" />
+                    </div>
+                </div>
+            </div>
+
+            </noscript>
+
+                                </div>
+
+                                                                    <div class="form-submit cbt grid gsx gs4">
+                                        <button id="submit-button" class="grid--cell s-btn s-btn__primary s-btn__icon" type="submit" tabindex="120" autocomplete="off">
+Отправить ответ                                        </button>
+                                        <button class="grid--cell s-btn s-btn__danger discard-answer dno">
+                                            Отменить
+                                        </button>
+                                            <p class="privacy-policy-agreement">
+                                                Нажимая на кнопку «Отправить ответ», вы соглашаетесь с нашими <a href="https://stackoverflow.com/legal/terms-of-service/public" name="tos" target="_blank" class="-link">пользовательским соглашением</a>, <a href="https://stackoverflow.com/legal/privacy-policy" name="privacy" target="_blank" class="-link">политикой конфиденциальности</a> и <a href="https://stackoverflow.com/legal/cookie-policy" name="cookie" target="_blank" class="-link">политикой о куки</a><input type="hidden" name="legalLinksShown" value="1">
+                                            </p>
+                                    </div>
+                                    <div class="js-general-error general-error cbt d-none"></div>
+                            </form>
+
+
+
+                            <h2 class="bottom-notice" data-loc="1">
+Всё ещё ищете ответ?                                Посмотрите другие вопросы с метками <a href="https://ru.stackoverflow.com/questions/tagged/python" class="post-tag" title="показать вопросы с меткой [python]" rel="tag">python</a> <a href="https://ru.stackoverflow.com/questions/tagged/scipy" class="post-tag" title="показать вопросы с меткой [scipy]" rel="tag">scipy</a>  или <a href="https://ru.stackoverflow.com/questions/ask">задайте свой вопрос</a>.                            </h2>
+                </div>
+            </div>
+                            <div id="sidebar" class="show-votes" role="complementary" aria-label="sidebar">
+                <div class="s-sidebarwidget s-sidebarwidget__yellow s-anchors s-anchors__grayscale mb16" data-tracker="cb=1">
+                <div class="s-sidebarwidget--header s-sidebarwidget__small-bold-text fc-light">
+                    Важное на Мете
+                </div>
+            <ul class="s-sidebarwidget--content s-sidebarwidget__items pt0 pr16 pb0 pl16">
+    <li class="s-sidebarwidget--item grid">
+        <div class="grid--cell1 fl-shrink0">
+                <a href="https://meta.stackexchange.com/questions/342991/planned-maintenance-scheduled-for-wednesday-february-5-2020-for-data-explorer?cb=1" data-ga="[&quot;community bulletin board&quot;,&quot;Важное на Мете&quot;,&quot;https://meta.stackexchange.com/questions/342991/planned-maintenance-scheduled-for-wednesday-february-5-2020-for-data-explorer&quot;,null,null]">
+<div class="favicon favicon-stackexchangemeta" title="Meta Stack Exchange"></div>                </a>
+        </div>
+        <div class="grid--cell">
+            <a href="https://meta.stackexchange.com/questions/342991/planned-maintenance-scheduled-for-wednesday-february-5-2020-for-data-explorer?cb=1" class="js-gps-track" data-ga="[&quot;community bulletin board&quot;,&quot;Важное на Мете&quot;,&quot;https://meta.stackexchange.com/questions/342991/planned-maintenance-scheduled-for-wednesday-february-5-2020-for-data-explorer&quot;,null,null]" data-gps-track="communitybulletin.click({ priority: 3, position: 0 })">Planned Maintenance scheduled for Wednesday, February 5, 2020 for Data Explorer</a>
+        </div>
+    </li>
+            </ul>
+            <ul class="s-sidebarwidget--content s-sidebarwidget__items pt0 pr16 pb0 pl16">
+    <li class="s-sidebarwidget--item grid">
+        <div class="grid--cell1 fl-shrink0">
+                <a href="https://ru.meta.stackoverflow.com/questions/10013/%d0%9d%d0%b5%d0%b1%d0%be%d0%bb%d1%8c%d1%88%d0%be%d0%b5-%d0%bf%d0%be%d0%b4%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b8%d1%82%d0%be%d0%b3%d0%be%d0%b2-%d1%8d%d0%ba%d1%81%d0%bf%d0%b5%d1%80%d0%b8%d0%bc%d0%b5%d0%bd%d1%82%d0%b0-%d0%bf%d0%be-%d0%be%d1%82%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b8%d1%8e-%d0%bf%d1%80%d0%b8%d1%87%d0%b8%d0%bd%d1%8b-%d0%b7%d0%b0%d0%ba%d1%80%d1%8b%d1%82%d0%b8%d1%8f-%d0%b2%d0%be%d0%bf%d1%80%d0%be%d1%81%d0%be%d0%b2?cb=1" data-ga="[&quot;community bulletin board&quot;,&quot;Важное на Мете&quot;,&quot;https://ru.meta.stackoverflow.com/questions/10013/%d0%9d%d0%b5%d0%b1%d0%be%d0%bb%d1%8c%d1%88%d0%be%d0%b5-%d0%bf%d0%be%d0%b4%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b8%d1%82%d0%be%d0%b3%d0%be%d0%b2-%d1%8d%d0%ba%d1%81%d0%bf%d0%b5%d1%80%d0%b8%d0%bc%d0%b5%d0%bd%d1%82%d0%b0-%d0%bf%d0%be-%d0%be%d1%82%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b8%d1%8e-%d0%bf%d1%80%d0%b8%d1%87%d0%b8%d0%bd%d1%8b-%d0%b7%d0%b0%d0%ba%d1%80%d1%8b%d1%82%d0%b8%d1%8f-%d0%b2%d0%be%d0%bf%d1%80%d0%be%d1%81%d0%be%d0%b2&quot;,null,null]">
+<div class="favicon favicon-rumeta" title="Stack Overflow на русском Meta"></div>                </a>
+        </div>
+        <div class="grid--cell">
+            <a href="https://ru.meta.stackoverflow.com/questions/10013/%d0%9d%d0%b5%d0%b1%d0%be%d0%bb%d1%8c%d1%88%d0%be%d0%b5-%d0%bf%d0%be%d0%b4%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b8%d1%82%d0%be%d0%b3%d0%be%d0%b2-%d1%8d%d0%ba%d1%81%d0%bf%d0%b5%d1%80%d0%b8%d0%bc%d0%b5%d0%bd%d1%82%d0%b0-%d0%bf%d0%be-%d0%be%d1%82%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b8%d1%8e-%d0%bf%d1%80%d0%b8%d1%87%d0%b8%d0%bd%d1%8b-%d0%b7%d0%b0%d0%ba%d1%80%d1%8b%d1%82%d0%b8%d1%8f-%d0%b2%d0%be%d0%bf%d1%80%d0%be%d1%81%d0%be%d0%b2?cb=1" class="js-gps-track" title="Небольшое подведение итогов эксперимента по отключению причины закрытия вопросов «учебные задания»" data-ga="[&quot;community bulletin board&quot;,&quot;Важное на Мете&quot;,&quot;https://ru.meta.stackoverflow.com/questions/10013/%d0%9d%d0%b5%d0%b1%d0%be%d0%bb%d1%8c%d1%88%d0%be%d0%b5-%d0%bf%d0%be%d0%b4%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b8%d1%82%d0%be%d0%b3%d0%be%d0%b2-%d1%8d%d0%ba%d1%81%d0%bf%d0%b5%d1%80%d0%b8%d0%bc%d0%b5%d0%bd%d1%82%d0%b0-%d0%bf%d0%be-%d0%be%d1%82%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b8%d1%8e-%d0%bf%d1%80%d0%b8%d1%87%d0%b8%d0%bd%d1%8b-%d0%b7%d0%b0%d0%ba%d1%80%d1%8b%d1%82%d0%b8%d1%8f-%d0%b2%d0%be%d0%bf%d1%80%d0%be%d1%81%d0%be%d0%b2&quot;,null,null]" data-gps-track="communitybulletin.click({ priority: 6, position: 1 })">Небольшое подведение итогов эксперимента по отключению причины закрытия…</a>
+        </div>
+    </li>
+            </ul>
+
+</div>
+<div id="dfp-tsb" class="everyonelovesstackoverflow everyoneloves__top-sidebar" data-dfp-zone="true" style="display: none;"><div id="google_ads_iframe_/248424177/ru.stackoverflow.com/sb/question-pages_0__container__" style="border: 0pt none; width: 300px; height: 250px;"></div></div>
+                
+
+                    <div class="module sidebar-related">
+                        <h4 id="h-related">Похожие</h4>
+                        <div class="related js-gps-related-questions" data-tracker="rq=1">
+                            <div class="spacer js-gps-track"><a href="https://ru.stackoverflow.com/q/396345?rq=1" title="Количество голосов («за» − «против»)"><div class="answer-votes answered-accepted default">1</div></a><a href="https://ru.stackoverflow.com/questions/396345/%d0%98%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-active-objects?rq=1" class="question-hyperlink">Использование active_objects</a></div><div class="spacer js-gps-track"><a href="https://ru.stackoverflow.com/q/767668?rq=1" title="Количество голосов («за» − «против»)"><div class="answer-votes answered-accepted default">8</div></a><a href="https://ru.stackoverflow.com/questions/767668/%d0%98%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-global-%d0%b2-python?rq=1" class="question-hyperlink">Использование global в Python</a></div><div class="spacer js-gps-track"><a href="https://ru.stackoverflow.com/q/866761?rq=1" title="Количество голосов («за» − «против»)"><div class="answer-votes answered-accepted default">1</div></a><a href="https://ru.stackoverflow.com/questions/866761/%d0%9a%d0%b0%d0%ba-%d1%81-%d0%bf%d0%be%d0%bc%d0%be%d1%89%d1%8c%d1%8e-pandas-%d0%bf%d1%80%d0%b8-%d0%be%d0%b1%d1%8a%d0%b5%d0%b4%d0%b8%d0%bd%d0%b5%d0%bd%d0%b8%d0%b8-%d0%b4%d0%b0%d1%82%d0%b0%d1%84%d1%80%d0%b5%d0%b9%d0%bc%d0%be%d0%b2-%d0%bf%d0%be-%d0%be%d0%b4%d0%bd%d0%be%d0%bc%d1%83-%d0%b7%d0%bd%d0%b0%d1%87%d0%b5%d0%bd%d0%b8%d1%8e-%d1%81%d0%b4%d0%b5%d0%bb%d0%b0%d1%82%d1%8c-%d1%82%d0%b0%d0%ba?rq=1" class="question-hyperlink">Как с помощью Pandas при объединении датафреймов по одному значению сделать так, чтобы не учитывался регистр букв?</a></div><div class="spacer js-gps-track"><a href="https://ru.stackoverflow.com/q/888229?rq=1" title="Количество голосов («за» − «против»)"><div class="answer-votes default">0</div></a><a href="https://ru.stackoverflow.com/questions/888229/aiohttp-%d1%81-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-socks?rq=1" class="question-hyperlink">aiohttp с использование socks</a></div><div class="spacer js-gps-track"><a href="https://ru.stackoverflow.com/q/952718?rq=1" title="Количество голосов («за» − «против»)"><div class="answer-votes default">0</div></a><a href="https://ru.stackoverflow.com/questions/952718/%d0%98%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-%d0%b4%d0%b5%d0%ba%d0%be%d1%80%d0%b0%d1%82%d0%be%d1%80%d0%b0?rq=1" class="question-hyperlink">Использование декоратора</a></div><div class="spacer js-gps-track"><a href="https://ru.stackoverflow.com/q/972584?rq=1" title="Количество голосов («за» − «против»)"><div class="answer-votes answered-accepted default">0</div></a><a href="https://ru.stackoverflow.com/questions/972584/%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-timeit?rq=1" class="question-hyperlink">использование timeit</a></div>
+                        </div>
+                    </div>
+
+
+
+    <div id="feed-link" class="js-feed-link">
+        <a href="https://ru.stackoverflow.com/feeds/question/483540" title="Лента этого вопроса и его ответов">
+            <svg aria-hidden="true" class="svg-icon fc-orange-400 iconRss" width="18" height="18" viewBox="0 0 18 18"><path d="M1 3c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3zm14.5 12C15.5 8.1 9.9 2.5 3 2.5V5a10 10 0 0 1 10 10h2.5zm-5 0A7.5 7.5 0 0 0 3 7.5V10a5 5 0 0 1 5 5h2.5zm-5 0A2.5 2.5 0 0 0 3 12.5V15h2.5z"></path></svg>
+            Лента вопроса
+        </a>
+    </div>
+    <aside class="s-modal js-feed-link-modal" tabindex="-1" role="dialog" aria-labelledby="feed-modal-title" aria-describedby="feed-modal-description" aria-hidden="true">
+        <div class="s-modal--dialog js-modal-dialog wmx4" role="document" data-controller="se-draggable">
+            <h1 class="s-modal--header fw-bold js-first-tabbable c-move" id="feed-modal-title" data-target="se-draggable.handle" tabindex="0">
+                Подписаться на ленту
+            </h1>
+            <div class="grid gs4 gsy fd-column">
+                <div class="grid--cell">
+                    <label class="d-block s-label c-default" for="feed-url">
+                        Лента вопроса
+                        <p class="s-description mt2" id="feed-modal-description">Для подписки на ленту скопируйте и вставьте эту ссылку в вашу программу для чтения RSS.</p>
+                    </label>
+                </div>
+                <div class="grid ps-relative">
+                    <input class="s-input" type="text" name="feed-url" id="feed-url" readonly="readonly" value="https://ru.stackoverflow.com/feeds/question/483540">
+                    <svg aria-hidden="true" class="svg-icon s-input-icon fc-orange-400 iconRss" width="18" height="18" viewBox="0 0 18 18"><path d="M1 3c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3zm14.5 12C15.5 8.1 9.9 2.5 3 2.5V5a10 10 0 0 1 10 10h2.5zm-5 0A7.5 7.5 0 0 0 3 7.5V10a5 5 0 0 1 5 5h2.5zm-5 0A2.5 2.5 0 0 0 3 12.5V15h2.5z"></path></svg>
+                </div>
+            </div>
+            <a class="s-modal--close s-btn s-btn__muted js-modal-close js-last-tabbable" href="https://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize#" aria-label="Закрыть">
+                <svg aria-hidden="true" class="svg-icon iconClearSm" width="14" height="14" viewBox="0 0 14 14"><path d="M12 3.41L10.59 2 7 5.59 3.41 2 2 3.41 5.59 7 2 10.59 3.41 12 7 8.41 10.59 12 12 10.59 8.41 7 12 3.41z"></path></svg>
+            </a>
+        </div>
+    </aside>
+            </div>
+    </div>
+<script>StackExchange.ready(function(){$.get('/posts/483540/ivc/b7c9');});</script>
+<noscript><div><img src="/posts/483540/ivc/b7c9" class="dno" alt="" width="0" height="0"></div></noscript><div style="display:none" id="prettify-lang">lang-py</div></div>
+
+
+        </div>
+    </div>
+
+
+<script>;try{(function(a){function b(a){return'string'==typeof a?document.getElementById(a):a}function c(a){return a=b(a),!!a&&'none'===getComputedStyle(a).display}function d(a){return!c(a)}function e(a){return!!a}function f(a){return /^\s*$/.test(b(a).innerHTML)}function g(a){var b=a.style;b.height=b.maxHeight=b.minHeight='auto',b.display='none',[].forEach.call(a.children,g)}function h(a,b){var c;return function(){return a&&(c=a.call(b||this,arguments),a=null),c}}function i(a){var b=document.createElement('script');b.src=a,document.body.appendChild(b)}function j(a){return k([],a)}function k(a,b){return a.push=function(a){return b(),delete this.push,this.push(a)},a}function l(){try{return!new Function('return async()=>{};')}catch(a){return!0}}function m(){return'undefined'!=typeof googletag&&!!googletag.apiReady}function n(){m()||(googletag={cmd:j(A)})}function o(){var a=document.createElement('div');a.className='adsbox',a.id='clc-abd',a.style.position='absolute',a.style.pointerEvents='none',a.innerHTML='&nbsp;',document.body.appendChild(a)}function p(a){var b=a.serviceName,c=a.slot,d=a.lineItemId;try{var e=c.getSlotElementId(),f=[];e||f.push('id=0');var h=document.getElementById(e);if(!e||h?h.hasAttribute('data-clc-stalled')&&f.push('st=1'):f.push('el=0'),0!==f.length)return void B(f.join('&'));if(-1!==x.dh.indexOf(d))g(h);else if(d&&(h.setAttribute('data-clc-prefilled','true'),'dfp-msb'==e)){var i=document.getElementById('hireme');g(i)}h.setAttribute('data-clc-ready','true')}catch(a){var j=document.querySelector('#dfp-tsb, #dfp-isb, #clc-tsb');j&&j.setAttribute('data-clc-ready','true'),B('e=1')}}function q(){return Object.keys(F.ids)}function r(a){var b=F.ids[a],c=F.slots[b];'function'==typeof c&&(c=c(a));return{path:'/'+C+'/'+E+'/'+b+'/'+D,sizes:c,zone:b}}function s(a){return!(clc.collapse&&void 0!==clc.collapse[a])||!!clc.collapse[a]}function t(a,b){'dfp-isb'===a&&b.setTargeting('Sidebar',['Inline']),'dfp-tsb'===a&&b.setTargeting('Sidebar',['Right']);var c=r(a),d=c.path,e=c.sizes,f=c.zone,g=googletag.defineSlot(d,e,a);s(f)&&g.setCollapseEmptyDiv(!0,!0),g.addService(b),!1}function u(b){var c=a.dfp&&a.dfp.targeting||{};Object.keys(c).forEach(function(a){b.setTargeting(a,c[a])})}function v(a){var g=a.map(b).filter(e);return{eligible:g.filter(f).filter(d),ineligible:g.filter(c)}}function w(b){if(void 0===b&&(b=q()),!m())return n(),void googletag.cmd.push(function(){return w(b)});var c=v(b),d=c.eligible,e=c.ineligible;if(e.forEach(g),0!==d.length){x.abd&&o(),googletag.destroySlots();var f=googletag.pubads();x.sf&&(f.setForceSafeFrame(!0),f.setSafeFrameConfig({allowOverlayExpansion:!0,allowPushExpansion:!0,sandbox:!0})),f.enableSingleRequest(),a.sreEvent||(f.addEventListener('slotRenderEnded',p),a.sreEvent=!0),u(f),d.forEach(function(a){t(a.id,f),a.setAttribute('data-dfp-zone','true')}),googletag.enableServices(),d.forEach(function(a){googletag.display(a.id)})}}var x=function(a){for(var b=[],c=1;c<arguments.length;c++)b[c-1]=arguments[c];for(var d,e=0,f=b;e<f.length;e++)for(var g in d=f[e],d)a[g]=d[g];return a}({"lib":"https://cdn.sstatic.net/clc/clc.min.js?v=d86ede4e666e","style":"https://cdn.sstatic.net/clc/styles/clc.min.css?v=308d7ccd0858","u":"https://clc.stackoverflow.com/markup.js","wa":true,"kt":2000,"tto":true,"h":"clc.stackoverflow.com","allowed":"^(((talent\\.)?stackoverflow)|(blog\\.codinghorror)|(serverfault|askubuntu)|([^\\.]+\\.stackexchange))\\.com$","wv":true,"al":false,"dh":[5171832659],"abd":true},a.options||{}),y=h(function(){var a=x.lib;l()&&(a=a.replace(/(\.min)?\.js(\?v=[0-9a-fA-F]+)?$/,'.ie$1.js$2')),i(a)}),z=a.cmd||[];Array.isArray(z)&&(0<z.length?y():k(z,y));var A=h(function(){i('https://www.googletagservices.com/tag/js/gpt.js')}),B=function(a){new Image().src='https://'+x.h+'/stalled.gif?'+a},C='248424177',D=/^\/tags\//.test(location.pathname)||/^\/questions\/tagged\//.test(location.pathname)?'tag-pages':/^\/$/.test(location.pathname)||/^\/home/.test(location.pathname)?'home-page':'question-pages',E=location.hostname;var F={slots:{lb:[[728,90]],mlb:[[728,90]],smlb:[[728,90]],bmlb:[[728,90]],sb:function(a){return'dfp-tsb'===a?[[300,250],[300,600]]:[[300,250]]},"tag-sponsorship":[[730,135]],"mobile-below-question":[[320,50],[300,250]],msb:[[300,250],[300,600]]},ids:{"dfp-tlb":'lb',"dfp-mlb":'mlb',"dfp-smlb":'smlb',"dfp-bmlb":'bmlb',"dfp-tsb":'sb',"dfp-isb":'sb',"dfp-tag":'tag-sponsorship',"dfp-msb":'msb',"dfp-m-aq":'mobile-below-question',"clc-tlb":'lb',"clc-mlb":'mlb',"clc-tsb":'sb'}};(function(){var b=x.al;b&&z.push(function(){return a.load()})})(),n(),a.dfp={load:w},a.options=x,a.cmd=z})(this.clc=this.clc||{})}catch(a){window.console.error(a)}</script>    <script>
+        var clc = clc || {};
+        clc.collapse = { sb: !0, 'tag-sponsorship': !0, lb:!0, mlb:!0, smlb:!0, bmlb:!0, 'mobile-below-question':!0};
+        clc.options = clc.options || {};
+        clc.options.sf = !1;
+        clc.options.hb = !1;
+                clc.dfp = clc.dfp || {};
+        clc.dfp.targeting = {Registered:['false'],'ru.so-tag':['python','scipy'],Persona:['BigData'],NumberOfAnswers:['1']};
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        googletag.cmd.push(function () { clc.dfp.load(); });
+    </script><script src="./python - Использование scipy.optimize - Stack Overflow на русском_files/gpt.js.Без названия"></script>
+    
+    <footer id="footer" class="site-footer js-footer" role="contentinfo">
+        <div class="site-footer--container">
+            
+            <nav class="site-footer--nav">
+                    <div class="site-footer--col site-footer--col__visible js-footer-col" data-name="default">
+                        <h5 class="-title"><a href="https://ru.stackoverflow.com/">Stack Overflow на русском</a></h5>
+                        <ul class="-list js-primary-footer-links">
+                                    <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 2 })" href="https://ru.stackoverflow.com/tour">Тур</a></li>
+                                <li class="-item"><a href="https://ru.stackoverflow.com/help" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 3 })">Справка</a></li>
+                                    <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 5 })" href="https://chat.stackexchange.com/?tab=site&amp;host=ru.stackoverflow.com">Чат</a></li>
+                            <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 13 })" href="https://ru.stackoverflow.com/contact">Связаться с нами</a></li>
+                                <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 14 })" href="https://ru.meta.stackoverflow.com/">Оставить отзыв</a></li>
+                                                            <li class="-item"><a onclick="StackExchange.switchMobile(&quot;on&quot;)" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 12 })">Мобильная версия</a></li>
+                        <li class="-item"><a class="-link" role="button">Отключить адаптивный дизайн</a></li></ul>
+                    </div>
+                <div class="site-footer--col site-footer--col__visible js-footer-col" data-name="default">
+                    <h5 class="-title"><a class="js-gps-track" data-gps-track="footer.click({ location: 2, link: 1 })" href="https://stackoverflow.com/company/about">Компания</a></h5>
+                    <ul class="-list">
+                                                    <li class="-item"><a href="https://stackoverflow.com/" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 15})">Stack Overflow</a></li>
+                            <li class="-item"><a href="https://stackoverflowbusiness.com/" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 19 })">Stack Overflow Business</a></li>
+                            <li class="-item"><a href="https://stackoverflow.com/jobs" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 17})">Вакансии для разработчиков</a></li>
+                                <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 1 })" href="https://stackoverflow.com/company/about">О компании</a></li>
+                        <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 27 })" href="https://stackoverflow.com/company/press">Упоминания в СМИ</a></li>
+                        <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 7 })" href="https://stackoverflow.com/legal">Соглашение</a></li>
+                        <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 8 })" href="https://stackoverflow.com/legal/privacy-policy">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer--col site-footer--categories-nav site-footer--col__visible">
+                    <a href="https://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize#" class="site-footer--back js-footer-back"><svg aria-hidden="true" class="svg-icon iconArrowLeftAlt" width="18" height="18" viewBox="0 0 18 18"><path d="M10.58 16L12 14.59 6.4 9 12 3.41 10.57 2l-7 7 7 7z"></path></svg></a>
+                    <div>
+                        <h5 class="-title"><a href="https://stackexchange.com/" data-gps-track="footer.click({ location: 2, link: 30 })">Stack Exchange<br> Network</a></h5>
+                        <ul class="-list">
+                            <li class="-item"><a href="https://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Technology">Technology</a></li>
+                            <li class="-item"><a href="https://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Life / Arts">Life / Arts</a></li>
+                            <li class="-item"><a href="https://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Culture / Recreation">Culture / Recreation</a></li>
+                            <li class="-item"><a href="https://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Science">Science</a></li>
+                            <li class="-item"><a href="https://ru.stackoverflow.com/questions/483540/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-scipy-optimize#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Other">Other</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="site-footer--categories">
+                    <div class="site-footer--col site-footer--category js-footer-col" data-name="Technology">
+        <ul class="-list">
+                <li class="-item"><a href="https://stackoverflow.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                <li class="-item"><a href="https://serverfault.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="system and network administrators">Server Fault</a></li>
+                <li class="-item"><a href="https://superuser.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="computer enthusiasts and power users">Super User</a></li>
+                <li class="-item"><a href="https://webapps.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="power users of web applications">Web Applications</a></li>
+                <li class="-item"><a href="https://askubuntu.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                <li class="-item"><a href="https://webmasters.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="pro webmasters">Webmasters</a></li>
+                <li class="-item"><a href="https://gamedev.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional and independent game developers">Game Development</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://tex.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                <li class="-item"><a href="https://softwareengineering.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professionals, academics, and students working within the systems development life cycle">Software Engineering</a></li>
+                <li class="-item"><a href="https://unix.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                <li class="-item"><a href="https://apple.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                <li class="-item"><a href="https://wordpress.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="WordPress developers and administrators">WordPress Development</a></li>
+                <li class="-item"><a href="https://gis.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                <li class="-item"><a href="https://electronics.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://android.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                <li class="-item"><a href="https://security.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="information security professionals">Information Security</a></li>
+                <li class="-item"><a href="https://dba.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                <li class="-item"><a href="https://drupal.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Drupal developers and administrators">Drupal Answers</a></li>
+                <li class="-item"><a href="https://sharepoint.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="SharePoint enthusiasts">SharePoint</a></li>
+                <li class="-item"><a href="https://ux.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="user experience researchers and experts">User Experience</a></li>
+                <li class="-item"><a href="https://mathematica.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users of Wolfram Mathematica">Mathematica</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://salesforce.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                <li class="-item"><a href="https://expressionengine.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li>
+                <li class="-item"><a href="https://pt.stackoverflow.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="programadores profissionais e entusiastas">Stack Overflow em Português</a></li>
+                <li class="-item"><a href="https://blender.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people who use Blender to create 3D graphics, animations, or games">Blender</a></li>
+                <li class="-item"><a href="https://networkengineering.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="network engineers">Network Engineering</a></li>
+                <li class="-item"><a href="https://crypto.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="software developers, mathematicians and others interested in cryptography">Cryptography</a></li>
+                <li class="-item"><a href="https://codereview.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="peer programmer code reviews">Code Review</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://magento.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users of the Magento e-Commerce platform">Magento</a></li>
+                <li class="-item"><a href="https://softwarerecs.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people seeking specific software recommendations">Software Recommendations</a></li>
+                <li class="-item"><a href="https://dsp.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="practitioners of the art and science of signal, image and video processing">Signal Processing</a></li>
+                <li class="-item"><a href="https://emacs.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="those using, extending or developing Emacs">Emacs</a></li>
+                <li class="-item"><a href="https://raspberrypi.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users and developers of hardware and software for Raspberry Pi">Raspberry Pi</a></li>
+                <li class="-item"><a href="https://ru.stackoverflow.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="программистов">Stack Overflow на русском</a></li>
+                <li class="-item"><a href="https://codegolf.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="programming puzzle enthusiasts and code golfers">Code Golf</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://es.stackoverflow.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="programadores y profesionales de la informática">Stack Overflow en español</a></li>
+                <li class="-item"><a href="https://ethereum.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users of Ethereum, the decentralized application platform and smart contract enabled blockchain">Ethereum</a></li>
+                <li class="-item"><a href="https://datascience.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Data science professionals, Machine Learning specialists, and those interested in learning more about the field">Data Science</a></li>
+                <li class="-item"><a href="https://arduino.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="developers of open-source hardware and software that is compatible with Arduino">Arduino</a></li>
+                <li class="-item"><a href="https://bitcoin.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Bitcoin crypto-currency enthusiasts">Bitcoin</a></li>
+                <li class="-item"><a href="https://sqa.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="software quality control experts, automation engineers, and software testers">Software Quality Assurance &amp; Testing</a></li>
+                <li class="-item"><a href="https://sound.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="sound engineers, producers, editors, and enthusiasts">Sound Design</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://windowsphone.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="enthusiasts and power users of Windows Phone OS">Windows Phone</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#technology" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 26 })">
+                        <strong>
+                            more (27)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="site-footer--col site-footer--category js-footer-col" data-name="Life / Arts">
+        <ul class="-list">
+                <li class="-item"><a href="https://photo.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                <li class="-item"><a href="https://scifi.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                <li class="-item"><a href="https://graphicdesign.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                <li class="-item"><a href="https://movies.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                <li class="-item"><a href="https://music.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="musicians, students, and enthusiasts">Music: Practice &amp; Theory</a></li>
+                <li class="-item"><a href="https://worldbuilding.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="writers/artists using science, geography and culture to construct imaginary worlds and settings">Worldbuilding</a></li>
+                <li class="-item"><a href="https://video.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="engineers, producers, editors, and enthusiasts spanning the fields of video, and media creation">Video Production</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Life / Arts"><ul class="-list">
+                <li class="-item"><a href="https://cooking.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                <li class="-item"><a href="https://diy.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="contractors and serious DIYers">Home Improvement</a></li>
+                <li class="-item"><a href="https://money.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                <li class="-item"><a href="https://academia.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="academics and those enrolled in higher education">Academia</a></li>
+                <li class="-item"><a href="https://law.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="legal professionals, students, and others with experience or interest in law">Law</a></li>
+                <li class="-item"><a href="https://fitness.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="physical fitness professionals, athletes, trainers, and those providing health-related needs">Physical Fitness</a></li>
+                <li class="-item"><a href="https://gardening.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="gardeners and landscapers">Gardening &amp; Landscaping</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Life / Arts"><ul class="-list">
+                <li class="-item"><a href="https://parenting.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="parents, grandparents, nannies and others with a parenting role">Parenting</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#lifearts" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 26 })">
+                        <strong>
+                            more (11)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="site-footer--col site-footer--category js-footer-col" data-name="Culture / Recreation">
+        <ul class="-list">
+                <li class="-item"><a href="https://english.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                <li class="-item"><a href="https://skeptics.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="scientific skepticism">Skeptics</a></li>
+                <li class="-item"><a href="https://judaism.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                <li class="-item"><a href="https://travel.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="road warriors and seasoned travelers">Travel</a></li>
+                <li class="-item"><a href="https://christianity.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                <li class="-item"><a href="https://ell.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="speakers of other languages learning English">English Language Learners</a></li>
+                <li class="-item"><a href="https://japanese.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="students, teachers, and linguists wanting to discuss the finer points of the Japanese language">Japanese Language</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Culture / Recreation"><ul class="-list">
+                <li class="-item"><a href="https://chinese.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="students, teachers, and linguists wanting to discuss the finer points of the Chinese language">Chinese Language</a></li>
+                <li class="-item"><a href="https://french.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="students, teachers, and linguists wanting to discuss the finer points of the French language">French Language</a></li>
+                <li class="-item"><a href="https://german.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="speakers of German wanting to discuss the finer points of the language and translation">German Language</a></li>
+                <li class="-item"><a href="https://hermeneutics.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professors, theologians, and those interested in exegetical analysis of biblical texts">Biblical Hermeneutics</a></li>
+                <li class="-item"><a href="https://history.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="historians and history buffs">History</a></li>
+                <li class="-item"><a href="https://spanish.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="linguists, teachers, students and Spanish language enthusiasts in general wanting to discuss the finer points of the language">Spanish Language</a></li>
+                <li class="-item"><a href="https://islam.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Muslims, experts in Islam, and those interested in learning more about Islam">Islam</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Culture / Recreation"><ul class="-list">
+                <li class="-item"><a href="https://rus.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="лингвистов и энтузиастов русского языка">Русский язык</a></li>
+                <li class="-item"><a href="https://russian.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="students, teachers, and linguists wanting to discuss the finer points of the Russian language">Russian Language</a></li>
+                <li class="-item"><a href="https://gaming.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                <li class="-item"><a href="https://bicycles.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                <li class="-item"><a href="https://rpg.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                <li class="-item"><a href="https://anime.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="anime and manga fans">Anime &amp; Manga</a></li>
+                <li class="-item"><a href="https://puzzling.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="those who create, solve, and study puzzles">Puzzling</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Culture / Recreation"><ul class="-list">
+                <li class="-item"><a href="https://mechanics.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="mechanics and DIY enthusiast owners of cars, trucks, and motorcycles">Motor Vehicle Maintenance &amp; Repair</a></li>
+                <li class="-item"><a href="https://boardgames.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people who like playing board games, designing board games or modifying the rules of existing board games">Board &amp; Card Games</a></li>
+                <li class="-item"><a href="https://bricks.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="LEGO® and building block enthusiasts">Bricks</a></li>
+                <li class="-item"><a href="https://homebrew.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="dedicated home brewers and serious enthusiasts">Homebrewing</a></li>
+                <li class="-item"><a href="https://martialarts.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="students and teachers of all martial arts">Martial Arts</a></li>
+                <li class="-item"><a href="https://outdoors.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people who love being outdoors enjoying nature and wilderness, and learning about the required skills and equipment">The Great Outdoors</a></li>
+                <li class="-item"><a href="https://poker.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="serious players and enthusiasts of poker">Poker</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Culture / Recreation"><ul class="-list">
+                <li class="-item"><a href="https://chess.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="serious players and enthusiasts of chess">Chess</a></li>
+                <li class="-item"><a href="https://sports.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="participants in team and individual sport activities">Sports</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#culturerecreation" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 26 })">
+                        <strong>
+                            more (16)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="site-footer--col site-footer--category js-footer-col" data-name="Science">
+        <ul class="-list">
+                <li class="-item"><a href="https://mathoverflow.net/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional mathematicians">MathOverflow</a></li>
+                <li class="-item"><a href="https://math.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                <li class="-item"><a href="https://stats.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                <li class="-item"><a href="https://cstheory.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                <li class="-item"><a href="https://physics.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="active researchers, academics and students of physics">Physics</a></li>
+                <li class="-item"><a href="https://chemistry.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="scientists, academics, teachers, and students in the field of chemistry">Chemistry</a></li>
+                <li class="-item"><a href="https://biology.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="biology researchers, academics, and students">Biology</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Science"><ul class="-list">
+                <li class="-item"><a href="https://cs.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="students, researchers and practitioners of computer science">Computer Science</a></li>
+                <li class="-item"><a href="https://philosophy.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="those interested in the study of the fundamental nature of knowledge, reality, and existence">Philosophy</a></li>
+                <li class="-item"><a href="https://linguistics.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional linguists and others with an interest in linguistic research and theory">Linguistics</a></li>
+                <li class="-item"><a href="https://psychology.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="practitioners, researchers, and students in cognitive science, psychology, neuroscience, and psychiatry">Psychology &amp; Neuroscience</a></li>
+                <li class="-item"><a href="https://scicomp.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="scientists using computers to solve scientific problems">Computational Science</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#science" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 26 })">
+                        <strong>
+                            more (8)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="site-footer--col site-footer--category js-footer-col" data-name="Other">
+        <ul class="-list">
+                <li class="-item"><a href="https://meta.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                <li class="-item"><a href="https://stackapps.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                <li class="-item"><a href="https://api.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="programmatic interaction with Stack Exchange sites">API</a></li>
+                <li class="-item"><a href="https://data.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="querying Stack Exchange data using SQL">Data</a></li>
+                    </ul>
+    </div>
+                </div>
+            </nav>
+            <div class="site-footer--copyright fs-fine">
+                <ul class="-list">
+                    <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link:4 })" href="https://stackoverflow.blog/?blb=1">Блог</a></li>
+                    <li class="-item"><a href="https://www.facebook.com/officialstackoverflow/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 31 })">Facebook</a></li>
+                    <li class="-item"><a href="https://twitter.com/stackoverflow" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 32 })">Твиттер</a></li>
+                    <li class="-item"><a href="https://linkedin.com/company/stack-overflow" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 33 })">LinkedIn</a></li>
+                </ul>
+
+                <p class="mt-auto mb24">
+дизайн сайта / логотип © 2020 Stack Exchange Inc; пользовательское содержимое попадает под действие лицензии <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="js-gps-track" data-gps-track="footer.click({ location: 2, link: 34 })" rel="license">cc by-sa 4.0</a> с <a href="https://stackoverflow.blog/2009/06/25/attribution-required/" class="js-gps-track" data-gps-track="footer.click({ location: 2, link:35 })" rel="license">указанием ссылки на источник</a>.
+                    <span id="svnrev">rev&nbsp;2020.1.30.35927</span>
+                </p>
+            </div>
+        </div>
+
+            </footer>
+            <script>StackExchange.ready(function () { StackExchange.responsiveness.addSwitcher(); })</script>
+    <noscript>
+        <div id="noscript-warning">Stack Overflow на русском лучше работает с включенным JavaScript
+            <img src="https://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno">
+        </div>
+    </noscript>
+
+<script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            StackExchange.ready(function () {
+
+                StackExchange.ga.init({
+                    sendTitles: true,
+                    tracker: window.ga,
+                    trackingCodes: [
+                        'UA-108242619-5'
+                    ],
+                        checkDimension: 'dimension42'
+                });
+
+
+
+                    StackExchange.ga.setDimension('dimension2', '|python|scipy|');
+
+                    StackExchange.ga.setDimension('dimension3', 'Questions/Show');
+
+
+                StackExchange.ga.trackPageView();
+            });
+            
+/**/
+            
+            var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+            (function() {
+                var ssl = 'https:' == document.location.protocol,
+                    s = document.getElementsByTagName('script')[0],
+                    qc = document.createElement('script');
+                 qc.async = true;
+                    qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                    s.parentNode.insertBefore(qc, s);
+                    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+/**/
+                 var sc = document.createElement('script');
+                    sc.async = true;
+                    sc.src = (ssl ? 'https://sb' : 'http://b') + '.scorecardresearch.com/beacon.js';
+                    s.parentNode.insertBefore(sc, s);
+                    _comscore.push({ c1: "2", c2: "17440561" });
+            })();
+            
+
+</script>
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter31923236 = new Ya.Metrika({
+                        id:31923236,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true
+                    });
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/31923236" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            
+    
+    
+<div class="adsbox" id="clc-abd" style="position: absolute; pointer-events: none;">&nbsp;</div></body></html>
